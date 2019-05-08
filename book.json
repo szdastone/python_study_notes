@@ -1,0 +1,55 @@
+{
+	"title": "Python学习笔记",
+    "description": "记录Python的一些学习笔记",
+	"author": "Dastone Deng <dastone.deng@gmail.com>",
+	"root": ".",
+    "isbn": "",
+	"language": "zh-hans",
+	"gitbook": "3.2.3",
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            "我的主页": "http://szdastone.github.io"
+        }
+    },
+    "pdf": {
+        "fontSize": 12,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "plugins": [
+		"disqus",
+		"-lunr",
+		"-search",
+		"-highlight",
+		"-sharing",
+		"books"
+	],
+	"pluginsConfig": {
+		"books": {
+			"prism_themes": "prismjs/themes/prism-okaidia.css",
+			"github_url": "https://github.com/szdastone"
+		},
+		"theme-default": {
+            "showLevel": true
+        },
+		"disqus": {
+            "shortName": "dastonedeng"
+        }
+	},
+    
+    "variables": {
+	}
+}
