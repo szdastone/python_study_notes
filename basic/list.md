@@ -154,6 +154,126 @@ remove只删除第一个指定的值，如要删除的值在列表中多次出�
 
 同样，可使用reverse=True来进行反排序。
 
+#### 顺序与长度
+
+列表也可以使用reverse()进行修改顺序，调用后会永久修改列表元素的排列顺序，如要恢复，则再次调用。
+
+```
+>>>cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>>cars.reverse()
+>>>print(cars)
+['subaru','toyota','audi','bmw']
+```
+
+列表的长度使用len,如：
+
+```
+>>>cars = ['bmw', 'audi', 'toyota', 'subaru']
+>>>len(cars)
+4
+```
+
+请注意列表的索引，如超出这个范围则会错误，如列表的长度为n,则序号为[-n...n-1]之间。如超出，则会出现如下错误：
+
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+```
+
+#### 遍历列表
+
+要访问列表的所有元素，可使用for循环。
+
+```
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+for car in cars:
+	print(car)
+```
+
+#### 创建列表
+
+- 使用函数range()
+
+  可使用range()来生成一系列数字，如
+
+  ```
+  for value in range(1,5)
+  	print(value)
+  ```
+
+  range(1,5)会打印数字1-4，range()有3个参数，开始数字，结束数字以及步长，如range(1,10,3)则会打印1,4,7这3个数。
+
+  如要生成数字列表，可如下：
+
+  ```
+  >>>nums = list(range(1,6))
+  >>>print(nums)
+  [1,2,3,4,5]
+  ```
+
+  
+
+- 数字列表的简单统计
+
+  可使用min,max,sum来对数字列表进行统计。
+
+  ```
+  >>>digits = list(range(1,10))
+  >>>min(digits)
+  1
+  >>>max(digits)
+  9
+  >>>sum(digits)
+  45
+  ```
+
+  
+
+- 列表解析
+
+  列表解析就是将for循环以及创建新元素代码合并成一行，病自动附件新元素。如
+
+  ```
+  >>>squares = [values**2 for value in range(1,11)]
+  >>>print(squares)
+  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+  ```
+
+  
+
+- 列表切片
+
+  如果访问列表部分元素，可使用切片，一般要指定第一个元素及最后一个元素的索引，和range()函数差不多吧。如：
+
+  ```
+  >>>cars = ['bmw', 'audi', 'toyota', 'subaru']
+  >>>print(cars[0:3])
+  ['bmw', 'audi', 'toyota']
+  ```
+
+  如没有指定第一个索引，则从列表开头开始，如没有指定第二个索引，则到列表结尾结束;当然，索引也可以是负数，如:
+
+  ```  
+  cars[:3]  #等同cars[0:3]
+  cars[2:]  #等同cars[2:4]
+  cars[:]   #等同cars或cars[0:4]
+  cars[-3:] #等同cars[-3,0],打印最后3个
+  ```
+
+  当然切边后的列表也是列表，所以还是可以遍历的，可试下？
+
+- 复制列表
+
+  复制列表，可使用切片方法来复制。如
+
+  ```
+  cars = ['bmw', 'audi', 'toyota', 'subaru']
+  new_cars = cars[:]
+  ```
+
+  为啥不直接赋值呢？比如new_cars=cars不行么？好像是可以，但还是有问题。赋值后指向同一个地址，当修改一个列表，则另一个列表也修改了，这是你所预期的？
+
 
 
 

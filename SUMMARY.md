@@ -8,7 +8,7 @@
     * [数据类型](basic/data_type.md)
     * [列表](basic/list.md)
     * [元组](basic/tuple.md)
-    * [判断](basic/if.md)
+    * [流程控制](basic/if.md)
     * [循环](basic/loop.md)
     * [字典](basic/dict.md)
     * [函数](basic/function.md)
