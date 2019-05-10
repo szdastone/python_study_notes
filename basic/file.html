@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../module/" />
+    <link rel="next" href="unittest.html" />
     
     
     <link rel="prev" href="inout.html" />
@@ -357,6 +357,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.12" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                        <b>1.3.12.</b>
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -456,6 +471,31 @@
                                 <section class="normal markdown-section">
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h1>
+<p>&#x53EF;&#x4EE5;&#x7528;Python&#x6765;&#x5904;&#x7406;&#x6587;&#x4EF6;&#xFF0C;&#x8BA9;&#x7A0B;&#x5E8F;&#x80FD;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5E76;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x6216;&#x5904;&#x7406;&#x3002;</p>
+<h4 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x8BFB;&#x53D6;</h4>
+<p>&#x6587;&#x672C;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5F88;&#x591A;&#x4FE1;&#x606F;&#x3002;&#x5F53;&#x9700;&#x8981;&#x5206;&#x6790;&#x6216;&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5148;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x3002;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4F1A;&#x9996;&#x5148;&#x5C06;&#x4FE1;&#x606F;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x4E3A;&#x6B64;&#xFF0C;&#x53EF;&#x4E00;&#x6B21;&#x6027;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x53EF;&#x6BCF;&#x6B21;&#x4E00;&#x884C;&#x7684;&#x9010;&#x6B65;&#x8BFB;&#x53D6;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x6709;&#x7684;&#x5199;&#x6709;&#x5706;&#x5468;&#x7387;&#x7684;&#x6587;&#x672C;&#x3002;&#x5185;&#x5BB9;&#x5FFD;&#x7565;&#xFF0C;&#x53EF;&#x81EA;&#x52A8;&#x5B9A;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x6709;&#x5199;&#x6709;&#x5706;&#x5468;&#x7387;&#x7684;&#x51E0;&#x884C;&#x6570;&#x5B57;&#x5427;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x53EB;pi.txt&#x3002;</p>
+<pre class="language-"><code>with open(&apos;pi.txt&apos;) as f:
+    contents = f.read()
+    print(contents)
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;with&#xFF0C;&#x5219;&#x4E0D;&#x9700;&#x8003;&#x8651;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#xFF0C;&#x5728;&#x8BBF;&#x95EE;&#x5B8C;&#x6210;&#x540E;&#x5C31;&#x81EA;&#x52A8;&#x5C06;&#x5176;&#x5173;&#x95ED;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;with&#x6765;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x7684;&#x8C03;&#x7528;close()&#x6765;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5728;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#xFF0C;&#x90A3;Python&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F60;&#x4EE3;&#x7801;&#x4FDD;&#x5B58;&#x4E3A;py&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#x6765;&#x67E5;&#x627E;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x53EF;&#x4F7F;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x4EE5;&#x53CA;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x5C31;&#x662F;&#x51C6;&#x786E;&#x6307;&#x51FA;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7EDD;&#x5BF9;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x662F;&#x76F8;&#x5BF9;&#x5F53;&#x524D;py&#x6587;&#x4EF6;&#x6240;&#x5728;&#x8DEF;&#x5F84;&#x7684;&#x3002;&#x540C;&#x65F6;&#x8981;&#x6CE8;&#x610F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;linux&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E3A;(\)&#xFF0C;&#x4E3A;window&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E3A;(/)&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x662F;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#xFF0C;&#x5982;&#x8981;&#x9010;&#x884C;&#x8BFB;&#x53D6;&#xFF0C;&#x53EF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>with open(&apos;pi.txt&apos;) as f:
+    for line in f:
+        print(line)
+</code></pre><p>&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;Python&#x5C06;&#x5176;&#x4E2D;&#x6587;&#x672C;&#x90FD;&#x8BFB;&#x53D6;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5982;&#x8981;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x6570;&#x503C;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;int()&#x5C06;&#x5176;&#x8F6C;&#x4E3A;&#x6574;&#x6570;&#xFF0C;&#x6216;&#x4F7F;&#x7528;&#x51FD;&#x6570;float()&#x5C06;&#x5176;&#x8F6C;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#x3002;</p>
+<p>Python&#x53EF;&#x5904;&#x7406;&#x5927;&#x6587;&#x672C;&#x3002;&#x53EA;&#x8981;&#x5185;&#x5B58;&#x8DB3;&#x591F;&#x5927;&#xFF0C;&#x591A;&#x5C11;&#x6570;&#x636E;&#x90FD;&#x80FD;&#x5904;&#x7406;&#x3002;</p>
+<h4 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5199;&#x5165;&#x6587;&#x672C;</h4>
+<p>&#x8981;&#x5C06;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x6837;&#x8C03;&#x7528;open()&#xFF0C;&#x4E0D;&#x8FC7;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x53E6;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>with open(&apos;pi.txt&apos;, &apos;w&apos;) as f:
+
+    f.write(&quot;3.1415926535&quot;)
+</code></pre><p>&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x4E0B;open()&#x51FD;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x53C2;&#x4E3A;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4E3A;&#x64CD;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;&apos;r&apos;&#xFF0C;&#x53EF;&#x7701;&#x7565;&#xFF0C;&#x6240;&#x4EE5;&#x8BFB;&#x53D6;&#x65F6;&#x7701;&#x7565;&#x4E86;&#x8FD9;&#x4E2A;&#x5B9E;&#x53C2;&#x3002;&#x8FD9;&#x4E2A;&#x5B9E;&#x53C2;&#x5982;&#x4E0B;&#xFF1A;&#x8BFB;&#x53D6;&#x6A21;&#x5F0F;(&apos;r&apos;)&#xFF0C;&#x5199;&#x5165;&#x6A21;&#x5F0F;(&#x2018;w&#x2019;)&#xFF0C;&#x9644;&#x4EF6;&#x6A21;&#x5F0F;(&apos;a&apos;)&#xFF0C;&#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165;&#x6A21;&#x5F0F;(&apos;r+&apos;)&#x3002;</p>
+<p>&#x5982;&#x8981;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x5B83;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4EE5;&#x5199;&#x5165;&#x6A21;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x5982;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#x524D;&#x6E05;&#x7A7A;&#x8BE5;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5982;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4E3A;&#x591A;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x6BCF;&#x884C;&#x672B;&#x5C3E;&#x52A0;&#x4E0A;&#x6362;&#x884C;&#x7B26;\n&#x3002;&#x4E3A;&#x4E86;&#x683C;&#x5F0F;&#x597D;&#x770B;&#xFF0C;&#x4E5F;&#x53EF;&#x4F7F;&#x7528;&#x7A7A;&#x683C;&#x3001;&#x5236;&#x8868;&#x7B26;&#x3001;&#x6362;&#x884C;&#x7B26;&#x7B49;&#x6765;&#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x5C06;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8986;&#x76D6;&#x4EE5;&#x524D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x4EE5;&#x9644;&#x52A0;&#x6A21;&#x5F0F;&#x6765;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                                 
                                 </section>
@@ -472,7 +512,7 @@
                 </a>
                 
                 
-                <a href="../module/" class="navigation navigation-next " aria-label="Next page: 内置模块">
+                <a href="unittest.html" class="navigation navigation-next " aria-label="Next page: 单元测试">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -483,7 +523,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"文件操作","level":"1.3.11","depth":2,"next":{"title":"内置模块","level":"1.4","depth":1,"path":"module/README.md","ref":"module/README.md","articles":[]},"previous":{"title":"输入输出","level":"1.3.10","depth":2,"path":"basic/inout.md","ref":"basic/inout.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/file.md","mtime":"2019-05-08T02:30:40.109Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-09T08:00:29.965Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文件操作","level":"1.3.11","depth":2,"next":{"title":"单元测试","level":"1.3.12","depth":2,"path":"basic/unittest.md","ref":"basic/unittest.md","articles":[]},"previous":{"title":"输入输出","level":"1.3.10","depth":2,"path":"basic/inout.md","ref":"basic/inout.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/file.md","mtime":"2019-05-10T07:57:22.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-10T08:31:09.534Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
