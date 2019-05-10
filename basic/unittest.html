@@ -471,6 +471,61 @@
                                 <section class="normal markdown-section">
                                 
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x5355;&#x5143;&#x6D4B;&#x8BD5;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x5355;&#x5143;&#x6D4B;&#x8BD5;</h1>
+<p>&#x7F16;&#x5199;&#x5B8C;&#x4EE3;&#x7801;&#x540E;&#xFF0C;&#x53EA;&#x6709;&#x901A;&#x8FC7;&#x4E86;&#x6D4B;&#x8BD5;&#xFF0C;&#x624D;&#x53EF;&#x786E;&#x5B9A;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x6309;&#x8981;&#x6C42;&#x5B8C;&#x6210;&#x6307;&#x5B9A;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h4 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x6D4B;&#x8BD5;</h4>
+<p>&#x6BD4;&#x5982;&#x6709;&#x6BB5;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;name.py&#x4E2D;&#x3002;</p>
+<pre class="language-"><code>def get_name(first,last):
+    full_name = first+&#x2019; &#x2018;+last
+    return full_name.title()
+</code></pre><p>&#x8981;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x6BD4;&#x5982;&#x5BFC;&#x5165;&#x6A21;&#x5757;unittest&#x4EE5;&#x53CA;&#x8981;&#x6D4B;&#x8BD5;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;unittest.TestCase&#x7C7B;&#xFF0C;&#x5E76;&#x7F16;&#x5199;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x6CD5;&#x5BF9;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<pre class="language-"><code>import unittest
+from name import get_name
+
+class NamesTestCase(unittest.TestCase):
+    def test_full_name(self):
+        name = get_name(&apos;janis&apos;,&apos;joplin&apos;)
+        self.assertEqual(name, &apos;Janis Joplin&apos;)
+
+unittest.main()
+</code></pre><p>&#x4E0A;&#x9762;&#x4F7F;&#x7528;&#x4E86;unittest&#x7C7B;&#x5E38;&#x7528;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#xFF1A;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x3002;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x6838;&#x5B9E;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x4E0E;&#x9884;&#x671F;&#x7684;&#x7ED3;&#x679C;&#x4E00;&#x81F4;&#x3002;&#x5982;&#x679C;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5219;&#x6D4B;&#x8BD5;&#x901A;&#x4E0D;&#x8FC7;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6D4B;&#x8BD5;&#x672A;&#x901A;&#x8FC7;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x6B63;&#x786E;&#xFF0C;&#x800C;&#x7ED3;&#x679C;&#x4E0D;&#x5BF9;&#xFF0C;&#x5219;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x7EE7;&#x7EED;&#x6D4B;&#x8BD5;&#xFF0C;&#x77E5;&#x9053;&#x7B26;&#x5408;&#x9884;&#x671F;&#x7ED3;&#x679C;&#x3002;</p>
+<h4 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x7C7B;</h4>
+<p>unittest.TestCase&#x7C7B;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x3002;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x68C0;&#x67E5;&#x5E94;&#x8BE5;&#x6EE1;&#x8DB3;&#x7684;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;&#x5982;&#x679C;&#x6EE1;&#x8DB3;&#xFF0C;&#x5219;&#x7A0B;&#x5E8F;&#x6B63;&#x786E;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x5219;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x4EE3;&#x7801;&#x6709;&#x95EE;&#x9898;&#x6216;&#x8005;&#x53D1;&#x751F;&#x4E86;&#x5F02;&#x5E38;&#x3002;&#x4E0B;&#x9762;&#x8868;&#x683C;&#x4ECB;&#x7ECD;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assertEqual(a, b)</td>
+<td>&#x6838;&#x5B9E; a == b</td>
+</tr>
+<tr>
+<td>assertNotEqual(a, b)</td>
+<td>&#x6838;&#x5B9E; a != b</td>
+</tr>
+<tr>
+<td>asserTrue(x)</td>
+<td>&#x6838;&#x5B9E;x&#x4E3A;True</td>
+</tr>
+<tr>
+<td>assertFalse(x)</td>
+<td>&#x6838;&#x5B9E;x&#x4E3A;False</td>
+</tr>
+<tr>
+<td>assertIn(Item, list)</td>
+<td>&#x6838;&#x5B9E;item&#x5728;list&#x4E2D;</td>
+</tr>
+<tr>
+<td>assertNotIn(Item, list)</td>
+<td>&#x6838;&#x5B9E;item&#x4E0D;&#x5728;list&#x4E2D;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x9664;&#x4E86;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x6709;&#x4E2A;&#x65B9;&#x6CD5;setUp()&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x9700;&#x5728;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E2D;&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;&#x5BF9;&#x8C61;&#x4E00;&#x6B21;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x4E2D;&#x5C31;&#x53EF;&#x4F7F;&#x7528;&#x5B83;&#x4E86;&#x3002;&#x4E5F;&#x5C31;&#x662F;setUp()&#x65B9;&#x6CD5;&#x53EF;&#x5B9E;&#x4F8B;&#x8981;&#x521D;&#x59CB;&#x7684;&#x7C7B;&#x4EE5;&#x53CA;&#x521D;&#x59CB;&#x5316;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x4E2D;&#x80FD;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x590D;&#x521B;&#x5EFA;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                                 
                                 </section>
@@ -498,7 +553,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"单元测试","level":"1.3.12","depth":2,"next":{"title":"内置模块","level":"1.4","depth":1,"path":"module/README.md","ref":"module/README.md","articles":[]},"previous":{"title":"文件操作","level":"1.3.11","depth":2,"path":"basic/file.md","ref":"basic/file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/unittest.md","mtime":"2019-05-10T08:28:27.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-10T08:31:09.534Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"单元测试","level":"1.3.12","depth":2,"next":{"title":"内置模块","level":"1.4","depth":1,"path":"module/README.md","ref":"module/README.md","articles":[]},"previous":{"title":"文件操作","level":"1.3.11","depth":2,"path":"basic/file.md","ref":"basic/file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/unittest.md","mtime":"2019-05-10T09:39:49.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-10T09:40:06.165Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
