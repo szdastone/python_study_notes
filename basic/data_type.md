@@ -1,5 +1,34 @@
 # 数据类型
 
+Python内置的基本数据类型可简单分为数字、序列、映射和集合基类。又根据其实例是否可修改，分可变和不可变。
+
+| 名称      | 分类     | 可变类型 |
+| --------- | -------- | -------- |
+| int       | number   | N        |
+| float     | number   | N        |
+| str       | sequence | N        |
+| bytes     | sequence | N        |
+| bytearray | sequence | Y        |
+| list      | sequence | Y        |
+| tuple     | sequence | N        |
+| dict      | mapping  | Y        |
+| set       | set      | Y        |
+| frozenset | set      | N        |
+
+标准库collections.abc可列出相关类型的抽象基类，及是否可变。
+
+```
+>>>import collections.abc
+>>>issubclass(str,collections.abc.Sequence)
+True
+>>>issubclass(str,collections.abc.MutableSequence)
+False
+```
+
+
+
+
+
 ## 字符串
 
 字符串就是一系列字符，可用引号括起来的都是字符串。引号可以为单引号，双引号。可灵活的使用单引号与双引号。如果字符串包含有单双引号，可使用转义符(\\\)。当然，转义符也可以用来转义其他字符，比如制表符\t,换行符\n，但如果要使用\\，则需要使用\\\来表示！
@@ -111,16 +140,148 @@ Hello Python
 
 ### 整数
 
-可处理任意大小整数，并可使用加(+)减(-)乘(*)除-(/)来运算。可以用python当计算器做各种运算。
+在Python3中，将int、long这两种类型合并为int,采用变长结构。可处理任意大小整数，并可使用加(+)减(-)乘(*)除-(/)来运算。可以用python当计算器做各种运算。
 
 ```
 >>> 3*3
 9
 >>>3**3
 27
+>>>3/2    #单斜线为True Division，无论是否整除，总返回浮点数
+1.5
+>>>3 // 2   #双斜线为False Division，会截掉小数部分，仅返回整数结果
+1
 >>>(2+10)*2-(10+3)
 11
+>>>78_654_321      #由于逗号表示tuple语法，可使用下划线便是分割千位位数
+78654321
+>>>5%2   #取模运算符(mod)
+1
+>>>divmod(99,5)
+(19,4)
 ```
+
+除了十进制，还可以二进制、八进制、十六进制表示。下划线分隔符号也适用这些进制的字面量。
+
+```
+>>>0b110011   #bin 
+51
+>>>0o12       #oct
+10
+>>>0x64      #hex
+100
+>>>0b_11001_1  
+51
+```
+
+可用内置函数将整数转换为指定进制字符串，或使用int还原，int函数默认为十进制，会忽略空格、制表符等，如指定进制，则可省略相关进制前缀。
+
+```
+>>>int("0b1100100",2)
+100
+>>>int("0o144",8)
+100
+>>>int("0x64",16)
+100
+>>>int("64",16)
+100
+>>>int("  100\t  ")
+100
+```
+
+如使用eval也可完成转换，但性能要差很多。
+
+将整数转换为字节数组时需要指定目标字节数组大小，而整数类型是变长结构，故通过二进制位长度来计算，另可通过sys.byteorder来获取当前系统字节序。
+
+```
+>>>x=0x1234
+>>>n=(x.bit_length()+8-1)//8  #计算按8位对齐所需的字节数
+>>>b=x.to_bytes(n,sys.byteorder)
+>>>b.hex()
+'3412'
+>>>hex(int.from_bytes(b,sys.byteorder))
+'0x1234'
+```
+
+##### 布尔
+
+布尔为整数子类型。True，False可当做整数直接使用。
+
+```
+>>>True == 1
+True
+>>> False == 0
+True
+>>>issubclass(bool,int)
+True
+>>>isinstance(True,int)
+True
+>>>True+1
+2
+```
+
+在进行布尔转换时，数字零、空值(None)、空序列和空字典都为False，反之为True。
+
+```
+>>>data=(0,0.0,None,"",list(),tuple(),dict(),set(),frozenset())
+>>>any(map(bool,data))
+False
+```
+
+##### 枚举
+
+Python中没有枚举类型的定义，但可通过标准库来实现。首先定义枚举类型，随后由内部代码生成枚举值实例。
+
+```
+>>>import enum
+>>>Color = enum.Enum("Color","BLACK YELLOW BLUE RED")
+>>>isinstance(Color.BLACK, Color)
+True
+>>>list(Color)
+[<Color.BLACK: 1>, <Color.YELLOW: 2>, <Color.BLUE: 3>, <Color.RED: 4>]
+```
+
+枚举值不一定为整数，可通过继承，将其指定为任一类型。
+
+```
+>>>class X(enum.Enum):
+	A="a"
+	B=100
+	C=[1,2,3]
+	
+>>>X.C
+<X.C: [1, 2, 3]>
+```
+
+枚举类型的内部以字典方式实现，每个枚举值都有name和value属性。可通过名字或值查找对应枚举实例。按字典规则，值可相同，但名字不可重复。如要避免相同枚举定义，可用enum.unique装饰器。
+
+```
+>>>X.B.name
+'B'
+>>>X.B.value
+100
+>>>X["B"]
+<X.B: 100>
+>>>X([1,2,3])
+<X.C: [1, 2, 3]>
+```
+
+##### 内存
+
+在Python中，小数字都会预先缓存，一般缓存范围为[-5,256]。如超出这个范围，则要新建对象，并内存分配等。
+
+```
+>>>a=-5
+>>>b=-5
+>>>a is b
+True
+>>>a=257
+>>>b=257
+>>>a is b
+False
+```
+
+
 
 ### 浮点数
 
