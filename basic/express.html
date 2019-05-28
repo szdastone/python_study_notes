@@ -1,0 +1,839 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>表达式 · Python学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Dastone Deng <dastone.deng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/stype.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/katex/dist/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/prismjs/themes/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="if.html" />
+    
+    
+    <link rel="prev" href="dict.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://szdastone.github.io" target="_blank" class="custom-link">我的主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../install/install.html">
+            
+                <a href="../install/install.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../install/venv.html">
+            
+                <a href="../install/venv.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="dict.html">
+            
+                <a href="dict.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="express.html">
+            
+                <a href="express.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="if.html">
+            
+                <a href="if.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="loop.html">
+            
+                <a href="loop.html">
+            
+                    
+                        <b>1.3.6.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                        <b>1.3.7.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                        <b>1.3.8.</b>
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="exception.html">
+            
+                <a href="exception.html">
+            
+                    
+                        <b>1.3.9.</b>
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="inout.html">
+            
+                <a href="inout.html">
+            
+                    
+                        <b>1.3.10.</b>
+                    
+                    输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                        <b>1.3.11.</b>
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                        <b>1.3.12.</b>
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../module/">
+            
+                <a href="../module/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../common/requests.html">
+            
+                <a href="../common/requests.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >表达式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x8868;&#x8FBE;&#x5F0F;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x8868;&#x8FBE;&#x5F0F;</h1>
+<h3 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D4B;&#x503C;</h3>
+<p>&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x4E3A;&#x53D8;&#x91CF;&#x540D;&#x4E0E;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x5EFA;&#x7ACB;&#x5173;&#x8054;&#x3002;</p>
+<p>&#x591A;&#x4E2A;&#x540D;&#x5B57;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt;a = b = c = 1023
+&gt;&gt;&gt; a is b is c
+True
+</code></pre><p>&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x5272;&#x591A;&#x4E2A;&#x503C;&#x4F1A;&#x5F53;&#x505A;&#x5143;&#x7EC4;&#x7684;&#x521D;&#x59CB;&#x5316;&#x5143;&#x7D20;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = 1, &quot;abc&quot;, {10, 20}
+&gt;&gt;&gt; x
+(1, &apos;abc&apos;, {10, 20})
+</code></pre><h4 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x589E;&#x91CF;&#x8D4B;&#x503C;</h4>
+<p>&#x589E;&#x91CF;&#x8D4B;&#x503C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x539F;&#x5BF9;&#x8C61;&#x5185;&#x5BB9;&#xFF0C;&#x5B9E;&#x73B0;&#x7D2F;&#x52A0;&#x6548;&#x679C;&#x3002;&#x524D;&#x63D0;&#x662F;&#x76EE;&#x6807;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x800C;&#x4E14;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x5141;&#x8BB8;&#xFF0C;&#x5426;&#x5219;&#x4E3A;&#x666E;&#x901A;&#x8D4B;&#x503C;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x53EF;&#x53D8;&#x5217;&#x8868;&#xFF0C;&#x4E0D;&#x53EF;&#x53D8;&#x5143;&#x7EC4;&#x8FDB;&#x884C;&#x589E;&#x91CF;&#x8D4B;&#x503C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; s = 0
+&gt;&gt;&gt; s += 10
+&gt;&gt;&gt; a = b = []
+&gt;&gt;&gt; a += [1,2]
+&gt;&gt;&gt; a is b               # &#x540C;&#x4E00;&#x5BF9;&#x8C61;
+True
+&gt;&gt;&gt; c = d = ()
+&gt;&gt;&gt; c += (1, 2)
+&gt;&gt;&gt; c is d               # &#x65B0;&#x5BF9;&#x8C61;
+False
+</code></pre><p>&#x53EF;&#x770B;&#x51FA;&#xFF0C;&#x5217;&#x8868;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x539F;&#x5185;&#x5BB9;&#xFF0C;&#x800C;&#x5143;&#x7EC4;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;&#x3002;&#x6309;&#x7F16;&#x8BD1;&#x5668;&#x5904;&#x7406;&#x662F;&#x6309;INPLACE<em>ADD&#x6307;&#x4EE4;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x6309;&#x65F6;&#x6309;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#x5B9A;&#x3002;&#x8FD9;&#x91CC;&#x7684;+=&#xFF0C;&#x5BF9;&#x5E94;\</em>_iadd__&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x8BE5;&#x65B9;&#x6CD5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x6267;&#x884C;__add__&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4ECE;&#x589E;&#x91CF;&#x64CD;&#x4F5C;&#x53D8;&#x6210;&#x4E86;&#x666E;&#x901A;&#x52A0;&#x6CD5;&#x64CD;&#x4F5C;&#x4E86;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; &quot;__iadd__&quot; in dir([1,2])
+True
+&gt;&gt;&gt; &quot;__iadd__&quot; in dir((1,2))
+False
+&gt;&gt;&gt; &quot;__add__&quot; in dir((1,2))
+True
+</code></pre><h4 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E8F;&#x5217;&#x89E3;&#x5305;</h4>
+<p>&#x4E0E;&#x591A;&#x4E2A;&#x540D;&#x5B57;&#x5173;&#x8054;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0D;&#x540C;&#xFF0C;&#x5E8F;&#x5217;&#x89E3;&#x5305;&#x662F;&#x5C55;&#x5F00;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x518D;&#x5206;&#x522B;&#x4E8E;&#x591A;&#x4E2A;&#x540D;&#x5B57;&#x5173;&#x8054;&#x3001;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a, b, c = [1, 2, 3]
+&gt;&gt;&gt; a, b, c
+(1, 2, 3)
+&gt;&gt;&gt; a, b, c = &quot;xyz&quot;
+&gt;&gt;&gt; a, b, c
+(&apos;x&apos;, &apos;y&apos;, &apos;z&apos;)
+&gt;&gt;&gt; a, b, c = range(3)
+&gt;&gt;&gt; a, b, c
+(0, 1, 2)
+&gt;&gt;&gt; a, b = [1,2], (3,4)
+&gt;&gt;&gt; a
+[1, 2]
+&gt;&gt;&gt; b
+(3, 4)
+&gt;&gt;&gt; a, b = b, a   #&#x4EA4;&#x6362;&#x5BF9;&#x8C61;
+&gt;&gt;&gt; a
+(3, 4)
+&gt;&gt;&gt; b
+[1, 2]
+&gt;&gt;&gt; a, ((b, c), (d, e)) = 1, [(10, 20), &quot;ab&quot;] #&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#xFF0C;&#x5DE6;&#x53F3;&#x503C;&#x8868;&#x8FBE;&#x5F0F;&#x4EE5;&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5D4C;&#x5957;&#x3002;
+&gt;&gt;&gt; a, b, c, d, e
+(1, 10, 20, &apos;a&apos;, &apos;b&apos;)
+&gt;&gt;&gt; a, _, b, _, c = &quot;a0b0c&quot;  #&#x4EE5;_&#x6765;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x5143;&#x7D20;
+&gt;&gt;&gt; a, b, c
+(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;)
+&gt;&gt;&gt; a, b = 1, 2, 3    #&#x5E8F;&#x5217;&#x5143;&#x7D20;&#x4E0E;&#x53D8;&#x91CF;&#x540D;&#x4E0D;&#x7B49;&#x65F6;&#x89E3;&#x5305;&#x9519;&#x8BEF;
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+ValueError: too many values to unpack (expected 2)
+&gt;&gt;&gt; a, *b, c = range(5)  #&#x540D;&#x5B57;&#x524D;&#x6DFB;&#x52A0;&#x661F;&#x53F7;*&#xFF0C;&#x8868;&#x793A;&#x53EF;&#x63A5;&#x7EB3;&#x6240;&#x6709;&#x591A;&#x4F59;&#x5143;&#x7D20;
+&gt;&gt;&gt; a, b, c
+(0, [1, 2, 3], 4)
+&gt;&gt;&gt; a, *b, c = 1, 2   #&#x6536;&#x96C6;&#x4E0D;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x5217;&#x8868;
+&gt;&gt;&gt; a, b, c
+(1, [], 2)
+&gt;&gt;&gt; a, *b, c, d = 1, 2  # &#x5143;&#x7D20;&#x5C11;&#x4E8E;&#x975E;&#x6536;&#x96C6;&#x53D8;&#x91CF;&#x540D;&#x6570;&#x76EE;
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+ValueError: not enough values to unpack (expected at least 3, got 2)
+&gt;&gt;&gt; a, *b, *c, d = range(10)  # &#x4E0D;&#x80FD;&#x51FA;&#x73B0;2&#x4E2A;&#x6216;&#x4EE5;&#x4E0A;&#x7684;&#x661F;&#x53F7;
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1
+SyntaxError: two starred expressions in assignment
+&gt;&gt;&gt; *a = 1, 2                 # &#x661F;&#x53F7;&#x6536;&#x96C6;&#x4E0D;&#x80FD;&#x5355;&#x72EC;&#x51FA;&#x73B0;
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1
+SyntaxError: starred assignment target must be in a list or tuple
+&gt;&gt;&gt; [*a] = 1, 2               # &#x661F;&#x53F7;&#x5355;&#x72EC;&#x51FA;&#x73B0;&#x9700;&#x653E;&#x5728;&#x5217;&#x8868;/&#x5143;&#x7EC4;&#x4E2D;
+&gt;&gt;&gt; a
+[1, 2]
+&gt;&gt;&gt; (*a,) = 1, 2              # 1&#x4E2A;&#x5143;&#x7956;&#xFF0C;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x9017;&#x53F7;
+&gt;&gt;&gt; a
+[1, 2]
+&gt;&gt;&gt; for a, *b in [&quot;abc&quot;, (1,2,3)]: print(a,b) #&#x5E8F;&#x5217;&#x89E3;&#x5305;&#x548C;&#x661F;&#x53F7;&#x6536;&#x96C6;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x573A;&#x666F;
+a [&apos;b&apos;, &apos;c&apos;]
+1 [2, 3]
+</code></pre><p>&#x661F;&#x53F7;&#x8FD8;&#x53EF;&#x5C55;&#x5F00;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x6709;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#x3001;&#x5B57;&#x5178;&#x3001;&#x96C6;&#x5408;&#x3001;&#x6587;&#x4EF6;&#x7B49;&#x90FD;&#x662F;&#x53EF;&#x8FED;&#x4EE3;&#x7C7B;&#x578B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a = (1, 2)
+&gt;&gt;&gt; b = &quot;ab&quot;
+&gt;&gt;&gt; c = range(10, 13)
+&gt;&gt;&gt; [*a, *b, *c]
+[1, 2, &apos;a&apos;, &apos;b&apos;, 10, 11, 12]
+&gt;&gt;&gt; d= {&quot;a&quot;: 1, &quot;b&quot;: 2}
+&gt;&gt;&gt; [*d]        # &#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x5355;&#x661F;&#x53F7;&#x5C55;&#x5F00;&#x4E3B;&#x952E;
+[&apos;a&apos;, &apos;b&apos;]
+&gt;&gt;&gt; {&quot;c&quot;: 3, **d}  # &#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x53CC;&#x661F;&#x53F7;&#x5C55;&#x5F00;&#x952E;&#x503C;
+{&apos;c&apos;: 3, &apos;a&apos;: 1, &apos;b&apos;: 2}
+</code></pre><p>&#x5728;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x53EF;&#x5C06;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#x5206;&#x89E3;&#x6210;&#x591A;&#x4E2A;&#x5B9E;&#x53C2;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test(a, b, c):
+...     print(locals())
+&gt;&gt;&gt; test(*range(3))
+{&apos;a&apos;: 0, &apos;b&apos;: 1, &apos;c&apos;: 2}
+&gt;&gt;&gt; test(*[1,2], 3)
+{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3}
+&gt;&gt;&gt; a = {&quot;a&quot;: 1, &quot;c&quot;:3}
+&gt;&gt;&gt; b = {&quot;b&quot;: 2}
+&gt;&gt;&gt; test(**b, **a)
+{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3}
+</code></pre><h4 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;&#x57DF;</h4>
+<p>&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x9ED8;&#x8BA4;&#x662F;&#x9488;&#x5BF9;&#x5F53;&#x524D;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x7684;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; g = 1
+&gt;&gt;&gt; def outer():
+...     e = 2
+...     def inner():
+...             global g     #&#x58F0;&#x660E;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+...             nonlocal e     #&#x58F0;&#x660E;&#x5916;&#x90E8;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#x53D8;&#x91CF;
+...             g = 10
+...             e = 20
+...     inner()
+...     return e
+...
+&gt;&gt;&gt; outer()
+20
+&gt;&gt;&gt; g
+10
+</code></pre><p>&#x53EF;&#x7528;global&#x5728;&#x51FD;&#x6570;&#x5185;&#x521B;&#x5EFA;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x7528;nonlocal&#x5219;&#x81EA;&#x5185;&#x5411;&#x5916;&#x4E00;&#x6B21;&#x68C0;&#x7D22;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x62EC;&#x5168;&#x5C40;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x591A;&#x5C42;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#x5B58;&#x5728;&#x540C;&#x540D;&#x53D8;&#x91CF;&#xFF0C;&#x5219;&#x5C31;&#x8FD1;&#x539F;&#x5219;&#x5904;&#x7406;&#xFF0C;&#x53E6;&#x5916;&#xFF0C;nonlocal&#x4E0D;&#x80FD;&#x4E3A;&#x5916;&#x5C42;&#x5D4C;&#x5957;&#x51FD;&#x6570;&#x65B0;&#x5EFA;&#x53D8;&#x91CF;&#x3002;&#x4E0D;&#x540C;global&#x8FD0;&#x884C;&#x671F;&#x884C;&#x4E3A;&#xFF0C;nonlocal&#x8981;&#x6C42;&#x7F16;&#x8BD1;&#x671F;&#x7ED1;&#x5B9A;&#xFF0C;&#x6545;&#x76EE;&#x6807;&#x53D8;&#x91CF;&#x63D0;&#x524D;&#x5B58;&#x5728;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def enclosing():
+...     x = 1
+...     def outer():
+...             def inner():
+...                     nonlocal x
+...                     x = 999
+...             inner()
+...     outer()
+...     print(x)
+...
+&gt;&gt;&gt; enclosing()
+999
+
+&gt;&gt;&gt; def inner():
+...     nonlocal x
+...
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 2
+SyntaxError: no binding for nonlocal &apos;x&apos; found
+</code></pre><h3 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>Python&#x8FD0;&#x7B97;&#x7B26;&#x63A5;&#x8FD1;&#x81EA;&#x7136;&#x8868;&#x8FBE;&#x65B9;&#x5F0F;&#x3002;&#x4F46;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x987A;&#x5E8F;&#x548C;&#x9690;&#x5F0F;&#x8F6C;&#x6362;&#x4F1A;&#x5BFC;&#x81F4;&#x67D0;&#x4E9B;&#x9690;&#x853D;&#x9519;&#x8BEF;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; not &quot;a&quot; in [&quot;a&quot;, 1]   # &#x5E94;&#x8BE5;&#x5148;in&#x540E;not
+False
+&gt;&gt;&gt; (not &quot;a&quot;) in [&quot;a&quot;, 1]
+False
+&gt;&gt;&gt; not (&quot;a&quot; in [&quot;a&quot;, 1])  #&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#xFF0C;&#x907F;&#x514D;&#x8BEF;&#x89E3;
+False
+</code></pre><figure id="fig1.3.4.1"><a href="https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png" data-lightbox="1.3.4.1" target="_blank"><img src="https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png" alt="1559027907842"></a><figcaption>&#x56FE;&#xFF1A;1559027907842</figcaption></figure>
+<p>&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;&#x5982;&#x4E0A;&#x56FE;&#x3002;</p>
+<p>&#x6807;&#x51C6;&#x5E93;operator&#x63D0;&#x4F9B;&#x4E86;&#x7279;&#x5B9A;&#x51FD;&#x6570;&#x6216;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x53EF;&#x50CF;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x90A3;&#x6837;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def calc(x, y, op):
+...     return op(x, y)
+...
+&gt;&gt;&gt; import operator
+&gt;&gt;&gt; calc(1, 2, operator.add)    # operator&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x8FD0;&#x7B97;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;help(operator)&#x67E5;&#x770B;
+3
+</code></pre><h4 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x94FE;&#x5F0F;&#x6BD4;&#x8F83;</h4>
+<p>&#x94FE;&#x5F0F;&#x6BD4;&#x8F83;&#x5C31;&#x662F;&#x5C06;&#x591A;&#x4E2A;&#x6BD4;&#x8F83;&#x8868;&#x8FBE;&#x5F0F;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x6709;&#x6548;&#x7F29;&#x77ED;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x53EF;&#x63D0;&#x4F9B;&#x6027;&#x80FD;&#x4EE5;&#x53CA;&#x66F4;&#x7B26;&#x5408;&#x9605;&#x8BFB;&#x4E60;&#x60EF;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a, b = 2, 3
+&gt;&gt;&gt; a &gt; 0 and b &gt; a and b &lt;= 5
+True
+&gt;&gt;&gt; 0&lt;a&lt;b&lt;=5
+True
+</code></pre><h4 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5207;&#x7247;</h4>
+<p>&#x5207;&#x7247;&#x53EF;&#x7528;&#x4E8E;&#x8868;&#x8FBE;&#x5E8F;&#x5217;&#x7247;&#x6BB5;&#x6216;&#x6574;&#x4F53;&#x3002;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x7531;3&#x4E2A;&#x53C2;&#x6570;&#x6784;&#x6210;&#xFF0C;[start: stop: step]&#x3002;&#x4EE5;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x6784;&#x6210;&#x534A;&#x5F00;&#x534A;&#x95ED;&#x533A;&#x95F4;&#xFF0C;&#x4E0D;&#x542B;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#x3002;&#x9ED8;&#x8BA4;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x4E3A;0&#xFF0C;&#x7ED3;&#x675F;&#x4E3A;&#x6B62;&#x4E3A;len(x)&#xFF0C;&#x9ED8;&#x8BA4;&#x6B65;&#x957F;&#x4E3A;1&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = [0, 1, 2, 3, 4, 5, 6]
+&gt;&gt;&gt; s = x[2:5]    # &#x4ECE;&#x5217;&#x8868;&#x590D;&#x5236;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x7684;&#x5F15;&#x7528;
+&gt;&gt;&gt; s
+[2, 3, 4]
+&gt;&gt;&gt; x.insert(3, 100)  #&#x4FEE;&#x6539;&#x539F;&#x5217;&#x8868;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x5207;&#x7247;
+&gt;&gt;&gt; x
+[0, 1, 2, 100, 3, 4, 5, 6]
+&gt;&gt;&gt; s
+[2, 3, 4]
+&gt;&gt;&gt; x[:5]    #&#x7701;&#x7565;&#x8D77;&#x59CB;&#xFF0C;&#x4EE5;0&#x5F00;&#x59CB;
+[0, 1, 2, 100, 3]  
+&gt;&gt;&gt; x[2:]   #&#x7701;&#x7565;&#x7ED3;&#x675F;&#xFF0C;&#x5230;&#x6700;&#x5C3E;&#x3002;
+[2, 100, 3, 4, 5, 6]
+&gt;&gt;&gt; x[:]    #&#x5B8C;&#x6210;&#x590D;&#x5236;
+[0, 1, 2, 100, 3, 4, 5, 6]
+&gt;&gt;&gt; x[2:6:2]  #&#x6307;&#x5B9A;&#x6B65;&#x957F;&#x4E3A;2
+[2, 3]
+&gt;&gt;&gt; x[::2]  #&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#xFF0C;&#x6B65;&#x957F;&#x4E3A;2
+[0, 2, 3, 5]
+&gt;&gt;&gt; x[::-1] #&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#xFF0C;&#x53CD;&#x5411;&#x590D;&#x5236;
+[6, 5, 4, 3, 100, 2, 1, 0]
+&gt;&gt;&gt; x[5:2:-1] #&#x53CD;&#x5411;&#x6B65;&#x8FDB;
+[4, 3, 100]
+&gt;&gt;&gt; x[-2:-5:-1]  #&#x7528;&#x8D1F;&#x7D22;&#x5F15;&#x8868;&#x8FBE;&#x8D77;&#x59CB;&#xFF0C;&#x7ED3;&#x675F;&#xFF0C;&#x53CD;&#x5411;&#x6B65;&#x957F;&#x3002;
+[5, 4, 3]
+&gt;&gt;&gt; x[-2]      #&#x4F7F;&#x7528;&#x8D1F;&#x7D22;&#x5F15;&#x6765;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5E8F;&#x5217;&#x5143;&#x7D20;
+5
+
+&gt;&gt;&gt; x[3:7]
+[100, 3, 4, 5]
+&gt;&gt;&gt; del x[3:7]   #&#x4F7F;&#x7528;&#x5207;&#x7247;&#x6765;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5E8F;&#x5217;
+&gt;&gt;&gt; x
+[0, 1, 2, 6]
+&gt;&gt;&gt; del x[::2]   #&#x6B65;&#x8FDB;&#x5220;&#x9664;
+&gt;&gt;&gt; x
+[1, 6]
+</code></pre><p>&#x9664;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#x4E5F;&#x53EF;&#x7528;itertools.islice&#x51FD;&#x6570;&#x6765;&#x6267;&#x884C;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4EE5;&#x5207;&#x7247;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5C40;&#x90E8;&#x8D4B;&#x503C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5148;&#x5220;&#x9664;&#xFF0C;&#x540E;&#x63D2;&#x5165;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = [0, 1, 2, 3, 4, 5, 6]
+&gt;&gt;&gt; x[2:6] = [10, 20]
+&gt;&gt;&gt; x
+[0, 1, 10, 20, 6]
+
+&gt;&gt;&gt; x = [0, 1, 2, 3, 4, 5, 6]
+&gt;&gt;&gt; x[::2]
+[0, 2, 4, 6]
+&gt;&gt;&gt; x[::2] = [10,20,40,60]   #&#x5982;&#x7528;&#x6B65;&#x8FDB;&#x63D2;&#x5165;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x4E0E;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x76F8;&#x7B49;&#x3002;
+&gt;&gt;&gt; x
+[10, 1, 20, 3, 40, 5, 60]
+&gt;&gt;&gt; x[::2] = [10,20,40,60,80]   # &#x6B65;&#x8FDB;&#x63D2;&#x5165;&#xFF0C;&#x5220;&#x9664;&#x4E0E;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x4E0D;&#x7B49;&#x3002;
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+ValueError: attempt to assign sequence of size 5 to extended slice of size 4
+</code></pre><h4 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x8FD0;&#x7B97;</h4>
+<p>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x591A;&#x6761;&#x4EF6;&#x7684;&#x5E03;&#x5C14;&#x7ED3;&#x679C;&#xFF0C;&#x6216;&#x8FD4;&#x56DE;&#x6709;&#x6548;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x3002;</p>
+<p>&#x5206;&#x522B;&#x4EE5;and &#x3001;or&#x3001;not&#x8FD0;&#x7B97;&#x7B26;&#x8868;&#x793A;&#x903B;&#x8F91;&#x4E0E;&#x3001;&#x6216;&#x3001;&#x975E;&#x4E09;&#x79CD;&#x5173;&#x7CFB;&#x3002;</p>
+<p>and&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x6216;&#x5BFC;&#x81F4;&#x77ED;&#x8DEF;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#xFF1B;or&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x771F;&#x503C;&#xFF0C;&#x6216;&#x6700;&#x540E;&#x64CD;&#x4F5C;&#x6570;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x76F8;&#x540C;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;&#x4E00;&#x65E6;&#x77ED;&#x8DEF;&#xFF0C;&#x540E;&#x7EED;&#x8BA1;&#x7B97;&#x88AB;&#x7EC8;&#x6B62;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; 1 and 2  # &#x6700;&#x540E;&#x64CD;&#x4F5C;&#x6570;
+2
+&gt;&gt;&gt; 1 and 0 and 2 #&#x5BFC;&#x81F4;&#x77ED;&#x8DEF;&#x7684;&#x64CD;&#x4F5C;&#x6570;
+0
+&gt;&gt;&gt; 1 or 0   #&#x7B2C;&#x4E00;&#x771F;&#x503C;
+1
+&gt;&gt;&gt; 0 or 1 or 2  #&#x7B2C;&#x4E00;&#x771F;&#x503C;
+1
+&gt;&gt;&gt; 0 or []  # &#x6700;&#x540E;&#x64CD;&#x4F5C;&#x6570;
+[]
+
+&gt;&gt;&gt; def x(o):
+...     print(&quot;op:&quot;, o)
+...     return o
+...
+&gt;&gt;&gt; x(0) and x(1)  # 0 &#x5BFC;&#x81F4;&#x77ED;&#x8DEF;&#xFF0C;&#x540E;&#x7EED;&#x4E0D;&#x8BA1;&#x7B97;
+op: 0
+0
+&gt;&gt;&gt; x(1) or x(2)  # &#x8FD4;&#x56DE;1&#x771F;&#x503C;&#xFF0C;&#x540E;&#x7EED;&#x4E0D;&#x8BA1;&#x7B97;
+op: 1
+1
+&gt;&gt;&gt; x(0) and x(1) or x(2)  #&#x4E0D;&#x540C;&#x8FD0;&#x7B97;&#x7B26;&#x987B;&#x591A;&#x6B21;&#x8BA1;&#x7B97;&#x3002;
+op: 0
+op: 2
+2
+</code></pre><h5 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;</h5>
+<p>&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x3002;T if X else F&#xFF1A;&#x5F53;&#x6761;&#x4EF6;X&#x4E3A;&#x771F;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;T&#xFF0C;&#x5426;&#x8005;&#x8FD4;&#x56DE;F&#x3002;&#x7B49;&#x540C;X?T:F&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; &quot;T&quot; if 2&gt;1 else &quot;F&quot;
+&apos;T&apos;
+&gt;&gt;&gt; 2 &gt; 1 and &quot;T&quot; or &quot;F&quot;
+&apos;T&apos;
+&gt;&gt;&gt; 2 &lt; 1 and &quot;T&quot; or &quot;F&quot;
+&apos;F&apos;
+&gt;&gt;&gt; 2 &lt; 1 and &quot;T&quot;   #a.&#x5206;&#x89E3;&#x4E0A;&#x9762;&#x8FD0;&#x7B97;&#x7B26;&#x3002;2&lt;1&#x5BFC;&#x81F4;&#x77ED;&#x8DEF;
+False
+&gt;&gt;&gt; False or &quot;F&quot;    #b.&#x5206;&#x89E3;&#x4E0A;&#x9762;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x8FD4;&#x56DE;&#x771F;&#x503C;&quot;F&quot;
+&apos;F&apos;
+&gt;&gt;&gt; 2 &gt; 1 and &quot;&quot; or &quot;F&quot;   #T&#x4E3A;&#x5047;&#x65F6;&#xFF0C;or&#x5FC5;&#x987B;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x64CD;&#x4F5C;&#x6570;&#xFF0C;&#x8FD9;&#x4E0E;&#x9884;&#x671F;&#x4E0D;&#x7B26;&#x3002;
+&apos;F&apos;
+&gt;&gt;&gt; &quot;&quot; if 2 &gt; 1 else &quot;F&quot;    #&#x5F53;T&#x548C;F&#x65F6;&#x52A8;&#x6001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x66F4;&#x5B89;&#x5168;&#x70B9;&#x3002;
+&apos;&apos;
+
+&gt;&gt;&gt; x = None 
+&gt;&gt;&gt; y = x or 100    #&#x53EF;&#x7B80;&#x5316;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C;
+&gt;&gt;&gt; y = x and x*2 or 100  #&#x53EF;&#x7B80;&#x5316;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C;
+</code></pre><h3 id="anchor_10"><a name="anchor_10" class="anchor-navigation-ex-anchor" href="#anchor_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A8;&#x5BFC;&#x5F0F;</h3>
+<p>&#x63A8;&#x5BFC;&#x5F0F;&#x5C31;&#x662F;&#x6574;&#x5408;for&#x3001;if&#x8BED;&#x53E5;&#x6765;&#x6784;&#x9020;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#x548C;&#x96C6;&#x5408;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; [x for x in range(5)]  #&#x5217;&#x8868;
+[0, 1, 2, 3, 4]
+&gt;&gt;&gt; [x+10 for x in range(10) if x % 2 == 0]   #&#x6761;&#x4EF6;&#x8FC7;&#x6EE4;&#x540E;&#x7684;&#x5217;&#x8868;
+[10, 12, 14, 16, 18]
+
+&gt;&gt;&gt; {k:v for k, v in zip(&quot;abc&quot;, range(10,13))}  #&#x5B57;&#x5178;&#xFF0C;&#x4F7F;&#x7528;&#x5927;&#x62EC;&#x53F7;
+{&apos;a&apos;: 10, &apos;b&apos;: 11, &apos;c&apos;: 12}
+&gt;&gt;&gt; {x for x in &quot;abc&quot;}   #&#x96C6;&#x5408;&#xFF0C;&#x4F7F;&#x7528;&#x5927;&#x62EC;&#x53F7;
+{&apos;c&apos;, &apos;a&apos;, &apos;b&apos;}
+
+&gt;&gt;&gt; [f&quot;{x} {y}&quot; for x in &quot;abc&quot; if x!=&quot;c&quot;   #&#x591A;&#x5D4C;&#x5957;&#x4F7F;&#x7528;&#x63A8;&#x5BFC;&#x5F0F;&#xFF0C;&#x53EF;&#x7528;&#x591A;&#x4E2A;for&#x5B50;&#x53E5;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B50;&#x53E5;&#x53EF;&#x9009;&#x4E00;&#x4E2A;if&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x3002;
+...             for y in range(3) if y !=0 ]
+[&apos;a 1&apos;, &apos;a 2&apos;, &apos;b 1&apos;, &apos;b 2&apos;]
+</code></pre><p>&#x548C;&#x666E;&#x901A;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x4E0D;&#x540C;&#xFF0C;&#x63A8;&#x5BFC;&#x5F0F;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x4E0D;&#x5F71;&#x54CD;&#x4E0A;&#x4E0B;&#x6587;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x3002;&#x63A8;&#x5BFC;&#x5F0F;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x4E2D;&#x4F1A;&#x751F;&#x6210;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x53D8;&#x91CF;&#x5728;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x51FD;&#x6570;&#x5185;&#x4F7F;&#x7528;&#xFF0C;&#x6545;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     a=&quot;abc&quot;
+...     data = {a:b for a,b in zip(&quot;xyz&quot;,range(10,13))}  #&#x8FD9;&#x91CC;a,b&#x662F;&#x4E34;&#x65F6;&#x53D8;&#x91CF;
+...     print(locals())
+...
+&gt;&gt;&gt; test()
+{&apos;a&apos;: &apos;abc&apos;, &apos;data&apos;: {&apos;x&apos;: 10, &apos;y&apos;: 11, &apos;z&apos;: 12}}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x63A8;&#x5BFC;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#xFF0C;&#x5E76;&#x975E;&#x521B;&#x5EFA;&#x5143;&#x7EC4;&#xFF0C;&#x800C;&#x662F;&#x521B;&#x5EFA;&#x751F;&#x6210;&#x5668;&#x5BF9;&#x8C61;&#x3002;&#x533A;&#x522B;&#x4E8E;&#x63A8;&#x5BFC;&#x5F0F;&#xFF0C;&#x79F0;&#x4E3A;&#x751F;&#x6210;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; (x for x in range(3))
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>generator</span> <span class="token attr-name">object</span> <span class="token attr-name">&lt;genexpr</span><span class="token punctuation">&gt;</span></span> at 0x00000213A1770A20&gt;
+</code></pre><footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dict.html" class="navigation navigation-prev " aria-label="Previous page: 字典">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="if.html" class="navigation navigation-next " aria-label="Next page: 流程控制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"表达式","level":"1.3.4","depth":2,"next":{"title":"流程控制","level":"1.3.5","depth":2,"path":"basic/if.md","ref":"basic/if.md","articles":[]},"previous":{"title":"字典","level":"1.3.3","depth":2,"path":"basic/dict.md","ref":"basic/dict.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"},{"alt":"1559027907842","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png","label":"1559027907842","key":"1.3.4.1","backlink":"basic/express.html#fig1.3.4.1","nro":3,"list_caption":"图：1559027907842"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/express.md","mtime":"2019-05-28T09:10:11.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T09:56:31.352Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/jquery.mark.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/main.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

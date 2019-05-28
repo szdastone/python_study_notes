@@ -1,8 +1,8 @@
 # 循环
 
-在列表、元组及字典中经常都用到了for循环，用来对集合中每个元素进行遍历。下面介绍while循环。
+在列表、元组及字典中经常都用到了for循环，用来对集合中每个元素进行遍历。简单来说，while执行逻辑循环；for偏向对象内容迭代。
 
-#### while循环
+### while循环
 
 while循环就是不断运行，直到指定条件不满足为止。比如：
 
@@ -23,7 +23,7 @@ while message != 'quit':
 		print(message)
 ```
 
-#### break退出循环
+##### break退出循环
 
 在while循环中，可不管任何条件，都可使用break来退出循环。比如：
 
@@ -74,5 +74,65 @@ while 'cat' in pets:
 	
 ```
 
+### for迭代
 
+遍历可迭代对象时，可进一步执行序列解包。次序是先取迭代元素，然后对该元素做解包操作。
+
+```
+>>> for a, b in [(1, 2), (3, 4)]:
+...     print(a, b)
+...
+1 2
+3 4
+>>> for a, b in [1 ,2]:   #从列表取一个元素，但单个整数无法展开
+...     print(a, b)
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot unpack non-iterable int object
+```
+
+
+
+如要实现传统for循环，可用enumerate类型。它可为迭代元素自动增加序号，如此解包操作就可获取索引值。
+
+```
+>>> for i, x in enumerate([100,200,300]):
+...     print(i, x)
+...
+0 100
+1 200
+2 300
+
+>>> def data():
+...     print("data")
+...     return range(3)
+...
+>>> for i in data():   #迭代对象以函数返回，该函数只调用1次。
+...     print(i)
+...
+data
+0
+1
+2
+```
+
+
+
+循环语句没有单独名字空间，其内部临时变量会直接影响所在上下文。
+
+```
+>>> def test():
+...     while True:
+...             x =100
+...             break
+...     for i in range(10,20):
+...             pass
+...     print(locals())   # x ,i实际使用了test.locals名字空间
+...     print(x,i)
+...
+>>> test()
+{'x': 100, 'i': 19}
+100 19
+```
 
