@@ -8,6 +8,7 @@
     * [数据类型](basic/data_type.md)
     * [列表](basic/list.md)
     * [字典](basic/dict.md)
+    * [表达式](basic/express.md)
     * [流程控制](basic/if.md)
     * [循环](basic/loop.md)
     * [函数](basic/function.md)
