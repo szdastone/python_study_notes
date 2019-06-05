@@ -12,6 +12,8 @@
     * [流程控制](basic/if.md)
     * [循环](basic/loop.md)
     * [函数](basic/function.md)
+    * [迭代器](basic/iterator.md)
+    * [模块](basic/module.md)
     * [类](basic/class.md)
     * [异常](basic/exception.md)
     * [输入输出](basic/inout.md)
