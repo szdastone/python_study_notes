@@ -1,0 +1,1020 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>迭代器 · Python学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Dastone Deng <dastone.deng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/stype.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/katex/dist/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/prismjs/themes/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="module.html" />
+    
+    
+    <link rel="prev" href="function.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://szdastone.github.io" target="_blank" class="custom-link">我的主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../install/install.html">
+            
+                <a href="../install/install.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../install/venv.html">
+            
+                <a href="../install/venv.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="dict.html">
+            
+                <a href="dict.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="express.html">
+            
+                <a href="express.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="if.html">
+            
+                <a href="if.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="loop.html">
+            
+                <a href="loop.html">
+            
+                    
+                        <b>1.3.6.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                        <b>1.3.7.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                        <b>1.3.8.</b>
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                        <b>1.3.9.</b>
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                        <b>1.3.10.</b>
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="exception.html">
+            
+                <a href="exception.html">
+            
+                    
+                        <b>1.3.11.</b>
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="inout.html">
+            
+                <a href="inout.html">
+            
+                    
+                        <b>1.3.12.</b>
+                    
+                    输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                        <b>1.3.13.</b>
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                        <b>1.3.14.</b>
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../module/">
+            
+                <a href="../module/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../common/requests.html">
+            
+                <a href="../common/requests.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >迭代器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x8FED;&#x4EE3;&#x5668;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x8FED;&#x4EE3;&#x5668;</h1>
+<h4 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x8FF0;</h4>
+<p>&#x8FED;&#x4EE3;&#x5C31;&#x662F;&#x91CD;&#x590D;&#x4ECE;&#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x5230;&#x7ED3;&#x675F;&#x3002;&#x5728;Python&#x4E2D;&#x5C31;&#x662F;&#x7528;__iter__&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86;__next__&#x65B9;&#x6CD5;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x5BF9;&#x8C61;&#x3002;</p>
+<blockquote>
+<p>&#x5B9E;&#x73B0;<em>_iter\</em>_&#x65B9;&#x6CD5;&#x5C31;&#x8868;&#x793A;&#x76EE;&#x6807;&#x4E3A;&#x53EF;&#x8FED;&#x4EE3;&#x7C7B;&#x578B;&#xFF0C;&#x5141;&#x8BB8;&#x6267;&#x884C;&#x624B;&#x52A8;&#x6216;&#x81EA;&#x52A8;&#x8FED;&#x4EE3;&#x64CD;&#x4F5C;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x65B0;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x5B9E;&#x4F8B;&#x3002;&#x968F;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;__next__&#x4F9D;&#x6B21;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x76F4;&#x5230;&#x629B;&#x51FA;StopIteration&#x5F02;&#x5E38;&#x6765;&#x8868;&#x793A;&#x7ED3;&#x675F;&#x3002;</p>
+</blockquote>
+<p>&#x53EF;&#x8FED;&#x4EE3;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x662F;&#x5E8F;&#x5217;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x6309;&#x524D;&#x540E;&#x987A;&#x5E8F;&#x64CD;&#x4F5C;&#x7684;&#x6808;&#x3001;&#x961F;&#x5217;&#xFF0C;&#x4EE5;&#x53CA;&#x968F;&#x673A;&#x8FD4;&#x56DE;&#x952E;&#x503C;&#x7684;&#x54C8;&#x5E0C;&#x8868;&#x7B49;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; from collections import abc
+&gt;&gt;&gt; issubclass(list, abc.Iterable)
+True
+&gt;&gt;&gt; isinstance(range(3), abc.Iterable)
+True
+&gt;&gt;&gt; isinstance(zip([1, 2]), abc.Iterable)
+True
+</code></pre><h5 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</h5>
+<p>&#x6309;&#x8FED;&#x4EE3;&#x5668;&#x6D41;&#x7A0B;&#x53CA;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#xFF0C;&#x6765;&#x9010;&#x4E00;&#x5B9E;&#x73B0;&#xFF0C;&#x4EE5;&#x4FBF;&#x66F4;&#x597D;&#x7406;&#x89E3;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class Data:
+...     def __init__(self, n):
+...             self.data = list(range(n))
+...     def __iter__(self):
+...             return DataIter(self.data)
+&gt;&gt;&gt; class DataIter:
+...     def __init__(self, data):
+...             self.data = data
+...             self.index = 0
+...     def __next__(self):
+...             if not self.data or self.index &gt;= len(self.data):
+...                     raise StopIteration
+...             d = self.data[self.index]
+...             self.index += 1
+...             return d
+...
+&gt;&gt;&gt; d = Data(2)   # &#x624B;&#x5DE5;&#x8FED;&#x4EE3;
+&gt;&gt;&gt; x = d.__iter__()
+&gt;&gt;&gt; x.__next__()
+0
+&gt;&gt;&gt; x.__next__()
+1
+&gt;&gt;&gt; x.__next__()
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 7, in __next__
+StopIteration
+
+&gt;&gt;&gt; for i in Data(2): print(i)   #&#x81EA;&#x52A8;&#x8FED;&#x4EE3;
+...
+0
+1
+&gt;&gt;&gt; x = Data(2).__iter__()    # x&#x662F;&#x53EF;&#x8FED;&#x4EE3;&#x7C7B;&#x578B;&#x3002;
+&gt;&gt;&gt; x.__iter__()              # x&#x7F3A;&#x5C11;__iter__&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x7136;&#x53EF;&#x6DFB;&#x52A0;__iter__&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x8FD4;&#x56DE;&#x81EA;&#x8EAB; 
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+AttributeError: &apos;DataIter&apos; object has no attribute &apos;__iter__&apos;
+</code></pre><h5 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F85;&#x52A9;&#x51FD;&#x6570;</h5>
+<p>&#x4E0A;&#x4F8B;&#x7684;&#x5217;&#x8868;&#x5BB9;&#x5668;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x8FED;&#x4EE3;&#x63A5;&#x53E3;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5373;&#x53EF;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x6309;&#x540D;&#x5B57;&#x89C4;&#x5B9A;&#xFF0C;&#x4E0D;&#x5E94;&#x76F4;&#x63A5;&#x8C03;&#x7528;__iter&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x6539;&#x7528;iter&#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class Data:
+...     def __init__(self, n):
+...             self.data = list(range(n))
+...     def __iter__(self):
+...             return iter(self.data)
+...
+&gt;&gt;&gt; Data(2).__iter__()
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>list_iterator</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x00000265BEC73908</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x4F5C;&#x4E3A;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#xFF0C;iter&#x8FD8;&#x53EF;&#x4E3A;&#x5E8F;&#x5217;&#x5BF9;&#x8C61;(__getitem__)&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x8FED;&#x4EE3;&#x5668;&#x5305;&#x88C5;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class Data:
+...     def __init__(self, n):
+...             self.n = n
+...     def __getitem__(self, index):
+...             if index&lt;0 or index&gt;=self.n: raise IndexError
+...             return index + 100
+...
+&gt;&gt;&gt; iter(Data(2))
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iterator</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x00000265BEC739B0</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>iter&#x8FD8;&#x53EF;&#x5BF9;&#x51FD;&#x6570;&#x3001;&#x65B9;&#x6CD5;&#x7B49;&#x53EF;&#x8C03;&#x7528;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x5305;&#x88C5;&#x3002;&#x5176;&#x7528;&#x5728;&#x7F51;&#x7EDC;&#x548C;&#x6587;&#x4EF6;&#x7B49;I/O&#x6570;&#x636E;&#x63A5;&#x6536;&#x65B9;&#x9762;&#xFF0C;&#x6BD4;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x66F4;&#x4F18;&#x96C5;&#x4E9B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = lambda: input(&quot;n:&quot;)   # &#x88AB;__next__&#x8C03;&#x7528;&#xFF0C;&#x65E0;&#x53C2;&#x6570;
+&gt;&gt;&gt; for i in iter(x, &quot;end&quot;): print(i) # &#x51FD;&#x6570;x&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7B49;&#x4E8E;end&#x65F6;&#x7ED3;&#x675F;
+...
+n:1
+1
+n:2
+2
+n:end
+</code></pre><p>&#x4E0E;__next__&#x65B9;&#x6CD5;&#x5BF9;&#x5E94;&#x7684;&#x662F;next&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x624B;&#x52A8;&#x8FED;&#x4EE3;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = iter([1, 2])
+&gt;&gt;&gt; while True:
+...     try:
+...             print(next(x))
+...     except StopIteration:
+...             break
+...
+1
+2
+</code></pre><h5 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x52A8;&#x8FED;&#x4EE3;</h5>
+<p>&#x4F7F;&#x7528;for&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x751F;&#x6210;&#x8FED;&#x4EE3;&#x76F8;&#x5173;&#x6307;&#x4EE4;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x5BF9;&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     for i in [1, 2]: print(i)
+...
+&gt;&gt;&gt; import dis
+&gt;&gt;&gt; dis.dis(test)
+  2           0 SETUP_LOOP              20 (to 22)
+              2 LOAD_CONST               1 ((1, 2))
+              4 GET_ITER                              #&#x8C03;&#x7528;__iter__&#x8FD4;&#x56DE;&#x8FED;&#x4EE3;&#x5668;&#x5BF9;&#x8C61;(&#x6216;&#x5305;&#x88C5;)
+        &gt;&gt;    6 FOR_ITER                12 (to 20)  #&#x8C03;&#x7528;__next__&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF0C;&#x7ED3;&#x675F;&#x5219;&#x8DF3;&#x8F6C;
+              8 STORE_FAST               0 (i)
+             10 LOAD_GLOBAL              0 (print)
+             12 LOAD_FAST                0 (i)
+             14 CALL_FUNCTION            1
+             16 POP_TOP
+             18 JUMP_ABSOLUTE            6   # &#x7EE7;&#x7EED;&#x8FED;&#x4EE3;
+        &gt;&gt;   20 POP_BLOCK                       # &#x8FED;&#x4EE3;&#x7ED3;&#x675F;
+        &gt;&gt;   22 LOAD_CONST               0 (None)
+             24 RETURN_VALUE
+</code></pre><h4 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x5668;</h4>
+<p>&#x751F;&#x6210;&#x5668;&#x662F;&#x8FED;&#x4EE3;&#x5668;&#x8FDB;&#x5316;&#x7248;&#x672C;&#xFF0C;&#x7528;&#x51FD;&#x6570;&#x548C;&#x8868;&#x8FBE;&#x5F0F;&#x66FF;&#x4EE3;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#x3002;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x7684;&#x7279;&#x6B8A;&#x4E4B;&#x5904;&#x5728;&#x5176;&#x5185;&#x90E8;&#x4EE5;yield&#x8FD4;&#x56DE;&#x8FED;&#x4EE3;&#x6570;&#x636E;&#x3002;&#x65E0;&#x8BBA;&#x5185;&#x90E8;&#x903B;&#x8F91;&#x600E;&#x6837;&#xFF0C;&#x5176;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x603B;&#x662F;&#x8FD4;&#x56DE;&#x751F;&#x6210;&#x5668;&#x5BF9;&#x8C61;&#x3002;&#x968F;&#x540E;&#xFF0C;&#x4EE5;&#x666E;&#x901A;&#x8FED;&#x4EE3;&#x5668;&#x65B9;&#x5F0F;&#x7EE7;&#x7EED;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     yield 1
+...     yield 2
+...
+&gt;&gt;&gt; test()   # &#x51FD;&#x6570;&#x8C03;&#x7528;&#x8FD4;&#x56DE;&#x751F;&#x6210;&#x5668;&#x5BF9;&#x8C61;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>generator</span> <span class="token attr-name">object</span> <span class="token attr-name">test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x00000265BEC7D138</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; for i in test(): print(i)  # &#x4EE5;&#x666E;&#x901A;&#x65B9;&#x5F0F;&#x8FED;&#x4EE3;&#x6570;&#x636E;
+...
+1
+2
+</code></pre><p>&#x6BCF;&#x53E5;yield&#x8BED;&#x53E5;&#x5BF9;&#x5E94;&#x4E00;&#x6B21;__next__&#x8C03;&#x7528;&#x3002;&#x53EF;&#x5206;&#x5217;&#x591A;&#x6761;&#xFF0C;&#x6216;&#x51FA;&#x73B0;&#x5728;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x4E2D;&#x3002;&#x53EA;&#x8981;&#x7ED3;&#x675F;&#x51FD;&#x6570;&#x6D41;&#x7A0B;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x629B;&#x51FA;&#x8FED;&#x4EE3;&#x7EC8;&#x6B62;&#x5F02;&#x5E38;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     for i in range(10):
+...             yield i+100
+...             if i&gt;=1: return
+...
+&gt;&gt;&gt; x = test()
+&gt;&gt;&gt; next(x)
+100
+&gt;&gt;&gt; next(x)
+101
+&gt;&gt;&gt; next(x)
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+StopIteration
+&gt;&gt;&gt; for i in test(): print(i)
+...
+100
+101
+</code></pre><h5 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8FED;&#x4EE3;&#x5668;</h5>
+<p>&#x5982;&#x679C;&#x6570;&#x636E;&#x6E90;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4F7F;&#x7528;yield from&#x5B50;&#x8FED;&#x4EE3;&#x5668;&#x8BED;&#x53E5;&#x3002;&#x548C;&#x5728;for&#x5FAA;&#x73AF;&#x4E2D;&#x7528;yield&#x5E76;&#x65E0;&#x4E0D;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x8BED;&#x6CD5;&#x66F4;&#x7B80;&#x7EC3;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     yield from &quot;ab&quot;
+...     yield from range(3)
+...
+&gt;&gt;&gt; for i in test(): print(i)
+...
+a
+b
+0
+1
+2
+</code></pre><h5 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x5668;&#x8868;&#x8FBE;&#x5F0F;</h5>
+<p>&#x9664;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5916;&#xFF0C;&#x4E0E;&#x63A8;&#x5BFC;&#x5F0F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = (i+100 for i in range(8) if i % 2 ==0)
+&gt;&gt;&gt; x
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>generator</span> <span class="token attr-name">object</span> <span class="token attr-name">&lt;genexpr</span><span class="token punctuation">&gt;</span></span> at 0x00000265BEC7D138&gt;
+</code></pre><p>&#x751F;&#x6210;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x88AB;&#x5F53;&#x505A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test(x):
+...     print(x)
+...     for i in x: print(i)
+...
+&gt;&gt;&gt; test(i for i in range(3))
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>generator</span> <span class="token attr-name">object</span> <span class="token attr-name">&lt;genexpr</span><span class="token punctuation">&gt;</span></span> at 0x00000265BEC7D048&gt;
+0
+1
+2
+</code></pre><h5 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6267;&#x884C;</h5>
+<p>&#x76F8;&#x6BD4;&#x666E;&#x901A;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4F1A;&#x590D;&#x6742;&#x70B9;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x4E3A;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x6807;&#x8BB0;&#x3002;&#x5BF9;&#x6B64;&#x7C7B;&#x51FD;&#x6570;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#x5E76;&#x4E0D;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x3002;&#x800C;&#x662F;&#x5C06;&#x6808;&#x5E27;&#x548C;&#x4EE3;&#x7801;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x521B;&#x5EFA;&#x751F;&#x6210;&#x5668;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test(n):
+...     print(&quot;gen.start&quot;)
+...     for i in range(n):
+...             print(f&quot;gen.yield {i}&quot;)
+...             yield i
+...             print(&quot;gen.resume&quot;)
+...
+&gt;&gt;&gt; test.__code__.co_flags   # generator
+99
+&gt;&gt;&gt; import inspect
+&gt;&gt;&gt; inspect.isgeneratorfunction(test)
+True
+&gt;&gt;&gt; x = test(2)
+&gt;&gt;&gt; x.gi_frame.f_locals  #&#x6808;&#x5E27;&#x5185;&#x5B58;&#x50A8;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x53C2;&#x6570;
+{&apos;n&apos;: 2}
+&gt;&gt;&gt; x.gi_code            # &#x5173;&#x8054;&#x7528;&#x6237;&#x51FD;&#x6570;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span> <span class="token attr-name">object</span> <span class="token attr-name">test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x00000265BEC7E6F0,</span> <span class="token attr-name">file</span> <span class="token attr-name">&quot;&lt;stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1&gt;
+&gt;&gt;&gt; x.__next__           # &#x5B9E;&#x73B0;&#x8FED;&#x4EE3;&#x5668;&#x534F;&#x8BAE;&#x65B9;&#x6CD5;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>method-wrapper</span> <span class="token attr-name">&apos;__next__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">generator</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x00000265BEC7D048</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; next(x) # &#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x6267;&#x884C;&#x5230;yield&#x6307;&#x4EE4;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#x4FDD;&#x5B58;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;
+gen.start   # &#x5E76;&#x6302;&#x8D77;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x6D41;&#x7A0B;&#xFF0C;&#x53EA;&#x6709;&#x518D;&#x6B21;&#x8C03;&#x7528;__next__&#x65B9;&#x6CD5;&#xFF0C;&#x624D;&#x6062;&#x590D;&#x72B6;&#x6001;&#xFF0C;&#x7EE7;&#x7EED;
+gen.yield 0 # &#x6267;&#x884C;&#x3002;&#x5982;&#x6B64;&#xFF0C;&#x4EE5;yield&#x5207;&#x6362;&#x5206;&#x754C;&#x7EBF;&#xFF0C;&#x5F80;&#x590D;&#x4EA4;&#x66FF;&#xFF0C;&#x77E5;&#x9053;&#x51FD;&#x6570;&#x7ED3;&#x675F; &#x3002;
+0
+&gt;&gt;&gt; next(x)
+gen.resume
+gen.yield 1
+1
+&gt;&gt;&gt; next(x)
+gen.resume
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+StopIteration
+</code></pre><h5 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;</h5>
+<p>&#x751F;&#x6210;&#x5668;&#x53E6;&#x4E00;&#x8FDB;&#x5316;&#x7279;&#x5F81;&#xFF0C;&#x5C31;&#x662F;&#x63D0;&#x4F9B;&#x53CC;&#x5411;&#x901A;&#x4FE1;&#x80FD;&#x529B;&#x3002;&#x751F;&#x6210;&#x5668;&#x4E0D;&#x5355;&#x662F;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x65B9;&#xFF0C;&#x8FD8;&#x53EF;&#x4F5C;&#x4E3A;&#x63A5;&#x6536;&#x65B9;&#x5B58;&#x5728;&#x3002;&#x751F;&#x6210;&#x5668;&#x751A;&#x81F3;&#x80FD;&#x5728;&#x5916;&#x90E8;&#x505C;&#x6B62;&#x8FED;&#x4EE3;&#xFF0C;&#x6216;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x5B9E;&#x73B0;&#x91CD;&#x7F6E;&#x7B49;&#x81EA;&#x5B9A;&#x4E49;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x65B9;&#x6CD5;send&#x9664;&#x53EF;&#x5411;yield&#x4F20;&#x9001;&#x6570;&#x636E;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x4E0E;next&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002;&#x4E0D;&#x8FC7;&#x53D1;&#x9001;&#x524D;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5FC5;&#x987B;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x3002;&#x53EA;&#x6709;&#x8FD9;&#x6837;&#xFF0C;&#x624D;&#x53EF;&#x8FDB;&#x5165;&#x51FD;&#x6570;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF0C;&#x624D;&#x4F1A;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x548C;&#x4EA4;&#x4E92;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     while True:
+...             v = yield 200
+...             print(f&quot;resume {v}&quot;)
+...
+&gt;&gt;&gt; x = test()
+&gt;&gt;&gt; x.send(None)  # &#x5FC5;&#x987B;&#x7528;next&#x6216;send(None)&#x542F;&#x52A8;&#x751F;&#x6210;&#x5668;
+200
+&gt;&gt;&gt; x.send(100)   # &#x53EF;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;None,&#x8FD9;&#x4E0E;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x65E0;&#x5173;
+resume 100
+200
+</code></pre><p>&#x5BF9;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x800C;&#x8A00;&#xFF0C;&#x6302;&#x8D77;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x4F4D;&#x7F6E;&#xFF0C;&#x76F8;&#x5173;&#x72B6;&#x6001;&#x88AB;&#x4E34;&#x65F6;&#x51BB;&#x7ED3;&#x3002;</p>
+<p>&#x8C03;&#x7528;close&#x65B9;&#x6CD5;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#x5C06;&#x7EC8;&#x6B62;&#x751F;&#x6210;&#x5668;&#x8FED;&#x4EE3;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test():
+...     for i in range(10):
+...             try:
+...                     yield i
+...             finally:
+...                     print(&quot;finally&quot;)
+...
+&gt;&gt;&gt; x = test()
+&gt;&gt;&gt; next(x)   # &#x542F;&#x52A8;&#x751F;&#x6210;&#x5668;
+0
+&gt;&gt;&gt; x.close() # &#x7EC8;&#x6B62;&#x751F;&#x6210;&#x5668;
+finally
+&gt;&gt;&gt; next(x)   # &#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+StopIteration
+</code></pre><p>&#x8FD8;&#x53EF;&#x50CF;send&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E00;&#x6837;&#xFF0C;&#x5411;&#x751F;&#x6210;&#x5668;throw&#x6307;&#x5B9A;&#x5F02;&#x5E38;&#x4F5C;&#x4E3A;&#x4FE1;&#x53F7;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class ExitException(Exception): pass
+&gt;&gt;&gt; class ResetException(Exception): pass
+&gt;&gt;&gt; def test():
+...     while True:
+...             try:
+...                     v = yield
+...                     print(f&quot;recv: {v}&quot;)
+...             except ResetException:
+...                     print(&quot;reset.&quot;)
+...             except ExitException:
+...                     print(&quot;exit.&quot;)
+...                     return
+...
+&gt;&gt;&gt; x = test()
+&gt;&gt;&gt; x.send(None)   # &#x542F;&#x52A8;&#x751F;&#x6210;&#x5668;
+&gt;&gt;&gt; x.throw(ResetException) # &#x53D1;&#x9001;&#x91CD;&#x7F6E;&#x4FE1;&#x53F7;
+reset.
+&gt;&gt;&gt; x.send(1)  # &#x53EF;&#x7EE7;&#x7EED;&#x53D1;&#x9001;&#x6570;&#x636E;
+recv: 1
+&gt;&gt;&gt; x.throw(ExitException)  # &#x53D1;&#x9001;&#x7EC8;&#x6B62;&#x4FE1;&#x53F7;
+exit.
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+StopIteration
+&gt;&gt;&gt; x.send(2)  # &#x751F;&#x6210;&#x5668;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+StopIteration
+</code></pre><h4 id="anchor_10"><a name="anchor_10" class="anchor-navigation-ex-anchor" href="#anchor_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5F0F;</h4>
+<h5 id="anchor_11"><a name="anchor_11" class="anchor-navigation-ex-anchor" href="#anchor_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x4EA7;&#x6D88;&#x8D39;&#x6A21;&#x578B;</h5>
+<p>&#x5728;&#x4E0D;&#x501F;&#x52A9;&#x5E76;&#x53D1;&#x6846;&#x67B6;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B9E;&#x73B0;&#x751F;&#x4EA7;&#x3001;&#x6D88;&#x8D39;&#x534F;&#x4F5C;&#x3002;</p>
+<blockquote>
+<p>&#x6D88;&#x8D39;&#x8005;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4F7F;&#x7528;yield&#x5C06;&#x6267;&#x884C;&#x6743;&#x9650;&#x4EA4;&#x7ED9;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x7B49;&#x5F85;&#x5176;&#x53D1;&#x9001;&#x6570;&#x636E;&#x540E;&#x6FC0;&#x6D3B;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5982;&#x6709;&#x591A;&#x4E2A;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x6216;&#x6570;&#x636E;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x8F83;&#x957F;&#xFF0C;&#x4F9D;&#x7136;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x4E13;&#x4E1A;&#x5E76;&#x53D1;&#x65B9;&#x6848;</p>
+</blockquote>
+<pre class="language-"><code>&gt;&gt;&gt; def consumer():
+...     while True:
+...             v = yield
+...             print(f&quot;consume: {v}&quot;)
+...
+&gt;&gt;&gt; def producer(c):
+...     for i in range(10, 13):
+...             c.send(i)
+...
+&gt;&gt;&gt; c = consumer()   # &#x521B;&#x5EFA;&#x6D88;&#x8D39;&#x8005;
+&gt;&gt;&gt; c.send(None)     # &#x542F;&#x52A8;&#x6D88;&#x8D39;&#x8005;
+&gt;&gt;&gt; producer(c)      # &#x751F;&#x4EA7;&#x8005;&#x53D1;&#x9001;&#x6570;&#x636E;
+consume: 10
+consume: 11
+consume: 12
+&gt;&gt;&gt; c.close()        # &#x5173;&#x95ED;&#x751F;&#x4EA7;&#x8005;
+</code></pre><h5 id="anchor_12"><a name="anchor_12" class="anchor-navigation-ex-anchor" href="#anchor_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x9664;&#x56DE;&#x8C03;</h5>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x662F;&#x5E38;&#x89C1;&#x5F02;&#x6B65;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x65B9;&#x5F0F;&#x3002;&#x8C03;&#x7528;&#x8005;&#x5728;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x4E0D;&#x518D;&#x963B;&#x585E;&#x7B49;&#x5F85;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#xFF0C;&#x800C;&#x6539;&#x7531;&#x5F02;&#x6B65;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x9884;&#x5148;&#x6CE8;&#x518C;&#x7684;&#x51FD;&#x6570;&#x6765;&#x5B8C;&#x6210;&#x540E;&#x7EED;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5F02;&#x6B65;&#x670D;&#x52A1;&#x793A;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x5C1D;&#x8BD5;&#x7528;&#x751F;&#x6210;&#x5668;&#x6D88;&#x9664;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; import threading
+&gt;&gt;&gt; import time
+
+&gt;&gt;&gt; def target(request, callback):
+...     s = time.time()
+...     request()       # &#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x51FD;&#x6570;
+...     time.sleep(2)   # &#x6A21;&#x62DF;&#x963B;&#x585E;
+...     callback(f&quot;done: {time.time() - s}&quot;)  # &#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x4F20;&#x5165;&#x7ED3;&#x679C;
+...
+&gt;&gt;&gt; def service(request, callback):
+...     threading.Thread(target= target, args=(request, callback)).start()
+...
+&gt;&gt;&gt; def request():    # &#x4EFB;&#x52A1;&#x8BF7;&#x6C42;&#x6A21;&#x62DF;
+...     print(&quot;start&quot;)
+...
+&gt;&gt;&gt; def callback(x):  # &#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#x901A;&#x77E5;
+...     print(x)
+
+&gt;&gt;&gt; service(request, callback)
+start
+done: 2.001331090927124
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x7528;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;&#x66FF;&#x4EE3;&#x4E0A;&#x9762;&#x7684;2&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7528;yield&#x5206;&#x9694;&#x8BF7;&#x6C42;&#x548C;&#x8FD4;&#x56DE;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x4FBF;&#x670D;&#x52A1;&#x53EF;&#x63A5;&#x5165;&#x5176;&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x4FEE;&#x6539;&#x670D;&#x52A1;&#x6846;&#x67B6;&#xFF0C;&#x4EE5;&#x751F;&#x6210;&#x5668;&#x65B9;&#x5F0F;&#x6765;&#x8C03;&#x7528;&#x4EFB;&#x52A1;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; import threading
+&gt;&gt;&gt; import time
+&gt;&gt;&gt; def request():
+...     print(&quot;start&quot;)
+...     x = yield
+...     print(x)
+...
+&gt;&gt;&gt; def target(fn):
+...     try:
+...             s = time.time()
+...             g = fn()        # &#x8C03;&#x7528;&#x76EE;&#x6807;&#x751F;&#x6210;&#x5668;&#x51FD;&#x6570;
+...             g.send(None)    # &#x542F;&#x52A8;&#xFF0C;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x8BF7;&#x6C42;&#x4EE3;&#x7801;
+...             time.sleep(2)
+...             g.send(f&quot;done: {time.time() - s}&quot;) # &#x963B;&#x585E;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x4EFB;&#x52A1;
+...     except StopIteration:   # &#x76EE;&#x6807;&#x7ED3;&#x675F;&#xFF0C;&#x62E6;&#x622A;&#x5F02;&#x5E38;
+...             pass
+...
+&gt;&gt;&gt; def service(fn):
+...     threading.Thread(target=target, args=(fn,)).start()
+...
+&gt;&gt;&gt; service(request)
+start
+&gt;&gt;&gt; print(&quot;do something&quot;)  # &#x53D1;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5E76;&#x672A;&#x963B;&#x585E;
+do something
+done: 2.001655340194702
+</code></pre><h5 id="anchor_13"><a name="anchor_13" class="anchor-navigation-ex-anchor" href="#anchor_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x534F;&#x7A0B;</h5>
+<p>&#x534F;&#x7A0B;&#x4EE5;&#x534F;&#x4F5C;&#x8C03;&#x5EA6;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x5355;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0A;&#x5207;&#x6362;&#x6267;&#x884C;&#x5E76;&#x53D1;&#x4EFB;&#x52A1;&#x3002;&#x914D;&#x5408;&#x5F02;&#x6B65;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x5C06;I/O&#x963B;&#x585E;&#x65F6;&#x95F4;&#x6765;&#x6267;&#x884C;&#x66F4;&#x591A;&#x4EFB;&#x52A1;&#x3002;&#x7531;&#x4E8E;&#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x5B9E;&#x73B0;&#xFF0C;&#x56E0;&#x6B64;&#x88AB;&#x79F0;&#x4E3A;&#x7528;&#x6237;&#x7EBF;&#x7A0B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def sched(*tasks):
+...     tasks = list(map(lambda t: t(), tasks)) #&#x8C03;&#x7528;&#x6240;&#x6709;&#x4EFB;&#x52A1;&#x51FD;&#x6570;&#xFF0C;&#x751F;&#x6210;&#x5668;&#x5217;&#x8868;
+...     while tasks:     #&#x5FAA;&#x73AF;&#x8C03;&#x7528;&#x4EFB;&#x52A1;
+...             try:
+...                     t = tasks.pop(0)  # &#x4ECE;&#x5217;&#x8868;&#x5934;&#x90E8;&#x5F39;&#x51FA;&#x4EFB;&#x52A1;
+...                     t.send(None)      # &#x5F00;&#x59CB;&#x6267;&#x884C;&#x8BE5;&#x4EFB;&#x52A1;
+...                     tasks.append(t)   # &#x5982;&#x8BE5;&#x4EFB;&#x52A1;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#xFF0C;&#x5219;&#x653E;&#x56DE;&#x5217;&#x8868;&#x5C3E;&#x90E8;
+...             except StopIteration:     # &#x8BE5;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#xFF0C;&#x4E22;&#x5F03;
+...                     pass
+&gt;&gt;&gt; def task(id, n, m):                  # &#x6A21;&#x62DF;&#x4EFB;&#x52A1;&#x6A21;&#x677F;
+...     for i in range(n, m):
+...             print(f&quot;{id}: {i}&quot;)
+...             yield                    # &#x4E3B;&#x52A8;&#x8C03;&#x5EA6;
+...
+&gt;&gt;&gt; t1 = partial(task, 1, 10, 13)
+&gt;&gt;&gt; t2 = partial(task, 2, 30, 33)
+&gt;&gt;&gt; sched(t1, t2)
+1: 10
+2: 30
+1: 11
+2: 31
+1: 12
+2: 32
+</code></pre><h4 id="anchor_14"><a name="anchor_14" class="anchor-navigation-ex-anchor" href="#anchor_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</h4>
+<p>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x4EE5;&#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x66FF;&#x4EE3;&#x547D;&#x4EE4;&#x5F0F;&#x8BED;&#x53E5;&#xFF0C;&#x5F3A;&#x8C03;&#x9010;&#x7EA7;&#x7ED3;&#x679C;&#x63A8;&#x5BFC;&#xFF0C;&#x800C;&#x975E;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x8981;&#x6C42;&#x51FD;&#x6570;&#x4E3A;&#x7B2C;&#x4E00;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x4F20;&#x9012;&#x3002;&#x9700;&#x8981;&#x65F6;&#xFF0C;&#x53EF;&#x7528;&#x95ED;&#x5305;&#x6784;&#x6210;&#x5E26;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x72B6;&#x6001;&#x7684;&#x903B;&#x8F91;&#x8FD4;&#x56DE;&#x3002;&#x5176;&#x901A;&#x5E38;&#x4E0D;&#x4F7F;&#x7528;&#x72EC;&#x7ACB;&#x53D8;&#x91CF;&#xFF0C;&#x6240;&#x6709;&#x72B6;&#x6001;&#x4EE5;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF0C;&#x7528;&#x5D4C;&#x5957;&#x6216;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x4EE3;&#x66FF;&#x8FC7;&#x7A0B;&#x8BED;&#x53E5;&#x3002;&#x6700;&#x597D;&#x6CA1;&#x6709;&#x5916;&#x90E8;&#x4F9D;&#x8D56;&#x7684;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x4E14;&#x53C2;&#x6570;&#x4E0D;&#x53EF;&#x53D8;&#xFF0C;&#x4EC5;&#x5C06;&#x7ED3;&#x679C;&#x5E26;&#x5165;&#x4E0B;&#x4E00;&#x6B21;&#x8FD0;&#x7B97;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code>x = a + b
+y = x * 2
+</code></pre><p>&#x51FD;&#x6570;&#x5F0F;:</p>
+<pre class="language-"><code>mul(add(a, b), 3)
+add(a, b).mul(2)
+</code></pre><blockquote>
+<p>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x4E09;&#x5927;&#x7279;&#x5F81;&#xFF1A;&#x7B2C;&#x4E00;&#x7C7B;&#x578B;&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x53EF;&#x53D8;&#x6570;&#x636E;&#xFF0C;&#x5C3E;&#x9012;&#x5F52;&#x4F18;&#x5316;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x8303;&#x5F0F;</p>
+</blockquote>
+<h5 id="anchor_15"><a name="anchor_15" class="anchor-navigation-ex-anchor" href="#anchor_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FED;&#x4EE3;</h5>
+<p>&#x4EE5;&#x8FED;&#x4EE3;&#x5668;&#x65B9;&#x5F0F;&#xFF0C;&#x7528;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5904;&#x7406;&#x6570;&#x636E;&#x6E90;&#x3002;&#x76F8;&#x6BD4;&#x63A8;&#x5BFC;&#x5F0F;&#xFF0C;&#x5B83;&#x80FD;&#x4ECE;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x5E73;&#x884C;&#x63A5;&#x6536;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x6700;&#x77ED;&#x6570;&#x636E;&#x6E90;&#x8FED;&#x4EE3;&#x5B8C;&#x6210;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = map(lambda a, b: (a, b), [1 ,2 ,3], &quot;abcd&quot;)
+&gt;&gt;&gt; list(x)   # &#x5C06;&#x8FED;&#x4EE3;&#x5668;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x4E3A;&#x5217;&#x8868;
+[(1, &apos;a&apos;), (2, &apos;b&apos;), (3, &apos;c&apos;)]
+</code></pre><h5 id="anchor_16"><a name="anchor_16" class="anchor-navigation-ex-anchor" href="#anchor_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x805A;&#x5408;</h5>
+<p>&#x5E73;&#x884C;&#x4ECE;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x63A5;&#x6536;&#x53C2;&#x6570;&#xFF0C;&#x805A;&#x5408;&#x6210;&#x5143;&#x7EC4;&#xFF0C;&#x76F4;&#x5230;&#x6700;&#x77ED;&#x6570;&#x636E;&#x6E90;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = zip([1,2,3], &quot;abcd&quot;, (1.1,1.2))
+&gt;&gt;&gt; list(x)
+[(1, &apos;a&apos;, 1.1), (2, &apos;b&apos;, 1.2)]
+</code></pre><p>&#x5982;&#x6784;&#x9020;&#x5B57;&#x5178;&#x3002;&#x90FD;&#x4EE5;&#x6700;&#x77ED;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5982;&#x4EE5;&#x6700;&#x957F;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5219;&#x7528;itertools.zip_longest&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; kv = zip(&quot;abcd&quot;, range(100, 200))
+&gt;&gt;&gt; dict(kv)
+{&apos;a&apos;: 100, &apos;b&apos;: 101, &apos;c&apos;: 102, &apos;d&apos;: 103}
+</code></pre><h5 id="anchor_17"><a name="anchor_17" class="anchor-navigation-ex-anchor" href="#anchor_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7D2F;&#x79EF;</h5>
+<p>&#x8FED;&#x4EE3;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x5E26;&#x5165;&#x4E0B;&#x6B21;&#x8BA1;&#x7B97;&#xFF0C;&#x9002;&#x5408;&#x5B8C;&#x6210;&#x7EDF;&#x8BA1;&#x6216;&#x8FC7;&#x6EE4;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; import functools
+&gt;&gt;&gt; def calc(ret, x):
+...     print(f&quot;ret = {ret}, x = {x}&quot;)
+...     return ret + x
+...
+&gt;&gt;&gt; functools.reduce(calc, [1, 2, 3]) #&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#x503C;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x7B2C;&#x4E00;&#x6570;&#x636E;&#x5F53;&#x7ED3;&#x679C;
+ret = 1, x = 2
+ret = 3, x = 3
+6
+&gt;&gt;&gt; functools.reduce(calc, [1, 2, 3], 100) # &#x8981;&#x5BF9;&#x7B2C;&#x4E00;&#x6570;&#x636E;&#x548C;&#x521D;&#x59CB;&#x5316;&#x503C;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;
+ret = 100, x = 1
+ret = 101, x = 2
+ret = 103, x = 3
+106
+</code></pre><h5 id="anchor_18"><a name="anchor_18" class="anchor-navigation-ex-anchor" href="#anchor_18"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FC7;&#x6EE4;</h5>
+<p>&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x8FC7;&#x6EE4;&#x3002;</p>
+<blockquote>
+<p>&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5E03;&#x5C14;&#x503C;&#x51B3;&#x5B9A;&#x6570;&#x636E;&#x7684;&#x53BB;&#x7559;&#x3002;&#x53C2;&#x6570;&#x4E3A;None&#x65F6;&#x76F8;&#x5F53;&#x4E8E;bool&#x51FD;&#x6570;&#xFF0C;&#x79FB;&#x9664;&#x6240;&#x6709;False&#x5143;&#x7D20;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code>&gt;&gt;&gt; x = filter(lambda n: n % 2 ==0, range(10))
+&gt;&gt;&gt; list(x)
+[0, 2, 4, 6, 8]
+&gt;&gt;&gt; list(filter(None, [0, 1, &quot;&quot;, &quot;a&quot;, [], (1,)]))
+[1, &apos;a&apos;, (1,)]
+</code></pre><h5 id="anchor_19"><a name="anchor_19" class="anchor-navigation-ex-anchor" href="#anchor_19"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;</h5>
+<p>&#x5224;&#x65AD;&#x5728;&#x4E00;&#x7CFB;&#x5217;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x5168;&#x90E8;&#x6216;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#x771F;&#x503C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; all([1, &quot;a&quot;, (1,2)])
+True
+&gt;&gt;&gt; any([0,&quot;&quot;,(1,2)])
+True
+&gt;&gt;&gt;
+</code></pre><blockquote>
+<p>&#x8FED;&#x4EE3;&#x4F1A;&#x77ED;&#x8DEF;&#xFF0C;&#x6BD4;&#x5982;all&#x9047;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;False&#xFF0C;&#x5C31;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code>&gt;&gt;&gt; def a():
+...     print(&apos;a&apos;)
+...     return True
+...
+&gt;&gt;&gt; def b():
+...     print(&apos;b&apos;)
+...     return False
+...
+&gt;&gt;&gt; def c():
+...     print(&apos;c&apos;)
+...     return True
+...
+&gt;&gt;&gt; all(map(lambda m: m(), (a, b, c)))
+a
+b
+False
+&gt;&gt;&gt; any(map(lambda m: m(), (a, b, c)))
+a
+True
+</code></pre><blockquote>
+<p>&#x6807;&#x51C6;&#x5E93;itertools&#x62E5;&#x6709;&#x5927;&#x91CF;&#x9488;&#x5BF9;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="module.html" class="navigation navigation-next " aria-label="Next page: 模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"迭代器","level":"1.3.8","depth":2,"next":{"title":"模块","level":"1.3.9","depth":2,"path":"basic/module.md","ref":"basic/module.md","articles":[]},"previous":{"title":"函数","level":"1.3.7","depth":2,"path":"basic/function.md","ref":"basic/function.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"},{"alt":"1559027907842","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png","label":"1559027907842","key":"1.3.4.1","backlink":"basic/express.html#fig1.3.4.1","nro":3,"list_caption":"图：1559027907842"},{"alt":"1559182801747","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559182801747.png","label":"1559182801747","key":"1.3.7.1","backlink":"basic/function.html#fig1.3.7.1","nro":4,"list_caption":"图：1559182801747"},{"alt":"1559724201028","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559724201028.png","label":"1559724201028","key":"1.3.9.1","backlink":"basic/module.html#fig1.3.9.1","nro":5,"list_caption":"图：1559724201028"},{"alt":"1559726056262","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559726056262.png","label":"1559726056262","key":"1.3.9.2","backlink":"basic/module.html#fig1.3.9.2","nro":6,"list_caption":"图：1559726056262"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/iterator.md","mtime":"2019-06-04T02:45:59.736Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-05T09:17:20.652Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/jquery.mark.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/main.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
