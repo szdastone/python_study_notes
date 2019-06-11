@@ -657,3 +657,639 @@ class ElectricCar(Car):
 
 
 
+#### 统一类型
+
+Python3不再支持Classic Class，所有类型都是New-Style Class。也就是默认继承自object。
+
+```
+>>> class A: pass
+...
+>>> class B(A): pass
+...
+>>> class C(B): pass
+...
+>>> issubclass(A, object)
+True
+>>> type(A) is A.__class__
+True
+>>> B.__base__   # 子类以__base__引为基类
+<class '__main__.A'>
+>>> A.__subclasses__()   # 基类通过__subclasses__获知所有直接子类。仅返回直接子类
+[<class '__main__.B'>]
+```
+
+> \_\_init_subclass\_\_是一个隐式类型方法，在所有层次的子类型创建时被调用，其甚至可接收键值参数。
+
+```
+>>> class A:
+...     def __init_subclass__(cls, **kwargs):
+...             print("init_subclass:", cls, kwargs)
+...
+>>> class B(A): pass
+...
+init_subclass: <class '__main__.B'> {}
+>>> class C(B, data = "hello"): pass   # 向基类传递参数
+...
+init_subclass: <class '__main__.C'> {'data': 'hello'}
+```
+
+#### 初始化
+
+初始化方法\_\_init\_\_是可选的。
+
+如果子类没有新的构造参数或新的初始化逻辑，则没必要创建该方法。按搜索顺序，解释器会找到基类初始化方法并执行。同样的缘故，可在子类的初始化方法中显式调用基类方法。
+
+```
+>>> class A:
+...     def __init__(self):
+...             print("A.init")
+...
+>>> class B(A): pass
+...
+>>> B()
+A.init
+<__main__.B object at 0x0000016F308C6A90>
+```
+
+可使用名字引用基类方法或调用super返回基类代理，以解除对类型名字的直接依赖。
+
+```
+>>> class A:
+...     def __init__(self, x):
+...             self.x = x
+...
+>>> class B(A):
+...     def __init__(self, x, y):
+...             super().__init__(x)
+...             self.y = y
+...
+>>> o = B(1,2)
+>>> vars(o)
+{'x': 1, 'y': 2}
+```
+
+> 无论是A.\_\_init\_\_，还是B.\_\_init\_\_，其self参数都引用同一实例对象，所以在不同继承层次里创建的实例字段都存储在同一名字空间中，而不会出现多个同名成员。
+
+#### 覆盖
+
+覆盖(override)是指子类重新定义基类方法，从而实现功能变更。Python只需在搜索优先级更高的名字空间中定义同名方法即可实现覆盖。
+
+覆盖不应改变方法参数列表和返回值类型，须确保不影响原有调用代码和相关文档，这与名字遮蔽不同。无论是多态机制，还是名字搜索顺序，都能确保新定义方法被执行。
+
+```
+>>> class A:
+...     def m(self): print("A.m")
+...     def do(self): self.m()     # 如果self是B类型，那么搜索首先找到自然是B.m
+...
+>>> class B(A):
+...     def m(self): print("B.m")  # override
+...
+>>> A().do()
+A.m
+>>> B().do()
+B.m
+```
+
+方法搜索发生在运行期，其不会静态绑定具体类型方法。注意的是方法没有属性(property)那样的优先级策略，应避免被实例同名成员遮蔽。
+
+#### 多继承
+
+多重继承允许类型有多个继承体系。从优点来说，提供了一种混入机制，让既有体系的类型可扩展出其他体系功能，但却会导致严重混乱，且让设计和代码的复杂度增大。故须慎重，尽量少用。
+
+```
+>>> class A:
+...     def a(self): pass
+...
+>>> class B:
+...     def b(self): pass
+...
+>>> class X(A, B): pass
+...
+>>> dir(X)   # 可访问所有基类成员
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'a', 'b']
+>>> X.__base__     # 仅返回单个基类的只读属性  
+<class '__main__.A'>
+>>> X.__bases__    # 获取全部基类，按继承顺序返回所有全部基类
+(<class '__main__.A'>, <class '__main__.B'>)
+>>> class C:
+...     def c(self): pass
+...
+>>> X.__bases__= (B, A, C)  # 调整继承顺序，并添加新基类，实现功能混入
+>>> dir(X)                  # 可访问新基类成员
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'a', 'b', 'c']
+```
+
+除横向动态扩展外，还可纵向注入继承体系中。
+
+```
+>>> class A:
+...     def test(self): print("A.test")
+...
+>>> class B(A):
+...     pass
+...
+>>> class Proxy(A):
+...     def test(self):              # 拦截A.test调用
+...             print("proxy")
+...             return super().test()
+...
+>>> B.__bases__ = (Proxy,)           # 修改B基类，形成B => Proxy => A方式
+>>> B().test()
+proxy
+A.test
+```
+
+##### \_\_mro\_\_
+
+任何类型的最终基类都是object，所以多重继承会出现菱形布局。最大问题是多重继承线上出现相同名字的成员时，如何选择？
+
+这设计成员搜索基本规则：MRO(method resolution order)。对单继承，有近到远向祖先类依次查找。而多继承的复杂性在于深度和广度间的排列。
+
+MRO步骤如下：
+
+1. 按"深度优先，从左到右"顺序获取类型列表；
+
+2. 移除列表中重复类型，仅保留最后一个；
+
+3. 确保子类从在基类前，并保留多继承定义顺序。
+
+![](https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1560218865799.png)
+
+```
+>>> class Y:
+...     n = "Y.n"
+...     def test(self): print("Y.test")
+...
+>>> class X(Y): pass
+...
+>>> class N: pass
+...
+>>> class M(N):
+...     n = "M.n"
+...     def test(self): print("M.test")
+...
+>>> class A(X, M): pass
+...              # “左侧优先，子类优先”
+>>> A.__mro__    # __mro__是只读属性，且不能通过实例访问。
+(<class '__main__.A'>, <class '__main__.X'>, <class '__main__.Y'>, <class '__main__.M'>, <class '__main__.N'>, <class 'object'>)
+>>> A().n
+'Y.n'
+>>> A().test()
+Y.test
+>>> A.__bases__ = (M, X)  # 调整继承顺序，M变为左侧了。
+>>> A.__mro__
+(<class '__main__.A'>, <class '__main__.M'>, <class '__main__.N'>, <class '__main__.X'>, <class '__main__.Y'>, <class 'object'>)
+>>> A().test()
+M.test
+```
+
+应注意避免多条继承线存在交叉的现象，并竭力控制多继承和继承深度。
+
+##### super
+
+该函数返回基类型代理，完成对基类成员的委托访问。
+
+有2个参数，第二参数对象提供\_\_mro\_\_列表，第一参数则指定起点。函数总是返回起点位置后一类型。这要求第二参数必须是第一参数的实例或子类型，否则第一参数不会出现在列表中。同时，第二参数还是实例和类型方法所需的绑定对象。
+
+看看super算法伪码：
+
+```
+def super(t, o):
+	mro = getattr(o, "__mro__", type(o).__mro__) # 返回实例或类型mro列表  
+	index = mro.index(t)+1                       # 返回列表中的下一类型 
+	return mro[index]
+```
+
+对单继承，通常省略参数，默认使用当前类型和实例，返回直接基类。但对多继承，则须明确指定起点和列表提供者。
+
+```
+>>> class A:
+...     @classmethod
+...     def demo(cls): pass
+...     def test(self): print("A")
+...
+>>> class B(A):
+...     def test(self): print("B")
+...
+>>> class C(B):
+...     def test(self): print("C")
+...
+>>> C.__mro__
+(<class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
+>>> super(C, C).test
+<function B.test at 0x0000024CFC99A0D0>
+>>> super(B, C).test
+<function A.test at 0x0000024CFC99A048>
+>>> o = C()
+>>> super(C, o).__self__ is o  # 使用__self__作为绑定属性，存储第二参数引用
+True
+>>> super(C, o).test
+<bound method B.test of <__main__.C object at 0x0000024CFC996470>>
+>>> super(C, C).demo
+<bound method A.demo of <class '__main__.C'>>
+# 不建议直接使用__class__.__base__访问基类，可能会引发意外错误。如：
+>>> class A:
+...     def test(self):
+...             print("A.test")
+...
+>>> class B(A):
+...     def test(self):
+...             print("B.test")                    # 在B的角度，self.__class__.__base__指向A
+...             self.__class__.__base__.test(self) # 但实际，self可能是B子类实例，如C
+...                                                # 这样self.__class__.__base__实际指向B   
+>>> class C(B): pass                               # 结果导致B.test被递归               
+...
+>>> C().test()
+RecursionError: maximum recursion depth exceeded while calling a Python object
+```
+
+> 正确方式采用显式类型名字访问，或用super函数。即使省略super参数，默认使用当前类型B为搜索起点。这样就可确保访问A.test方法，避免递归错误。即修改为super().test()即可
+
+#### 抽象类
+
+抽象类表示部分完成，且不能被实例化的类型。
+
+作为设计方式，抽象类可分离主体框架和局部实现，或将共用和定制解耦。不同接口纯粹调用声明，抽象类属于继承树的组成部分，可有实现代码。从抽象类继承，必须实现所有层级未被实现的抽象方法，否则无法创建实例。
+
+实现抽象类，须继承abc，或使用ABCMeta元类。
+
+```
+>>> from abc import ABCMeta, abstractmethod
+>>> class Store(metaclass = ABCMeta):
+...     def __init__(self, name):
+...             self.name = name
+...     def save(self, data):
+...             with open(self.name, "wb") as f:
+...                     d = self.dump(data)
+...                     f.write(d)
+...     def read(self):
+...             with open(self.name, "rb") as f:
+...                     return self.load(f.read())
+...     @abstractmethod
+...     def dump(self, data): ...
+...     @abstractmethod
+...     def load(self, data): ...
+...
+>>> Store("test.dat")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't instantiate abstract class Store with abstract methods dump, load
+```
+
+该示例定义存储框架，并实现了通用部分的接口方法。至于具体的序列化过程，则交由子类完成。如此，可按需创建不同版本。
+
+```
+>>> import pickle
+>>> class PickleStore(Store):
+...     def dump(self, data):
+...             return pickle.dumps(data)
+...     def load(self, data):
+...             return pickle.loads(data)
+...
+>>> s = PickleStore("test.dat")
+>>> s.save({"x":1, "y":2})
+>>> s.read()
+{'x': 1, 'y': 2}
+```
+
+如从抽象类继承，未实现全部方法，或添加新的抽象定义，那么该类型依然是抽象类。另外，抽象装饰器还可用于属性、类型方法和静态方法。
+
+```
+>>> class A(metaclass = ABCMeta):
+...     @classmethod                    # 注意两个装饰器顺序
+...     @abstractmethod
+...     def hello(cls): ...
+...
+>>> class B(A): pass
+...
+>>> B()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't instantiate abstract class B with abstract methods hello
+>>> class B(A):    # 即便抽象类型方法，依然需要实现，否则无法创建实例
+...     @classmethod
+...     def hello(cls): pass
+...
+>>> B()
+<__main__.B object at 0x000001D392D46780>
+```
+
+### 开放类
+
+在运行期，可动态向实例或类型添加新成员，其中也包括方法。
+
+有别于实例字段，方法需要添加到类型名字空间，因为要作用于所有实例和后续类型。另外，只有添加到类型名字空间才能自动构成绑定，这是有解释器的运行规则所决定的。
+
+> 将已绑定的方法添加到实例名字空间，只能算是字段赋值，算不上添加方法。而将一个函数添加到实例，即便手动设定\_\_self\_\_也无法构成绑定
+
+```
+>>> class X: pass
+...
+>>> o = X()
+>>> o.test = lambda self:None   # 向实例添加函数字段
+>>> o.test.__self__ = o         # 尝试手工设定绑定 
+>>> o.test                      # 依然无法构成绑定，除非重写描述符的相关方法 
+<function <lambda> at 0x000001D3929FC1E0>
+>>> o.test()                    
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: <lambda>() missing 1 required positional argument: 'self'
+```
+
+考虑类型\_\_dict\_\_是一个只读代理，其只能以字段赋值方式添加新方法。如是类型和静态方法，还须调用装饰器函数。
+
+```
+>>> class X:pass
+...
+>>> o = X()
+>>> X.a = lambda self: print(f"instance method: {self}")
+>>> X.b = classmethod(lambda cls: print(f"class method: {cls}"))
+>>> X.c = staticmethod(lambda: print("static method"))
+>>> o.a()
+instance method: <__main__.X object at 0x000001D392D59C88>
+>>> o.b()
+class method: <class '__main__.X'>
+>>> o.c()
+static method
+```
+
+##### object
+
+作为祖先根类object，有点特殊，无法向其类型和实例添加任何成员
+
+```
+>>> object.x = 1
+TypeError: can't set attributes of built-in/extension type 'object'
+>>> o = object()
+>>> o.x = 1
+AttributeError: 'object' object has no attribute 'x'
+>>> object().__dict__  # 实例没有__dict__属性
+AttributeError: 'object' object has no attribute '__dict__'
+```
+
+> SimpleNamespace简单继承自object，用于替代那些"class X: pass"语句。不同于namedtuple创建结构化类型，SimpleNamespace直接创建实例。
+
+```
+>>> import types
+>>> o = types.SimpleNamespace(a = 1, b="abc")
+>>> o.c = [1,2]
+>>> o.__dict__
+{'a': 1, 'b': 'abc', 'c': [1, 2]}
+```
+
+##### \_\_slots\_\_
+
+名字空间字段带来便利同时，也造成内存和性能问题。
+
+对于需要创建海量实例的类型，须做“固化”处理。通过设置\_\_slots\_\_，阻止实例创建\_\_dict\_\_等成员。解释器仅为指定成员分配空间，添加任何非预置属性都会引发异常。
+
+> 对于有\_\_slots\_\_设置的类型，解释器在创建类型对象时，直接将指定成员包装成描述符后静态分配到类型对象尾部。实例字段也不再通过\_\_dict\_\_存储，而是改为直接分配引用内存，这样就只能替换引用内容，无法改变成员名字，更无法分配新的成员空间。
+>
+> 成员后续操作均由描述符完成，可间接修改或删除字段内容，但却无法改变描述符本身。
+
+```
+>>> class A:
+...     __slots__ = ("x","y")
+...
+>>> o = A()
+>>> o.z = 100   # 不能新增属性，因为无法为其分配引用内存
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'A' object has no attribute 'z'
+>>> o.x = 1    # 只能为预定字段赋值 
+>>> o.y = 2
+>>> o.x = "abc"  # 通过描述符修改字段内容
+>>> o.x
+'abc'
+>>> del o.x      # 删除字段内容，但描述符依然存在
+>>> o.x = 100    # 引用内存也在，可重新赋值
+```
+
+对\_\_slots\_\_的修改并不会影响类型创建时设定的内存分配策略，加上预定成员以描述符实现，所以也无法更换其名称。
+
+```
+>>> A.__slots__ = ("x","y","z")
+>>> o = A(1,2)
+TypeError: A() takes no arguments
+>>> o.z = 3
+AttributeError: 'A' object has no attribute 'z'
+>>> A.__slots__ = ("a", "b")
+>>> dir(A)
+[..., 'x', 'y']
+```
+
+> 注意，\_\_slots\_\_限制的是实例，而非类型。因此，还是可为类型添加新成员。如果在\_\_slots\_\_中添加\_\_dict\_\_，可回归其原来样子，不过没啥意义了。
+
+继承有\_\_slots\_\_设置的类型，同样需要添加该设置。其可为空，或是新增字段，以指示解释器继续使用特定分配策略。
+
+```
+>>> class A:
+...     __slots__ = ("x", "y")
+...     def __init__(self, x, y):
+...             self.x =x
+...             self.y =y
+...
+>>> class X(A):                            # 没有__slots__,会创建__dict__
+...     def __init__(self,x, y, z):
+...             super().__init__(x,y)
+...             self.z = z
+...
+>>> class Y(A):
+...     __slots__ = ("z",)                # 新增字段列表，或为空
+...     def __init__(self, x, y, z):
+...             super().__init__(x, y)
+...             self.z = z
+...
+>>> x = X(1,2,3)
+>>> x.__dict__          # 包含__dict__，用于存储非__slots__新增成员
+{'z': 3}
+>>> y = Y(1,2,3)
+>>> y.__dict__
+AttributeError: 'Y' object has no attribute '__dict__'
+>>> dir(y)
+[..., 'x', 'y', 'z']
+```
+
+### 运算符重载
+
+每种运算符都有对应一个特殊名称的方法。解释器会将运算符指令转换成方法调用，方法名可参考标准库的operator文档。运算符重载就是定义目标方法。但不限于运算符，还可包括内置函数和某些语句。
+
+```
+>>> class X:
+...     def __init__(self, data):
+...             self.data = data
+...     def __repr__(self):
+...             return f"{self.__class__} {self.data!r}"
+...     def __add__(self, other):     # 加法 +
+...             return X(self.data + other.data)
+...     def __iadd__(self, other):    # 增量赋值 +=
+...             self.data.extend(other.data)
+...             return self
+...
+>>> a, b = X([1, 2]), X([3, 4])
+>>> a+b
+<class '__main__.X'> [1, 2, 3, 4]
+>>> a +=b
+>>> a
+<class '__main__.X'> [1, 2, 3, 4]
+```
+
+##### \_\_repr\_\_
+
+函数repr、str都输出对象字符创格式信息。
+
+方法\_\_repr\_\_倾向输出运行期状态，比如类型、id，以及关键性内容，其适应调试和观察。而\_\_str\_\_通常返回内容数据，其面向用户，易阅读，可输出到终端或日志。
+
+```
+>>> class X:
+...     def __init__(self, x):
+...             self._x = x
+...     def __repr__(self):
+...             return f"<X:{hex(id(self))}>"
+...     def __str__(self):
+...             return str(self._x)
+...
+>>> repr(X(1))
+'<X:0x1d392dbb160>'
+>>> str(X(1))
+'1'
+```
+
+##### \_\_item\_\_
+
+为对象添加索引(index)或主键（key）访问。
+
+```
+>>> class X:
+...     def __init__(self, data = None):
+...             self.data = data or []
+...     def __getitem__(self, index):
+...             return self.data[index]
+...     def __setitem__(self, index, value):
+...             if index >= len(self.data):
+...                     self.data.append(value)
+...                     return
+...             self.data[index] = value
+...     def __delitem__(self, index):
+...             return self.data.pop(index)
+...
+>>> o = X([1, 2, 3, 4])
+>>> o[2] = 300
+>>> del o[2]
+>>> o.data
+[1, 2, 4]
+```
+
+##### \_\_call\_\_
+
+让对象可像函数一样调用。实现该方法的对象被称为callable，函数也是其中一种。用实例对象替代函数，让逻辑自带内部状态(其封装性比闭包更好)。
+
+```
+>>> class X:
+...     def __init__(self):
+...             self.count = 0
+...     def __call__(self, s):
+...             self.count += 1
+...             print(s)
+...
+>>> def test(f):
+...     f("abc")
+...
+>>> test(lambda s:print(s))
+abc
+>>> test(X())
+abc
+>>> o= X()
+>>> o("abc")
+abc
+```
+
+##### \_\_dir\_\_
+
+定制dir函数返回值，隐藏部分成员。
+
+```
+>>> class X:
+...     def __dir__(self):
+...             return (m for m in vars(self).keys() if not m.startswith("__"))
+...
+>>> o = X()
+>>> o.a =1
+>>> o.b = 2
+>>> dir(o)
+['a', 'b']
+>>> o.__c = "abc"
+>>> dir(o)
+['a', 'b']
+```
+
+##### \_\_getattr\_\_
+
+几个与实例属性访问相关方法：
+
+* \_\_getattr\_\_： 当整个搜索路径都找不到目标属性时触发。
+* \_\_setattr\_\_： 拦截对任何属性的赋值操作。
+* \_\_delattr\_\_： 拦截对任何属性的删除操作。
+
+> 拦截到赋值和删除操作后，由拦截方法负责处理赋值和删除行为，忽略则被视为放弃该操作。
+>
+> 在拦截方法内部，通过属性或setattr等函数调用都可能再次被拦截，甚至引发递归调用错误。应直接操作\_\_dict\_\_，或使用基类object.\_\_setattr\_\_方法。
+
+```
+>>> class A:
+...     a = 1234
+...
+>>> class B(A):
+...     def __init__(self, x):
+...             self.x = x
+...     def __getattr__(self, name):
+...             print(f"get: {name}")
+...             return self.__dict__.get(name)
+...     def __setattr__(self, name, value):
+...             print(f"set: {name} = {value}")
+...             self.__dict__[name] = value
+...     def __delattr__(self, name):
+...             print(f"del: {name}")
+...             self.__dict__.pop(name, None)
+...
+>>> o = B(1)
+set: x = 1    # 拦截B.__init__里对self.x的赋值操作
+>>> o.a		  # 搜索路径里能找到的成员，不会触发__getattr__	
+1234
+>>> o.xxx     # 找不到，才会触发
+get: xxx
+>>> o.x = 100 # 任何赋值操作都会被__setattr__拦截(无论其是否存在)
+set: x = 100
+>>> del o.x   # 拦截任何删除操作，(无论其是否存在)
+del: x
+```
+
+方法\_\_getattribute\_\_拦截任何实例属性的访问(无论其是否存在)。
+
+> 拦截目标包括\_\_dict\_\_，这意味着只能通过基类方法进行操作。
+>
+> 访问不存在的成员时，\_\_getattribute\_\_拦截后不再触发\_\_getattr\_\_，除非显式调用或触发异常。
+>
+> 在下面实例中，因object.\_\_getattribute\_\_找不到目标属性，所以会触发A.\_\_getattr\_\_调用，继而还会拦截到其内部对\_\_dict\_\_的访问。
+
+```
+>>> class A:
+...     def __init__(self, x):
+...             self.x = x
+...     def __getattribute__(self, name):   # 返回结果，或引发AttributeError
+...             print(f"getattribute: {name}")
+...             return object.__getattribute__(self, name)
+...     def __getattr__(self, name):
+...             print(f"getattr: {name}")
+...             return self.__dict__.get(name)
+...
+>>> o = A(1)
+>>> o.x    # 无论其是否存在，均被拦截
+getattribute: x
+1
+>>> o.s
+getattribute: s          # __getattribute__拦截
+getattr: s               # object.__getattribute__找不到s,触发__getattr__
+getattribute: __dict__	 # __getattr__访问__dict__被再次拦截
+```
+
