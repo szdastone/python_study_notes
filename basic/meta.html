@@ -1,0 +1,1177 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>元编程 · Python学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Dastone Deng <dastone.deng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/stype.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/katex/dist/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/prismjs/themes/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exception.html" />
+    
+    
+    <link rel="prev" href="class.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://szdastone.github.io" target="_blank" class="custom-link">我的主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../install/install.html">
+            
+                <a href="../install/install.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../install/venv.html">
+            
+                <a href="../install/venv.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="dict.html">
+            
+                <a href="dict.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="express.html">
+            
+                <a href="express.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="if.html">
+            
+                <a href="if.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="loop.html">
+            
+                <a href="loop.html">
+            
+                    
+                        <b>1.3.6.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                        <b>1.3.7.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                        <b>1.3.8.</b>
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                        <b>1.3.9.</b>
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                        <b>1.3.10.</b>
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.11" data-path="meta.html">
+            
+                <a href="meta.html">
+            
+                    
+                        <b>1.3.11.</b>
+                    
+                    元编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="exception.html">
+            
+                <a href="exception.html">
+            
+                    
+                        <b>1.3.12.</b>
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="inout.html">
+            
+                <a href="inout.html">
+            
+                    
+                        <b>1.3.13.</b>
+                    
+                    输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                        <b>1.3.14.</b>
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="unittest.html">
+            
+                <a href="unittest.html">
+            
+                    
+                        <b>1.3.15.</b>
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../module/">
+            
+                <a href="../module/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../common/requests.html">
+            
+                <a href="../common/requests.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >元编程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x5143;&#x7F16;&#x7A0B;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x5143;&#x7F16;&#x7A0B;</h1>
+<p>&#x5143;&#x7F16;&#x7A0B;&#x5C06;&#x7A0B;&#x5E8F;&#x5F53;&#x505A;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x5728;&#x8FD0;&#x884C;&#x671F;&#x5B8C;&#x6210;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h3 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x88C5;&#x9970;&#x5668;</h3>
+<p>&#x4EE3;&#x7801;&#x53EF;&#x5229;&#x7528;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5728;&#x4E0D;&#x6D78;&#x5165;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#xFF0C;&#x751A;&#x81F3;&#x5728;&#x4E0D;&#x77E5;&#x60C5;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x63D2;&#x5165;&#x6269;&#x5C55;&#x903B;&#x8F91;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; @log
+... def add(x, y):
+...     return x + y
+</code></pre><p>&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x8BED;&#x6CD5;&#x5904;&#x7406;&#x6210;&#x5982;&#x4E0B;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def add(x, y):
+...     return x + y
+...
+&gt;&gt;&gt; add = log(add)
+</code></pre><p>&#x5BF9;&#x6309;&#x540D;&#x5B57;&#x641C;&#x7D22;&#x6267;&#x884C;&#x7684;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x6839;&#x672C;&#x5BDF;&#x89C9;&#x4E0D;&#x5230;&#x3002;&#x800C;&#x88AB;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x8981;&#x80FD;&#x6536;&#x5230;&#x6B63;&#x786E;&#x53C2;&#x6570;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5C31;&#x53EF;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E86;&#x3002;&#x4ECE;&#x88C5;&#x9970;&#x5668;&#x8BED;&#x6CD5;&#x548C;&#x5B9E;&#x73B0;&#x6548;&#x679C;&#x6765;&#x770B;&#xFF0C;&#x7C7B;&#x4F3C;AOP&#x7F16;&#x7A0B;&#x8303;&#x5F0F;&#x3002;</p>
+<h4 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>1.1&#x3001;&#x5B9E;&#x73B0;</h4>
+<p>&#x57FA;&#x4E8E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x4EE5;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(fn):
+...     def wrap(*args, **kwargs):   # &#x901A;&#x8FC7;&#x5305;&#x88C5;&#x51FD;&#x6570;&#x95F4;&#x63A5;&#x8C03;&#x7528;&#x539F;&#x51FD;&#x6570;
+...             print(f&quot;log: {args}, {kwargs}&quot;)
+...             return fn(*args, **kwargs)
+...     return wrap                  # &#x8FD4;&#x56DE;&#x5305;&#x88C5;&#x51FD;&#x6570;&#x66FF;&#x4EE3;&#x539F;&#x51FD;&#x6570;&#x4E0E;&#x540D;&#x5B57;&#x5173;&#x8054;
+...
+&gt;&gt;&gt; @log
+... def add(x, y):
+...     return x +y
+...
+&gt;&gt;&gt; add(1, 2)
+log: (1, 2), {}
+3
+</code></pre><p>&#x5176;&#x8FD4;&#x56DE;&#x5305;&#x88C5;&#x4EE3;&#x7406;&#xFF0C;&#x6216;&#x4EC5;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x5C5E;&#x6027;&#x540E;&#xFF0C;&#x539F;&#x6837;&#x8FD4;&#x56DE;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(fn):
+...     fn.log_func = lambda *args, **kwargs: print(f&quot;log: {args}, {kwargs}&quot;)
+...     return fn
+</code></pre><p>&#x540C;&#x6837;&#xFF0C;&#x4EFB;&#x4F55;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;(callable)&#x90FD;&#x53EF;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x88C5;&#x9970;&#x5668;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class log:
+...     def __init__(self, fn):
+...             self.fn = fn
+...     def __call__(self, *args, **kwargs):
+...             print(f&quot;log: {args}, {kwargs}&quot;)
+...             return self.fn(*args, **kwargs)
+...
+&gt;&gt;&gt; @log
+... def add(x, y):
+...     return x + y
+...
+&gt;&gt;&gt; add(1, 4)
+log: (1, 4), {}
+5
+</code></pre><blockquote>
+<p>&#x56E0;&#x6BCF;&#x6761;&#x201C;@log&#x201D;&#x90FD;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x6210;&#x201C;log(add)&#x201D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5176;&#x5E94;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x5B8C;&#x5168;&#x6CA1;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p>&#x76F8;&#x6BD4;&#x4E8E;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x5B9E;&#x73B0;&#x4F3C;&#x4E4E;&#x53EF;&#x6784;&#x5EFA;&#x66F4;&#x590D;&#x6742;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4F46;&#x8FD9;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x9EBB;&#x70E6;&#x3002;&#x7C7B;&#x5B9E;&#x73B0;&#x7684;&#x88C5;&#x9970;&#x5668;&#x5E94;&#x7528;&#x4E8E;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;&#x4E22;&#x5931;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class log:
+...     def __init__(self, fn):
+...             self.fn = fn
+...     def __call__(self, *args, **kwargs):
+...             print(f&quot;log: {args}, {kwargs}&quot;)
+...             return self.fn(*args, **kwargs)
+...
+&gt;&gt;&gt; class X:
+...     @log
+...     def test(self): pass
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.test  # &#x65B9;&#x6CD5;&#x88AB;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x4F8B;&#x6240;&#x66FF;&#x4EE3;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.log</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BA6128</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; x.test()   
+log: (), {}
+Traceback (most recent call last):
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>&quot;, line 6, in __call__
+TypeError: test() missing 1 required positional argument: &apos;self&apos;
+</code></pre><p>&#x56E0;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x4F8B;&#x66FF;&#x4EE3;&#x4E86;&#x65B9;&#x6CD5;&#xFF0C;&#x7ED3;&#x679C;&#x5BFC;&#x81F4;&#x5B9E;&#x73B0;&#x7ED1;&#x5B9A;&#x7684;&#x63CF;&#x8FF0;&#x7B26;&#x65B9;&#x6CD5;&#x88AB;&#x9690;&#x85CF;&#xFF0C;&#x65E0;&#x6CD5;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x3002;&#x8981;&#x4E48;&#x8BA9;&#x88C5;&#x9970;&#x5668;&#x4E5F;&#x5B9E;&#x73B0;&#x63CF;&#x8FF0;&#x7B26;&#x534F;&#x8BAE;&#xFF0C;&#x8981;&#x4E48;&#x663E;&#x5F0F;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x6837;&#x53CD;&#x800C;&#x4E0D;&#x5982;&#x7528;&#x51FD;&#x6570;&#x6765;&#x7684;&#x7B80;&#x5355;&#xFF0C;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86;&#x63CF;&#x8FF0;&#x7B26;&#x534F;&#x8BAE;&#x548C;&#x7ED1;&#x5B9A;&#x89C4;&#x5219;&#x3002;&#x81F3;&#x4E8E;&#x72B6;&#x6001;&#x7EF4;&#x6301;&#xFF0C;&#x51FD;&#x6570;&#x4E00;&#x6837;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(fn):
+...     def wrap(*args, **kwargs):
+...             print(f&quot;log: {args}, {kwargs}&quot;)
+...             return fn(*args, **kwargs)
+...     return wrap
+...
+&gt;&gt;&gt; class X:
+...     @log
+...     def test(self): pass
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.test
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bound</span> <span class="token attr-name">method</span> <span class="token attr-name">log.&lt;locals</span><span class="token punctuation">&gt;</span></span>.wrap of <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BA6390</span><span class="token punctuation">&gt;</span></span>&gt;
+&gt;&gt;&gt; log.__get__   # &#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86;&#x63CF;&#x8FF0;&#x7B26;&#x534F;&#x8BAE;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>method-wrapper</span> <span class="token attr-name">&apos;__get__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">function</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23B90F28</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5D4C;&#x5957;</h5>
+<p>&#x5D4C;&#x5957;&#x5BF9;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x3002;</p>
+<pre class="language-"><code>@a
+@b
+def test(): pass
+</code></pre><p>&#x6700;&#x7EC8;&#x6548;&#x679C;&#x5C31;&#x662F;&#x591A;&#x6B21;&#x5D4C;&#x5957;&#x8C03;&#x7528;&#x3002;</p>
+<pre class="language-"><code>test = a(b(test))
+</code></pre><p>&#x88C5;&#x9970;&#x5668;&#x63A5;&#x6536;&#x524D;&#x4E00;&#x88C5;&#x9970;&#x5668;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8BE5;&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x80FD;&#x662F;&#x5305;&#x88C5;&#x5BF9;&#x8C61;&#x6216;&#x662F;&#x539F;&#x51FD;&#x6570;&#x3002;&#x5982;&#x6B64;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x6392;&#x5217;&#x987A;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5E76;&#x4E0D;&#x76F8;&#x540C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x987B;&#x786E;&#x4FDD;&#x7C7B;&#x578B;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;&#x5668;&#x662F;&#x6700;&#x5916;&#x9762;&#x4E00;&#x4E2A;&#xFF0C;&#x56E0;&#x4E3A;&#x65E0;&#x6CD5;&#x786E;&#x5B9A;&#x5185;&#x5C42;&#x88C5;&#x9970;&#x5668;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x56E0;&#x63CF;&#x8FF0;&#x7B26;&#x95EE;&#x9898;&#xFF0C;&#x5BFC;&#x81F4;&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;&#x5931;&#x6548;&#x3002;</p>
+<pre class="language-"><code>class X:
+    @classmethod   # &#x6CE8;&#x610F;&#x653E;&#x5728;&#x6700;&#x5916;&#x5C42;
+    @log
+    def test(cls): pass
+</code></pre><h5 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<p>&#x9664;&#x88AB;&#x88C5;&#x9970;&#x76EE;&#x6807;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x5411;&#x88C5;&#x9970;&#x5668;&#x4F20;&#x9012;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x3002;&#x4EE5;&#x5B9E;&#x73B0;&#x66F4;&#x591A;&#x5B9A;&#x7279;&#x6027;&#x3002;</p>
+<pre class="language-"><code>@log(&quot;demo&quot;)
+def test(): pass
+</code></pre><p>&#x8FD9;&#x6837;&#xFF0C;&#x5C31;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(name = &quot;default&quot;):  # &#x5916;&#x5C42;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x53C2;&#x6570;
+...     print(f&quot;args: {name}&quot;)
+...     def decorator(fn):      # &#x88C5;&#x9970;&#x5668; 
+...             print(f&quot;decorator: {fn}&quot;)
+...             return fn       # &#x8FD4;&#x56DE;&#x5305;&#x88C5;&#x51FD;&#x6570;&#x6216;&#x539F;&#x51FD;&#x6570;
+...     return decorator
+...
+&gt;&gt;&gt; @log(&quot;demo&quot;)
+... def test(): pass
+...
+args: demo
+decorator: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BAA400</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; @log()                # &#x5BF9;&#x4E8E;&#x6709;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5982;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x987B;&#x62EC;&#x53F7;&#x3002;
+... def test(): pass
+...
+args: default
+decorator: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BAA510</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;</h5>
+<p>&#x53EF;&#x8BA9;&#x5305;&#x88C5;&#x51FD;&#x6570;&#x66F4;&#x50CF;&#x539F;&#x51FD;&#x6570;&#x4E00;&#x4E9B;&#xFF0C;&#x6BD4;&#x5982;&#x62E5;&#x6709;&#x67D0;&#x4E9B;&#x76F8;&#x540C;&#x5C5E;&#x6027;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; import functools
+&gt;&gt;&gt; def log(fn):
+...     @functools.wraps(fn)
+...     def wrap(*args, **kwargs):
+...             return fn(*args, **kwargs)
+...     print(f&quot;wrap: {id(wrap)}, func: {id(fn)}&quot;)
+...     return wrap
+...
+&gt;&gt;&gt; @log
+... def add(x: int, y: int) -&gt; int:
+...     return x + y
+...
+wrap: 1714291384800, func: 1714291385208
+&gt;&gt;&gt; add.__name__
+&apos;add&apos;
+&gt;&gt;&gt; add.__annotations__
+{&apos;x&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;y&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;return&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>}
+&gt;&gt;&gt; id(add), id(add.__wrapped__)
+(1714291384800, 1714291385208)
+</code></pre><blockquote>
+<p>&#x88C5;&#x9970;&#x5668;functools.wrap&#x5C06;&#x539F;&#x51FD;&#x6570;__module__&#x3001;__name__&#x3001;__doc__&#x3001;__annotations__&#x7B49;&#x5C5E;&#x6027;&#x590D;&#x5236;&#x5230;&#x5305;&#x88C5;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x7528;__wrapped__&#x5B58;&#x50A8;&#x539F;&#x59CB;&#x51FD;&#x6570;&#x6216;&#x4E0A;&#x4E00;&#x88C5;&#x9970;&#x5668;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x53EF;&#x7531;&#x6B64;&#x5224;&#x65AD;&#x5E76;&#x7ED5;&#x5F00;&#x88C5;&#x9970;&#x5668;&#x5BF9;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x5E72;&#x6270;&#x3002;</p>
+</blockquote>
+<h5 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x578B;&#x88C5;&#x9970;&#x5668;</h5>
+<p>&#x88C5;&#x9970;&#x5668;&#x540C;&#x6837;&#x53EF;&#x7528;&#x4E8E;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x533A;&#x522B;&#x65E0;&#x975E;&#x662F;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x4E3A;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x800C;&#x5DF2;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(cls):
+...     class wrapper:
+...             def __init__(self, *args, **kwargs):
+...                     self.__dict__[&quot;inst&quot;] = cls(*args, **kwargs)
+...             def __getattr__(self, name):
+...                     value = getattr(self.inst, name)
+...                     print(f&quot;get: {name} = {value}&quot;)
+...                     return value
+...             def __setattr__(self, name, value):
+...                     print(f&quot;set: {name} = {value}&quot;)
+...                     return setattr(self.inst, name, value)
+...     return wrapper
+...
+&gt;&gt;&gt; @log
+... class X: pass
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.a = 1
+set: a = 1
+&gt;&gt;&gt; x.a
+get: a = 1
+1
+</code></pre><blockquote>
+<p>&#x56E0;&#x6BCF;&#x6B21;&#x90FD;&#x65B0;&#x5EFA;wrapper&#x7C7B;&#x578B;&#xFF0C;&#x6545;&#x53EF;&#x5E94;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x76EE;&#x6807;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x672A;&#x5FC5;&#x8981;&#x8FD4;&#x56DE;&#x5305;&#x88C5;&#x7C7B;&#xFF0C;&#x4E5F;&#x53EF;&#x7528;&#x51FD;&#x6570;&#x4EE3;&#x66FF;&#xFF0C;&#x95F4;&#x63A5;&#x8C03;&#x7528;&#x76EE;&#x6807;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def log(cls):
+...     def wrap(*args, **kwargs):
+...             o = cls(*args, **kwargs)
+...             print(f&quot;log: {o}&quot;)
+...             return o
+...     return wrap
+...
+&gt;&gt;&gt; @log
+... class X: pass
+...
+&gt;&gt;&gt; X()
+log: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BA6780</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BA6780</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>1.2&#x3001;&#x5E94;&#x7528;</h4>
+<p>&#x5229;&#x7528;&#x88C5;&#x9970;&#x5668;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x7F16;&#x5199;&#x5404;&#x79CD;&#x8F85;&#x52A9;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x3002;&#x5982;&#x8C03;&#x8BD5;&#x8DDF;&#x8E2A;&#x3001;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x3001;&#x5185;&#x5B58;&#x68C0;&#x6D4B;&#x7B49;&#x3002;&#x4E5F;&#x53EF;&#x7528;&#x4E8E;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x6539;&#x5584;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x3002;</p>
+<h5 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;&#x8DDF;&#x8E2A;</h5>
+<p>&#x8BB0;&#x5F55;&#x76EE;&#x6807;&#x8C03;&#x7528;&#x53C2;&#x6570;&#x3001;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4EE5;&#x53CA;&#x6267;&#x884C;&#x6B21;&#x6570;&#x548C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def call_count(fn):
+...     def counter(*args, **kwargs):
+...             counter.__count__ += 1
+...             return fn(*args, **kwargs)
+...     counter.__count__ = 0
+...     return counter
+...
+&gt;&gt;&gt; @call_count
+... def a(): pass
+...
+&gt;&gt;&gt; @call_count
+... def b(): pass
+...
+&gt;&gt;&gt; a(); a(); a.__count__
+2
+&gt;&gt;&gt; b(); b(); b(); b.__count__
+3
+</code></pre><p>&#x5728;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x7F13;&#x5B58;&#x7ED3;&#x679C;&#x51CF;&#x5C11;&#x76EE;&#x6807;&#x6267;&#x884C;&#x6B21;&#x6570;&#x3002;</p>
+<pre class="language-"><code>In [1]: import functools
+
+In [2]: @functools.lru_cache(10)
+   ...: def test(x):
+   ...:     time.sleep(x)
+   ...:
+
+In [3]: import time
+
+In [4]: %%time
+   ...: for i in range(1000): test(1)
+   ...:
+   ...:
+Wall time: 1 s
+</code></pre><h5 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C5E;&#x6027;&#x7BA1;&#x7406;</h5>
+<p>&#x4E3A;&#x76EE;&#x6807;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x5C5E;&#x6027;&#xFF0C;&#x5728;&#x539F;&#x6709;&#x8BBE;&#x8BA1;&#x4E0A;&#x4EE5;&#x88C5;&#x914D;&#x65B9;&#x5F0F;&#x6DF7;&#x5165;(mixin)&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x7EC4;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def pet(cls):
+...     cls.dosomething = lambda self: None
+...     return cls
+...
+&gt;&gt;&gt; @pet   # &#x6DFB;&#x52A0;&#x7C7B;&#x4F3C;&#x5BA0;&#x7269;&#x529F;&#x80FD;
+... class Parrot: pass
+...
+</code></pre><blockquote>
+<p>&#x6BD4;&#x8D77;&#x524D;&#x9762;&#x7AE0;&#x8282;&#x63D0;&#x53CA;&#x7684;&#x76F4;&#x63A5;&#x6DFB;&#x52A0;&#x57FA;&#x7C7B;(__bases__)&#x65B9;&#x5F0F;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x66F4;&#x597D;&#x70B9;&#x3002;</p>
+<p>&#x8FD8;&#x53EF;&#x7528;&#x4EE3;&#x7406;&#x7C7B;&#x62E6;&#x622A;(__getattr__&#x3001;__setattr__)&#x5BF9;&#x76EE;&#x6807;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x6BD4;&#x5982;&#x5B9E;&#x73B0;&#x53EA;&#x8BFB;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<h5 id="anchor_10"><a name="anchor_10" class="anchor-navigation-ex-anchor" href="#anchor_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x7BA1;&#x7406;</h5>
+<p>&#x66FF;&#x4EE3;&#x76EE;&#x6807;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x62E6;&#x622A;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x3002;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x7F13;&#x5B58;&#xFF0C;&#x6216;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def singleton(cls):
+...     inst = None
+...     def wrap(*args, **kwargs):
+...             nonlocal inst
+...             if not inst: inst = cls(*args, **kwargs)
+...             return inst
+...     return wrap
+...
+&gt;&gt;&gt; @singleton
+... class X: pass
+...
+&gt;&gt;&gt; X() is X()
+True
+</code></pre><h5 id="anchor_11"><a name="anchor_11" class="anchor-navigation-ex-anchor" href="#anchor_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x4EF6;&#x6CE8;&#x518C;</h5>
+<p>&#x5728;&#x5F88;&#x591A;Web&#x6846;&#x67B6;&#x91CC;&#xFF0C;&#x7528;&#x88C5;&#x9970;&#x5668;&#x66FF;&#x4EE3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x6CE8;&#x518C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class App:
+...     def __init__(self):
+...             self.routers = {}
+...     def route(self, url):
+...             def register(fn):
+...                     self.routers[url] = fn
+...                     return fn
+...             return register
+...
+&gt;&gt;&gt; app = App()
+&gt;&gt;&gt; @app.route(&quot;/&quot;)
+... def index(): pass
+...
+&gt;&gt;&gt; @app.route(&quot;/help&quot;)
+... def help(): pass
+...
+&gt;&gt;&gt; app.routers
+{&apos;/&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">index</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BAAD08</span><span class="token punctuation">&gt;</span></span>, &apos;/help&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">help</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000018F23BAAD90</span><span class="token punctuation">&gt;</span></span>}
+</code></pre><h3 id="anchor_12"><a name="anchor_12" class="anchor-navigation-ex-anchor" href="#anchor_12"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x63CF;&#x8FF0;&#x7B26;</h3>
+<p>&#x63CF;&#x8FF0;&#x7B26;&#x4E00;&#x81F4;&#x88AB;&#x89E3;&#x91CA;&#x5668;&#x5F53;&#x79D8;&#x5BC6;&#x6B66;&#x5668;&#x4F7F;&#x7528;&#x3002;&#x524D;&#x9762;&#x63D0;&#x53CA;&#x7684;&#x5C5E;&#x6027;&#x3001;&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;&#x7B49;&#x5185;&#x90E8;&#x673A;&#x5236;&#x90FD;&#x662F;&#x63CF;&#x8FF0;&#x7B26;&#x5728;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x4E0D;&#x540C;&#x4E8E;&#x5B9E;&#x4F8B;&#x901A;&#x8FC7;&#x62E6;&#x622A;&#x65B9;&#x6CD5;&#xFF08;__getattr__&#x7B49;&#xFF09;&#xFF0C;&#x63CF;&#x8FF0;&#x7B26;&#x4EE5;&#x5355;&#x4E2A;&#x5C5E;&#x6027;&#x51FA;&#x73B0;&#xFF0C;&#x5E76;&#x9488;&#x5BF9;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x4E0D;&#x540C;&#x8BBF;&#x95EE;&#x884C;&#x4E3A;&#x81EA;&#x52A8;&#x505A;&#x51FA;&#x54CD;&#x5E94;&#x3002;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x63CF;&#x8FF0;&#x7B26;&#x80FD;&quot;&#x611F;&#x77E5;&quot;&#x901A;&#x8FC7;&#x4EC0;&#x4E48;&#x5F15;&#x7528;&#x8BE5;&#x5C5E;&#x6027;&#xFF0C;&#x4ECE;&#x800C;&#x548C;&#x76EE;&#x6807;&#x5EFA;&#x7ACB;&#x7ED1;&#x5B9A;&#x5173;&#x8054;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class descriptor:
+...     def __set_name__(self, owner, name):
+...             print(f&quot;name: {owner.__name__}.{name}&quot;)
+...             self.name = f&quot;__{name}__&quot;
+...     def __get__(self, instance, owner):
+...             print(f&quot;get: {instance}, {owner}&quot;)
+...             return getattr(instance, self.name, None)
+...     def __set__(self, instance, value):
+...             print(f&quot;set: {instance}, {value}&quot;)
+...             setattr(instance, self.name, value)
+...     def __delete__(self, instance):
+...             print(f&quot;del: {instance}&quot;)
+...             raise AttributeError(&quot;delete is disabled&quot;)
+...
+&gt;&gt;&gt; class X:
+...     data = descriptor()
+...
+name: X.data
+</code></pre><p>&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x5B9A;&#x4E49;&#x4E3A;&#x7C7B;&#x578B;&#x6210;&#x5458;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x81EA;&#x8EAB;&#x4E0D;&#x9002;&#x5408;&#x5B58;&#x50A8;&#x5B9E;&#x4F8B;&#x76F8;&#x5173;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5728;&#x521B;&#x5EFA;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;__set_name__&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5E76;&#x53EF;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x83B7;&#x77E5;&#x76EE;&#x6807;&#x7C7B;&#x578B;&#xFF08;owner&#xFF09;,&#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x4EE5;&#x7C7B;&#x578B;&#x6216;&#x5B9E;&#x4F8B;&#x8BBF;&#x95EE;&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;__get__&#x88AB;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#xFF0C;&#x4E14;&#x4F1A;&#x63A5;&#x6536;&#x5230;&#x7C7B;&#x578B;&#x548C;&#x5B9E;&#x4F8B;&#x5F15;&#x7528;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.data = 100
+set: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576320</span><span class="token punctuation">&gt;</span></span>, 100
+&gt;&gt;&gt; x.data
+get: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576320</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.X&apos;</span><span class="token punctuation">&gt;</span></span>
+100
+</code></pre><p>&#x65B9;&#x6CD5;__set__&#x3001;__delete__&#x4EC5;&#x5728;&#x5B9E;&#x4F8B;&#x5F15;&#x7528;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x4EE5;&#x7C7B;&#x578B;&#x5F15;&#x7528;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x6216;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x88AB;&#x66FF;&#x6362;&#x6216;&#x5220;&#x9664;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; X.data
+get: None, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.X&apos;</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; X.data = 100   # &#x4EE5;&#x7C7B;&#x578B;&#x5F15;&#x7528;&#x8D4B;&#x503C;&#xFF0C;&#x5BFC;&#x81F4;&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x88AB;&#x66FF;&#x6362;
+&gt;&gt;&gt; X.data
+100
+</code></pre><p>&#x8FD8;&#x6709;&#xFF0C;&#x5C06;&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#x6216;&#x4F20;&#x53C2;&#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x7ED3;&#x679C;&#x662F;__get__&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.data = 100
+set: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576320</span><span class="token punctuation">&gt;</span></span>, 100
+&gt;&gt;&gt; o = x.data
+get: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576320</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.X&apos;</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; o
+100
+</code></pre><h5 id="anchor_13"><a name="anchor_13" class="anchor-navigation-ex-anchor" href="#anchor_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;</h5>
+<p>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;__set__&#x6216;__delete__&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4FBF;&#x79F0;&#x5176;&#x4E3A;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#x3002;&#x800C;&#x4EC5;&#x6709;__get__d&#x7684;&#x5219;&#x662F;&#x975E;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#x3002;&#x8FD9;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#x5C5E;&#x6027;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x5B9E;&#x4F8B;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x540C;&#x540D;&#x6210;&#x5458;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class descriptor:
+...     def __get__(self, instance, owner):
+...             print(&quot;__get__&quot;)
+...     def __set__(self, instance, value):
+...             print(&quot;__set__&quot;)
+...
+&gt;&gt;&gt; class X:
+...     data = descriptor()
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.__dict__[&quot;data&quot;] = 0
+&gt;&gt;&gt; x.data = 100
+__set__
+&gt;&gt;&gt; x.data
+__get__
+</code></pre><p>&#x4F46;&#x5982;&#x679C;&#x6CE8;&#x91CA;__set__&#xFF0C;&#x4F7F;&#x5176;&#x53D8;&#x6210;&#x975E;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x7ED3;&#x679C;&#x4E0D;&#x4E00;&#x6837;&#x4E86;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class descriptor:
+...     def __get__(self, instance, owner):
+...             print(&quot;__get__&quot;)
+...
+&gt;&gt;&gt; class X:
+...     data = descriptor()
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.data = 10  # &#x540C;&#x540D;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x975E;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;
+&gt;&gt;&gt; x.data
+10
+&gt;&gt;&gt; vars(x)
+{&apos;data&apos;: 10}
+</code></pre><p>&#x5C5E;&#x6027;&#xFF08;property&#xFF09;&#x5C31;&#x662F;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x7B26;&#x3002;&#x5C31;&#x7B97;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;setter&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;__set__&#x4F9D;&#x7136;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x540C;&#x540D;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; p  = property()
+&gt;&gt;&gt; p.__get__
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>method-wrapper</span> <span class="token attr-name">&apos;__get__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">property</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E55F0E8</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; p.__set__
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>method-wrapper</span> <span class="token attr-name">&apos;__set__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">property</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E55F0E8</span><span class="token punctuation">&gt;</span></span>
+&gt;&gt;&gt; p.__delete__
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>method-wrapper</span> <span class="token attr-name">&apos;__delete__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">property</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E55F0E8</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="anchor_14"><a name="anchor_14" class="anchor-navigation-ex-anchor" href="#anchor_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;</h5>
+<p>&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;&#x4E86;&#x63CF;&#x8FF0;&#x7B26;&#x534F;&#x8BAE;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x4EE5;&#x5B9E;&#x4F8B;&#x6216;&#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;__get__&#x9996;&#x5148;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x7C7B;&#x578B;&#x548C;&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x88AB;&#x4F20;&#x5165;__get__&#xFF0C;&#x4ECE;&#x800C;&#x62E6;&#x622A;&#x7ED1;&#x5B9A;&#x76EE;&#x6807;&#xFF08;__self__&#xFF09;&#xFF0C;&#x5982;&#x6B64;&#x5C31;&#x5C06;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x6210;&#x7ED1;&#x5B9A;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x3002;&#x5B9E;&#x9645;&#x88AB;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x4F1A;&#x9690;&#x5F0F;&#x4F20;&#x5165;&#x7B2C;&#x4E00;&#x53C2;&#x6570;&#x7684;&#x5305;&#x88C5;&#x54C1;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class X:
+...     def test(self, o): print(o)
+...
+&gt;&gt;&gt; x = X()
+&gt;&gt;&gt; x.test
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bound</span> <span class="token attr-name">method</span> <span class="token attr-name">X.test</span> <span class="token attr-name">of</span> <span class="token attr-name">&lt;__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576668</span><span class="token punctuation">&gt;</span></span>&gt;
+&gt;&gt;&gt; x.test(123)
+123
+&gt;&gt;&gt; m = x.test.__get__(x, type(x))
+&gt;&gt;&gt; X.test(m.__self__, 123)
+123
+&gt;&gt;&gt; m
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bound</span> <span class="token attr-name">method</span> <span class="token attr-name">X.test</span> <span class="token attr-name">of</span> <span class="token attr-name">&lt;__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576668</span><span class="token punctuation">&gt;</span></span>&gt;
+&gt;&gt;&gt; m.__self__, m.__func__
+(<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576668</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">X.test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E577598</span><span class="token punctuation">&gt;</span></span>)
+</code></pre><blockquote>
+<p>x.test(123)&#x5B9E;&#x9645;&#x5206;&#x6210;&#x4E86;2&#x4E2A;&#x6B65;&#x9AA4;&#x6765;&#x6267;&#x884C;&#xFF1A;</p>
+<ul>
+<li><p>x.test(123) ---&gt; m = x.test.__get__(x, type(x)) #&#x5C06;&#x51FD;&#x6570;&#x5305;&#x88C5;&#x4E3A;&#x7ED1;&#x5B9A;&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>m(123) ---&gt; X.test(m.__self__, 123) # &#x6267;&#x884C;&#x65F6;&#xFF0C;&#x9690;&#x5F0F;&#x5C06;self/cls&#x53C2;&#x6570;&#x4F20;&#x7ED9;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5728;&#x7ED1;&#x5B9A;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;&#x5185;&#xFF0C;__self__&#x548C;__func__&#x5B58;&#x50A8;&#x4E86;&#x6267;&#x884C;&#x6240;&#x9700;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+</blockquote>
+<h3 id="anchor_15"><a name="anchor_15" class="anchor-navigation-ex-anchor" href="#anchor_15"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x5143;&#x7C7B;</h3>
+<p>&#x5143;&#x7C7B;&#xFF08;metaclass&#xFF09;&#x5236;&#x9020;&#x4E86;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4E0E;&#x903B;&#x8F91;&#x4E0A;&#x7684;&#x7236;&#x7C7B;&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5B58;&#x5728;&#x4E24;&#x6761;&#x7EBF;&#xFF1A;&#x521B;&#x5EFA;&#x548C;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x5143;&#x7C7B;&#x662F;type&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre class="language-"><code>base     = type(&quot;base&quot;, object, ...)
+class    = type(&quot;class&quot;, base, ...)
+instance = class(...)
+instance.__class__ is class and isinstance(instance, class)
+class.__class__    is type  and isinstance(class, type)
+base.__class__     is type  and isinstance(base, type)
+</code></pre><blockquote>
+<p>&#x5C5E;&#x6027;__class__&#x8868;&#x660E;&#x8BE5;&#x5BF9;&#x8C61;&#x7531;&#x4F55;&#x79CD;&#x7C7B;&#x578B;&#x521B;&#x5EFA;&#xFF0C;&#x53EF;&#x7528;type(o)&#x8FD4;&#x56DE;&#x3002;</p>
+</blockquote>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x53EF;&#x7528;type&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; User = type(&quot;User&quot;,(object,),{
+... &quot;__init__&quot;: lambda self, name: setattr(self, &quot;name&quot;, name),
+... &quot;test&quot;    : lambda self: print(self.name),
+... &quot;table&quot;   : &quot;user&quot;,
+... })
+&gt;&gt;&gt; User.__dict__
+mappingproxy({&apos;__init__&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">&lt;lambda</span><span class="token punctuation">&gt;</span></span> at 0x0000014E7E5607B8&gt;, &apos;test&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">&lt;lambda</span><span class="token punctuation">&gt;</span></span> at 0x0000014E7E577620&gt;, &apos;table&apos;: &apos;user&apos;, &apos;__module__&apos;: &apos;__main__&apos;, &apos;__dict__&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>attribute</span> <span class="token attr-name">&apos;__dict__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">&apos;User&apos;</span> <span class="token attr-name">objects</span><span class="token punctuation">&gt;</span></span>, &apos;__weakref__&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>attribute</span> <span class="token attr-name">&apos;__weakref__&apos;</span> <span class="token attr-name">of</span> <span class="token attr-name">&apos;User&apos;</span> <span class="token attr-name">objects</span><span class="token punctuation">&gt;</span></span>, &apos;__doc__&apos;: None})
+&gt;&gt;&gt; u = User(&quot;yuhen&quot;)
+&gt;&gt;&gt; u.test()
+yuhen
+&gt;&gt;&gt; u.__dict__
+{&apos;name&apos;: &apos;yuhen&apos;}
+</code></pre><h4 id="anchor_16"><a name="anchor_16" class="anchor-navigation-ex-anchor" href="#anchor_16"><i class="fa fa-link" aria-hidden="true"></i></a>3.1&#x3001; &#x81EA;&#x5B9A;&#x4E49;</h4>
+<p>&#x53EF;&#x81EA;&#x5B9A;&#x4E49;&#x5143;&#x7C7B;&#xFF0C;&#x4EE5;&#x63A7;&#x5236;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x7684;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#x3002;&#x901A;&#x5E38;&#x81EA;type&#x7EE7;&#x627F;&#xFF0C;&#x4EE5;Meta&#x4E3A;&#x540E;&#x7F00;&#x540D;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class DemoMeta(type): pass
+...
+&gt;&gt;&gt; class X(metaclass = DemoMeta): pass
+...
+&gt;&gt;&gt; X.__class__
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.DemoMeta&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x4E0E;&#x666E;&#x901A;&#x7C7B;&#x578B;&#x6784;&#x9020;&#x8FC7;&#x7A0B;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x8986;&#x76D6;&#x6784;&#x9020;&#x548C;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x5236;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class DemoMeta(type):
+...     @classmethod
+...     def __prepare__(cls, name, bases):
+...             print(f&quot;__prepare__: {name}&quot;)
+...             return {&quot;__make__&quot;: &quot;make in DemoMeta&quot;} # &#x5B9A;&#x5236;&#x540D;&#x5B57;&#x7A7A;&#x95F4;
+...     def __new__(cls, name, bases, attrs):
+...             print(f&quot;__new__: {name}, {bases}, {attrs}&quot;) 
+...             return type.__new__(cls, name, bases, attrs) # &#x521B;&#x5EFA;&#x5E76;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;
+...     def __init__(self, name, bases, attrs):
+...             print(f&quot;__init__: {self}&quot;)
+...             return type.__init__(self, name, bases, attrs) # &#x521D;&#x59CB;&#x5316;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;
+...     def __call__(cls, *args, **kwargs):
+...             print(f&quot;__call__: {cls}, {args}, {kwargs}&quot;)
+...             return type.__call__(cls, *args, **kwargs) #&#x8C03;&#x7528;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD4;&#x56DE;&#x5B9E;&#x4F8B;
+</code></pre><blockquote>
+<p>&#x6309;&#x9700;&#x53BB;&#x5B9E;&#x73B0;&#x76F8;&#x5173;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>__prepare__&#x7528;&#x6765;&#x521B;&#x5EFA;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#xFF08;X.__dict__&#xFF09;&#xFF0C;&#x53EF;&#x5F80;&#x91CC;&#x6DFB;&#x52A0;&#x70B9;&#x6216;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x5178;&#x7C7B;&#x578B;&#x3002;&#x968F;&#x540E;&#xFF0C;&#x8BE5;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x4F1A;&#x586B;&#x5145;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x6210;&#x5458;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x4F20;&#x7ED9;__new__&#x548C;__init__&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code>class X(metaclass = DemoMeta) ---&gt;
+        namespace = DemoMeta.__prepare__(name, ...)
+                X = DemoMeta.__new__(name, bases, namespace{attrs})
+                DemoMeta.__init(X, ...)
+</code></pre><p>__call__&#x5728;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;(X)&#x521B;&#x5EFA;&#x5176;&#x6240;&#x5C5E;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x5B9E;&#x9645;&#x4E0A;X.__new__&#x3001;X.__init__&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x7531;&#x6B64;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x62E6;&#x622A;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x3002;</p>
+<pre class="language-"><code>o = X(1, 2)  ---&gt; 
+    o = DemoMeta.__call__(X, 1, 2) ---&gt;
+        o = X.__new__(...)
+            X.__init__(o, ...)
+</code></pre></blockquote>
+<pre class="language-"><code>&gt;&gt;&gt; class X(metaclass = DemoMeta):
+...     data = 100
+...     def __init__(self, x, y): pass
+...     def test(self): pass
+...
+__prepare__: X
+__new__: X, (), {&apos;__make__&apos;: &apos;make in DemoMeta&apos;, &apos;__module__&apos;: &apos;__main__&apos;, &apos;__qualname__&apos;: &apos;X&apos;, &apos;data&apos;: 100, &apos;__init__&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">X.__init__</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E577950</span><span class="token punctuation">&gt;</span></span>, &apos;test&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">X.test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E5779D8</span><span class="token punctuation">&gt;</span></span>}
+__init__: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.X&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><pre class="language-"><code>&gt;&gt;&gt; o = X(1, 2)
+__call__: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.X&apos;</span><span class="token punctuation">&gt;</span></span>, (1, 2), {}
+&gt;&gt;&gt; o
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>__main__.X</span> <span class="token attr-name">object</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E576B00</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x7528;&#x51FD;&#x6570;&#x6216;&#x5176;&#x4ED6;&#x53EF;&#x8C03;&#x7528;&#x5BF9;&#x8C61;&#x4EE3;&#x66FF;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def demo_meta(name, bases, attrs):
+...     print(f&quot;{name}, {bases}, {attrs}&quot;)
+...     return type(name, bases, attrs)
+...
+&gt;&gt;&gt; class X(metaclass = demo_meta):
+...     data = 100
+...     def __init__(self, x, y): pass
+...     def test(self): pass
+...
+X, (), {&apos;__module__&apos;: &apos;__main__&apos;, &apos;__qualname__&apos;: &apos;X&apos;, &apos;data&apos;: 100, &apos;__init__&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">X.__init__</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E577AE8</span><span class="token punctuation">&gt;</span></span>, &apos;test&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">X.test</span> <span class="token attr-name">at</span> <span class="token attr-name">0x0000014E7E577B70</span><span class="token punctuation">&gt;</span></span>}
+</code></pre><blockquote>
+<p>&#x51FD;&#x6570;&#x53EA;&#x662F;&#x62E6;&#x622A;&#x8C03;&#x7528;&#xFF0C;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x4F9D;&#x7136;&#x4F7F;&#x7528;type&#x5B8C;&#x6210;&#x3002;</p>
+</blockquote>
+<h5 id="anchor_17"><a name="anchor_17" class="anchor-navigation-ex-anchor" href="#anchor_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<p>&#x8FD8;&#x53EF;&#x5411;&#x5143;&#x7C7B;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#x5B9A;&#x5236;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class DemoMeta(type):
+...     def __new__(meta, name, bases, attrs, **kwargs):
+...             print(kwargs)
+...             return type.__new__(meta, name, bases, attrs)
+...
+&gt;&gt;&gt; class X(metaclass = DemoMeta, a = 1, b = &quot;abc&quot;):
+...     def test(self): pass
+...
+{&apos;a&apos;: 1, &apos;b&apos;: &apos;abc&apos;}
+</code></pre><h5 id="anchor_18"><a name="anchor_18" class="anchor-navigation-ex-anchor" href="#anchor_18"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EE7;&#x627F;</h5>
+<p>&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x7684;&#x5143;&#x7C7B;&#x8BBE;&#x7F6E;&#x987A;&#x5E8F;&#x5982;&#x4E0B;:</p>
+<p>1&#x3001;&#x4ECE;metaclass&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#xFF1B;</p>
+<p>2&#x3001;&#x4ECE;&#x57FA;&#x7C7B;&#x7EE7;&#x627F;&#xFF1B;</p>
+<p>3&#x3001;&#x9ED8;&#x8BA4;&#x5143;&#x7C7B;type&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class DemoMeta(type): pass
+...
+&gt;&gt;&gt; class X(metaclass = DemoMeta): pass
+...
+&gt;&gt;&gt; class Y(X): pass   # &#x4ECE;&#x57FA;&#x7C7B;&#x7EE7;&#x627F;&#x5143;&#x7C7B;
+&gt;&gt;&gt; type(Y)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.DemoMeta&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x5982;&#x662F;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;&#x80FD;&#x7EE7;&#x627F;&#x6240;&#x6709;&#x7684;&#x7956;&#x5148;&#x5143;&#x7C7B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class AMeta(type): pass
+...
+&gt;&gt;&gt; class BMeta(type): pass
+...
+&gt;&gt;&gt; class A(metaclass = AMeta): pass
+...
+&gt;&gt;&gt; class B(metaclass = BMeta): pass
+...
+&gt;&gt;&gt; class C(A, B): pass
+...
+TypeError: metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
+</code></pre><p>&#x56E0;&#x4E3A;__class__&#x53EA;&#x80FD;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5143;&#x7C7B;&#xFF0C;&#x6240;&#x4EE5;&#x9664;&#x975E;&#x7956;&#x5148;&#x5143;&#x7C7B;&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x5426;&#x5219;&#x5FC5;&#x7136;&#x4F1A;&#x7531;&#x4E8E;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x800C;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x987B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5143;&#x7C7B;&#xFF0C;&#x8BA9;&#x5176;&#x7EE7;&#x627F;&#x6240;&#x6709;&#x7684;&#x7956;&#x5148;&#x5143;&#x7C7B;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class CMeta(AMeta, BMeta): pass
+...
+&gt;&gt;&gt; class C(A, B, metaclass = CMeta): pass
+</code></pre><h4 id="anchor_19"><a name="anchor_19" class="anchor-navigation-ex-anchor" href="#anchor_19"><i class="fa fa-link" aria-hidden="true"></i></a>3.2&#x3001;&#x5E94;&#x7528;</h4>
+<p>&#x57FA;&#x4E8E;&#x5143;&#x7C7B;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x5F88;&#x591A;&#x9B54;&#x6CD5;&#xFF0C;&#x8BA9;&#x5BF9;&#x8C61;&#x62E5;&#x6709;&#x5F88;&#x9AD8;&#x7684;&#x9690;&#x5F0F;&#x201C;&#x667A;&#x80FD;&#x201D;&#xFF0C;&#x4F46;&#x4F1A;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<p>&#x53E6;&#xFF0C;&#x5143;&#x7C7B;&#x867D;&#x80FD;&#x50CF;&#x666E;&#x901A;&#x7C7B;&#x578B;&#x90A3;&#x6837;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x5B9E;&#x4F8B;&#x63D0;&#x4F9B;&#x5171;&#x4EAB;&#x6210;&#x5458;&#xFF0C;&#x4F46;&#x4F9D;&#x65E7;&#x907F;&#x514D;&#x4F7F;&#x7528;&#xFF0C;&#x80FD;&#x8BA9;&#x5143;&#x7C7B;&#x4E13;&#x6CE8;&#x4E8E;&#x7C7B;&#x578B;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x4E0D;&#x8981;&#x6D89;&#x53CA;&#x903B;&#x8F91;&#x6700;&#x597D;&#x3002;</p>
+<h5 id="anchor_20"><a name="anchor_20" class="anchor-navigation-ex-anchor" href="#anchor_20"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x6001;&#x7C7B;</h5>
+<p>&#x963B;&#x6B62;&#x7C7B;&#x578B;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x7528;__call__&#x62E6;&#x622A;&#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x5373;&#x53EF;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class StaticClassMeta(type):
+...     def __call__(cls, *args, **kwargs):
+...             raise RuntimeError(&quot;can&apos;t create object for static class&quot;)
+...
+&gt;&gt;&gt; class X(metaclass = StaticClassMeta): pass
+...
+&gt;&gt;&gt; x = X()
+RuntimeError: can&apos;t create object for static class
+</code></pre><h5 id="anchor_21"><a name="anchor_21" class="anchor-navigation-ex-anchor" href="#anchor_21"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BC6;&#x5C01;&#x7C7B;</h5>
+<p>&#x963B;&#x6B62;&#x7C7B;&#x88AB;&#x7EE7;&#x627F;&#x3002;&#x53EF;&#x4F7F;&#x7528;&#x8BE5;&#x5143;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0D;&#x80FD;&#x88AB;&#x7EE7;&#x627F;&#x7C7B;&#x6DFB;&#x52A0;&#x5230;&#x96C6;&#x5408;&#x91CC;&#xFF0C;&#x4F5C;&#x4E3A;&#x540E;&#x7EED;&#x57FA;&#x7C7B;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x5373;&#x53EF;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; class SealedClassMeta(type):
+...     types = set()
+...     def __init__(cls, name, bases, attrs):
+...             if cls.types &amp; set(bases): raise RuntimeError(&quot;can&apos;t inherit from sealed class&quot;)
+...             cls.types.add(cls)
+...
+&gt;&gt;&gt; class A(metaclass = SealedClassMeta): pass
+...
+&gt;&gt;&gt; class B(A): pass
+...
+RuntimeError: can&apos;t inherit from sealed class
+&gt;&gt;&gt;
+</code></pre><h3 id="anchor_22"><a name="anchor_22" class="anchor-navigation-ex-anchor" href="#anchor_22"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x89E3;</h3>
+<p>&#x6CE8;&#x89E3;&#xFF08;annotation&#xFF09;&#x4E3A;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x3001;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4EE5;&#x53CA;&#x6A21;&#x5757;&#x548C;&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x5143;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def add(x: int, y: int) -&gt; int:
+...     return x + y
+...
+&gt;&gt;&gt; add.__annotations__
+{&apos;x&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;y&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;return&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>}
+</code></pre><p>&#x5176;&#x672C;&#x8D28;&#x4EC5;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x7F16;&#x7A0B;&#x548C;&#x53EF;&#x6267;&#x884C;&#x7684;&#x6CE8;&#x91CA;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x671F;&#x88AB;&#x63D0;&#x53D6;&#xFF0C;&#x5E76;&#x4E0E;&#x5BF9;&#x8C61;&#x76F8;&#x5173;&#x8054;&#x3002;&#x5728;&#x8FD0;&#x884C;&#x671F;&#xFF0C;&#x5176;&#x5BF9;&#x89E3;&#x91CA;&#x5668;&#x6307;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x548C;&#x7EA6;&#x675F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; add(&quot;abc&quot;, &quot;d&quot;)   # &#x5E76;&#x4E0D;&#x53D7;&#x6CE8;&#x89E3;int&#x7C7B;&#x578B;&#x7EA6;&#x675F;
+&apos;abcd&apos;
+&gt;&gt;&gt; import dis
+&gt;&gt;&gt; dis.dis(add)      # &#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x4E2D;&#x4E5F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6CE8;&#x89E3;&#x76F8;&#x5173;&#x5185;&#x5BB9;
+  2           0 LOAD_FAST                0 (x)
+              2 LOAD_FAST                1 (y)
+              4 BINARY_ADD
+              6 RETURN_VALUE
+&gt;&gt;&gt; dis.dis(compile(&quot;add(&apos;abc&apos;, &apos;d&apos;)&quot;,&quot;&quot;,&quot;exec&quot;)) # &#x548C;&#x666E;&#x901A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E00;&#x81F4;
+  1           0 LOAD_NAME                0 (add)
+              2 LOAD_CONST               0 (&apos;abc&apos;)
+              4 LOAD_CONST               1 (&apos;d&apos;)
+              6 CALL_FUNCTION            2
+              8 POP_TOP
+             10 LOAD_CONST               2 (None)
+             12 RETURN_VALUE
+</code></pre><p>&#x6CE8;&#x89E3;&#x5185;&#x5BB9;&#x53EF;&#x662F;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x548C;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x5176;&#x53EF;&#x5E94;&#x7528;&#x4E8E;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x7528;&#x4E8E;lambda&#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x: int  = 123   # &#x6CE8;&#x610F;&#x548C;&#x7B49;&#x53F7;&#x540E;&#x7684;&#x521D;&#x59CB;&#x5316;&#x503C;&#x5206;&#x5F00;
+&gt;&gt;&gt; __annotations__
+{&apos;x&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>}
+&gt;&gt;&gt; def test(x: {&apos;type&apos;: int, &apos;range&apos;: (0, 10)} =5): # &#x7B49;&#x53F7;&#x540E;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;
+...     pass
+...
+&gt;&gt;&gt; test.__annotations__
+{&apos;x&apos;: {&apos;type&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;range&apos;: (0, 10)}}
+&gt;&gt;&gt; test.__defaults__
+(5,)
+&gt;&gt;&gt; class X:
+...     data: int = 10
+...     def test(self, o: str) -&gt; str: pass
+...
+&gt;&gt;&gt; X.__annotations__
+{&apos;data&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;int&apos;</span><span class="token punctuation">&gt;</span></span>}
+&gt;&gt;&gt; X.test.__annotations__
+{&apos;o&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>, &apos;return&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>}
+</code></pre><h5 id="anchor_23"><a name="anchor_23" class="anchor-navigation-ex-anchor" href="#anchor_23"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x9014;</h5>
+<p>&#x6CE8;&#x89E3;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x9014;&#x5C31;&#x662F;&#x4F5C;&#x4E3A;&#x7C7B;&#x578B;&#x548C;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x7684;&#x68C0;&#x67E5;&#x6761;&#x4EF6;&#xFF0C;&#x5728;ORM&#x6846;&#x67B6;&#x4E2D;&#x5E38;&#x89C1;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def test(x: (int, 0, 10)):
+...     if __debug__:
+...             ann_x = test.__annotations__[&quot;x&quot;]
+...             assert isinstance(x, ann_x[0])
+...             assert ann_x[1] &lt;=x &lt;= ann_x[2]
+...     return
+</code></pre><blockquote>
+<p>&#x66F4;&#x597D;&#x7684;&#x505A;&#x6CD5;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B8C;&#x6210;&#xFF0C;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x68C0;&#x67E5;&#x5668;&#x3002;</p>
+</blockquote>
+<p>&#x5176;&#x8FD8;&#x53EF;&#x4E3A;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x5668;(PyCharm)&#x548C;&#x5E2E;&#x52A9;&#x751F;&#x6210;&#x5DE5;&#x5177;(pydoc)&#x63D0;&#x4F9B;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x5206;&#x7C7B;&#x4FE1;&#x606F;&#x3002;&#x53E6;&#x6709;MyPy&#x7B49;&#x5B9E;&#x9A8C;&#x578B;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x501F;&#x52A9;&#x6CE8;&#x89E3;&#x5B9E;&#x73B0;&#x7F16;&#x8BD1;&#x5668;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;</p>
+<blockquote>
+<p>&#x6807;&#x51C6;&#x5E93;typing&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E;&#x6CE8;&#x89E3;&#x7684;&#x7F16;&#x7A0B;&#x652F;&#x6301;&#x3002;</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="class.html" class="navigation navigation-prev " aria-label="Previous page: 类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exception.html" class="navigation navigation-next " aria-label="Next page: 异常">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"元编程","level":"1.3.11","depth":2,"next":{"title":"异常","level":"1.3.12","depth":2,"path":"basic/exception.md","ref":"basic/exception.md","articles":[]},"previous":{"title":"类","level":"1.3.10","depth":2,"path":"basic/class.md","ref":"basic/class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"},{"alt":"1559027907842","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png","label":"1559027907842","key":"1.3.4.1","backlink":"basic/express.html#fig1.3.4.1","nro":3,"list_caption":"图：1559027907842"},{"alt":"1559182801747","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559182801747.png","label":"1559182801747","key":"1.3.7.1","backlink":"basic/function.html#fig1.3.7.1","nro":4,"list_caption":"图：1559182801747"},{"alt":"1559724201028","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559724201028.png","label":"1559724201028","key":"1.3.9.1","backlink":"basic/module.html#fig1.3.9.1","nro":5,"list_caption":"图：1559724201028"},{"alt":"1559726056262","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559726056262.png","label":"1559726056262","key":"1.3.9.2","backlink":"basic/module.html#fig1.3.9.2","nro":6,"list_caption":"图：1559726056262"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"basic/meta.md","mtime":"2019-06-13T09:01:23.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-13T09:03:08.676Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/jquery.mark.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/main.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
