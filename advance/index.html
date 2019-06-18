@@ -1,0 +1,793 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>进阶 · Python学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Dastone Deng <dastone.deng@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/stype.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/katex/dist/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-books/prismjs/themes/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../module/" />
+    
+    
+    <link rel="prev" href="../basic/unittest.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://szdastone.github.io" target="_blank" class="custom-link">我的主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../install/install.html">
+            
+                <a href="../install/install.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../install/venv.html">
+            
+                <a href="../install/venv.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/data_type.html">
+            
+                <a href="../basic/data_type.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic/list.html">
+            
+                <a href="../basic/list.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic/dict.html">
+            
+                <a href="../basic/dict.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic/express.html">
+            
+                <a href="../basic/express.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic/if.html">
+            
+                <a href="../basic/if.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic/loop.html">
+            
+                <a href="../basic/loop.html">
+            
+                    
+                        <b>1.3.6.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic/function.html">
+            
+                <a href="../basic/function.html">
+            
+                    
+                        <b>1.3.7.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic/iterator.html">
+            
+                <a href="../basic/iterator.html">
+            
+                    
+                        <b>1.3.8.</b>
+                    
+                    迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic/module.html">
+            
+                <a href="../basic/module.html">
+            
+                    
+                        <b>1.3.9.</b>
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../basic/class.html">
+            
+                <a href="../basic/class.html">
+            
+                    
+                        <b>1.3.10.</b>
+                    
+                    类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../basic/meta.html">
+            
+                <a href="../basic/meta.html">
+            
+                    
+                        <b>1.3.11.</b>
+                    
+                    元编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../basic/exception.html">
+            
+                <a href="../basic/exception.html">
+            
+                    
+                        <b>1.3.12.</b>
+                    
+                    异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../basic/inout.html">
+            
+                <a href="../basic/inout.html">
+            
+                    
+                        <b>1.3.13.</b>
+                    
+                    输入输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../basic/file.html">
+            
+                <a href="../basic/file.html">
+            
+                    
+                        <b>1.3.14.</b>
+                    
+                    文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../basic/unittest.html">
+            
+                <a href="../basic/unittest.html">
+            
+                    
+                        <b>1.3.15.</b>
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../module/">
+            
+                <a href="../module/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../common/">
+            
+                <a href="../common/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../common/requests.html">
+            
+                <a href="../common/requests.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon fa fa-hand-o-right"><a class="on-toolbar-action" aria-label="" href="#">&#x76EE;&#x5F55;</a></span></li><li><span class="title-icon fa fa-hand-o-right"></span><a href="#anchor"><b> </b>&#x8FDB;&#x9636;</a></li></ul></div><a href="#anchor" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anchor"><a name="anchor" class="anchor-navigation-ex-anchor" href="#anchor"><i class="fa fa-link" aria-hidden="true"></i></a> &#x8FDB;&#x9636;</h1>
+<h3 id="anchor_1"><a name="anchor_1" class="anchor-navigation-ex-anchor" href="#anchor_1"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x89E3;&#x91CA;&#x5668;</h3>
+<h4 id="anchor_2"><a name="anchor_2" class="anchor-navigation-ex-anchor" href="#anchor_2"><i class="fa fa-link" aria-hidden="true"></i></a>1.1&#x3001;&#x5B57;&#x8282;&#x7801;</h4>
+<p>&#x5B57;&#x8282;&#x7801;&#x88AB;&#x5B58;&#x50A8;&#x5728;__code__.co_code&#x91CC;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; def add(x, y):
+...     z = x + y
+...     return z
+&gt;&gt;&gt; &quot; &quot;.join(f&quot;{b:02X}&quot; for b in add.__code__.co_code) #&#x5B57;&#x8282;&#x7801;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;
+&apos;7C 00 7C 01 17 00 7D 02 7C 02 53 00&apos;
+&gt;&gt;&gt; dis.dis(add)
+  2           0 LOAD_FAST                0 (x)
+              2 LOAD_FAST                1 (y)
+              4 BINARY_ADD
+              6 STORE_FAST               2 (z)
+
+  3           8 LOAD_FAST                2 (z)
+             10 RETURN_VALUE
+# &#x884C;&#x53F7;     &#x504F;&#x79FB;&#x91CF; &#x6307;&#x4EE4;                     &#x53C2;&#x6570;&#xFF08;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#xFF09;            
+&gt;&gt;&gt; add.__code__.co_firstlineno   # &#x8D77;&#x59CB;&#x884C;&#x53F7;&#x3002;
+1
+&gt;&gt;&gt; add.__code__.co_lnotab       # &#x4E24;&#x4E2A;&#x4E00;&#x7EC4;&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;(&#x5B57;&#x8282;&#x7801;&#x504F;&#x79FB;&#x4F4D;&#x7F6E;&#xFF0C;&#x76F8;&#x5BF9;&#x524D;&#x4E00;&#x7EC4;&#x884C;&#x53F7;&#x7684;&#x589E;&#x91CF;)
+b&apos;\x00\x01\x08\x01&apos;
+&gt;&gt;&gt; add.__code__.co_varnames     # dis&#x6307;&#x4EE4;&#x53C2;&#x6570;&#x6240;&#x503C;&#x5BF9;&#x8C61;&#x5217;&#x8868;
+(&apos;x&apos;, &apos;y&apos;, &apos;z&apos;)
+
+&gt;&gt;&gt; def test():                 # &#x4EE3;&#x7801;&#x4E2D;&#x5B58;&#x5728;&#x5FAA;&#x73AF;&#x3001;&#x8DF3;&#x8F6C;&#x3002;&#x53EF;&#x770B;dis&#x6807;&#x8BB0;&#x4E86;&#x76EE;&#x6807;&#x4F4D;&#x7F6E;
+...     for i in range(3): pass
+...
+&gt;&gt;&gt; dis.dis(test) 
+  2           0 SETUP_LOOP              16 (to 18)   # &#x53C2;&#x6570;&#x4E3A;&#x76F8;&#x5BF9;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x8981;&#x52A0;&#x4E0A;&#x81EA;&#x8EAB;&#x957F;&#x5EA6;2
+              2 LOAD_GLOBAL              0 (range)
+              4 LOAD_CONST               1 (3)
+              6 CALL_FUNCTION            1
+              8 GET_ITER
+        &gt;&gt;   10 FOR_ITER                 4 (to 16)
+             12 STORE_FAST               0 (i)
+             14 JUMP_ABSOLUTE           10
+        &gt;&gt;   16 POP_BLOCK
+        &gt;&gt;   18 LOAD_CONST               0 (None)
+             20 RETURN_VALUE
+</code></pre><blockquote>
+<p>dis - Disassembler for Python bytecode</p>
+<p>&#x200B;    <strong>LOAD_FAST(var_num)</strong></p>
+<p>&#x200B;    Pushes a reference to the local co_varnames(var_num) onto the stack&#x3002;</p>
+<p>&#x200B;    <strong>STORE_FAST(var_num)</strong></p>
+<p>   Stores TOS into the local co_varnames(var_num)</p>
+</blockquote>
+<p>&#x521D;&#x6B65;&#x770B;&#x6765;&#xFF0C;&#x5B57;&#x8282;&#x7801;&#x89E3;&#x8BFB;&#x5E76;&#x4E0D;&#x9EBB;&#x70E6;&#xFF0C;&#x8FD9;&#x6BD4;&#x771F;&#x6B63;&#x7684;&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x8981;&#x7B80;&#x5355;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x5B83;&#x57FA;&#x4E8E;&#x6808;&#x5F0F;&#x865A;&#x62DF;&#x673A;&#x8BBE;&#x8BA1;&#xFF0C;&#x6CA1;&#x6709;&#x5BC4;&#x5B58;&#x5668;&#x7B49;&#x6982;&#x5FF5;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x6307;&#x4EE4;&#x8F6C;&#x8BD1;&#x6BD4;&#x8F83;&#x76F4;&#x767D;&#xFF0C;&#x6CA1;&#x6709;&#x53E6;&#x7C7B;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x5F0F;&#x3002;&#x5B57;&#x8282;&#x7801;&#x5E76;&#x4E0D;&#x80FD;&#x88AB;CPU&#x6267;&#x884C;&#xFF0C;&#x5B9E;&#x9645;&#x6BCF;&#x6761;&#x5B57;&#x8282;&#x7801;&#x5BF9;&#x5E94;&#x4E00;&#x5927;&#x5806;C&#x5B9E;&#x73B0;&#x7684;&#x673A;&#x5668;&#x6307;&#x4EE4;&#x3002;&#x4F46;&#x4F9D;&#x7136;&#x53EF;&#x7528;&#x6808;&#x5F0F;&#x865A;&#x62DF;&#x673A;&#x6A21;&#x578B;&#xFF0C;&#x6A21;&#x62DF;&#x5176;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x3002;</p>
+<blockquote>
+<p>CPython&#x89E3;&#x91CA;&#x5668;&#x6709;&#x4E24;&#x4E2A;&#x6808;&#xFF1A;&#x6267;&#x884C;&#x6808;&#x5B58;&#x50A8;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;&#x6570;&#xFF1B;&#x800C;&#x5757;&#x6808;&#x5B58;&#x50A8;&#x5FAA;&#x73AF;&#x3001;&#x5F02;&#x5E38;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x4E0D;&#x540C;&#x4EE3;&#x7801;&#x5757;&#x95F4;&#x5FEB;&#x901F;&#x8DF3;&#x8F6C;&#x3002;</p>
+</blockquote>
+<h4 id="anchor_3"><a name="anchor_3" class="anchor-navigation-ex-anchor" href="#anchor_3"><i class="fa fa-link" aria-hidden="true"></i></a>1.2&#x3001;&#x5168;&#x5C40;&#x9501;</h4>
+<p>&#x5168;&#x5C40;&#x9501;(GIL)&#x673A;&#x5236;&#x8BA9;&#x89E3;&#x91CA;&#x5668;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EF;&#x88AB;&#x8C03;&#x5EA6;&#x6267;&#x884C;&#x3002;&#x5BF9;&#x5355;&#x6838;&#x73AF;&#x5883;&#xFF0C;&#x8BE5;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x3001;&#x9AD8;&#x6548;&#x3002;&#x5176;&#x6613;&#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#x5B89;&#x5168;&#x8BBF;&#x95EE;&#xFF0C;&#x4FBF;&#x4E8E;&#x8FDB;&#x884C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x548C;&#x7F16;&#x5199;&#x6269;&#x5C55;&#x3002;&#x4F46;&#x5BFC;&#x81F4;&#x591A;&#x6838;&#x73AF;&#x5883;&#x4E0B;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x5E76;&#x884C;&#xFF0C;&#x8FD9;&#x5BF9;&#x591A;&#x7EBF;&#x7A0B;&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x5E76;&#x53D1;&#x5E94;&#x7528;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x201C;&#x707E;&#x96BE;&#x201D;&#x3002;&#x5E38;&#x89C1;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x591A;&#x7EBF;&#x7A0B;&#x52A0;&#x534F;&#x7A0B;&#x6765;&#x5145;&#x5206;&#x53D1;&#x6325;&#x591A;&#x6838;&#x73AF;&#x5883;&#x8BA1;&#x7B97;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x5F53;GIL&#x88AB;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x5360;&#x7528;&#x65F6;&#xFF0C;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x4F1A;&#x963B;&#x585E;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x8D85;&#x65F6;&#x540E;&#xFF0C;&#x4F9D;&#x7136;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x9501;&#xFF0C;&#x5219;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x79CD;&#x8BF7;&#x6C42;&#x8BBE;&#x8BA1;&#x7684;&#x5F88;&#x8F7B;&#x5DE7;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x3002;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#x4F1A;&#x89E3;&#x91CA;&#x5FAA;&#x73AF;&#x5185;&#x4F1A;&#x68C0;&#x67E5;&#x8BE5;&#x6807;&#x8BB0;&#xFF0C;&#x7136;&#x540E;&#x91CA;&#x653E;&#x9501;&#xFF0C;&#x5207;&#x6362;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#xFF0C;&#x5176;&#x81EA;&#x8EAB;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x662F;&#x5F88;&#x5178;&#x578B;&#x7684;&#x534F;&#x4F5C;&#x673A;&#x5236;&#x3002;</p>
+<p>Cpython&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x7EBF;&#x7A0B;&#x8C03;&#x5EA6;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5177;&#x4F53;&#x54EA;&#x4E2A;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x88AB;&#x5207;&#x6362;&#x6267;&#x884C;&#xFF0C;&#x6709;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x51B3;&#x5B9A;&#x3002;&#x751A;&#x81F3;&#xFF0C;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x548C;&#x88AB;&#x5207;&#x6362;&#x6267;&#x884C;&#x7684;&#x4E5F;&#x672A;&#x5FC5;&#x662F;&#x540C;&#x4E00;&#x7EBF;&#x7A0B;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x7B97;&#x6CD5;&#x4FDD;&#x8BC1;&#x4E0D;&#x4F1A;&#x5728;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5468;&#x671F;&#x5185;&#x591A;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x3002;</p>
+<pre class="language-"><code>import sys
+import threading
+
+
+def countdown():
+    n = 10000000
+    while n &gt; 0:
+        n -= 1
+
+
+if len(sys.argv) &gt; 1:
+    t1 = threading.Thread(target=countdown)
+    t2 = threading.Thread(target=countdown)
+
+    t1.start()
+    t2.start()
+
+    t1.join()
+    t2.join()
+else:
+    countdown()
+    countdown()
+</code></pre><pre class="language-"><code>$ time python test.py  # &#x987A;&#x5E8F;&#x6267;&#x884C;
+
+real    0m18.752s
+user    0m4.121s
+sys    0m0.011s
+$ time python test.py 1  # &#x591A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;
+
+real    0m13.678s
+user    0m4.218s
+sys    0m0.022s
+</code></pre><p>&#x4E0A;&#x9762;&#x6D4B;&#x8BD5;&#x65F6;&#x57FA;&#x4E8E;CPU-bound&#x6765;&#x6D4B;&#x8BD5;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x5DEE;&#x5F02;&#x3002;&#x867D;&#x7136;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x4E0D;&#x592A;&#x4E25;&#x8C28;&#xFF0C;&#x4F46;&#x4F9D;&#x7136;&#x80FD;&#x770B;&#x5230;GIL&#x5728;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x548C;&#x591A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x8DDD;&#x7F29;&#x5C0F;&#xFF0C;&#x8FD9;&#x8868;&#x660E;&#x5728;&#x9501;&#x8BF7;&#x6C42;&#x548C;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#x5904;&#x7406;&#x4E0A;&#x7684;&#x6539;&#x8FDB;&#x6548;&#x679C;&#x8FD8;&#x662F;&#x5F88;&#x660E;&#x663E;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5C31;I/O-bound&#x5728;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<pre class="language-"><code>import sys
+import threading
+import requests
+
+def test():
+    return requests.get(&quot;http://cn.bing.com&quot;).status_code
+
+if len(sys.argv) &gt; 1:
+    ts = [threading.Thread(target=test) for i in range(10)]
+    for t in ts: t.start()
+    for t in ts: t.join()
+else:
+  [test() for i in range(10)]
+</code></pre><pre class="language-"><code>$ time python test.py    # &#x987A;&#x5E8F;&#x6267;&#x884C;
+
+real    0m1.418s
+user    0m0.301s
+sys     0m0.062s
+$ time python test.py 1  # &#x591A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;
+
+real    0m0.511s
+user    0m0.301s
+sys     0m0.079s
+</code></pre><p>&#x4ECE;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x6765;&#x770B;&#xFF0C;&#x8FD8;&#x662F;&#x4F53;&#x73B0;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x52BF;&#x3002;&#x6240;&#x4EE5;&#x8981;&#x5728;&#x5BF9;&#x7684;&#x573A;&#x5408;&#x4F7F;&#x7528;&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5E94;&#x4E3A;GIL&#x5C31;&#x8BA4;&#x4E3A;&#x591A;&#x7EBF;&#x7A0B;&#x7EDD;&#x4E0D;&#x53EF;&#x89E6;&#x53CA;&#x3002;</p>
+<h4 id="anchor_4"><a name="anchor_4" class="anchor-navigation-ex-anchor" href="#anchor_4"><i class="fa fa-link" aria-hidden="true"></i></a>1.3&#x3001;&#x6267;&#x884C;&#x8FC7;&#x7A0B;</h4>
+<p>&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E0B;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x7531;&#x4E8E;&#x8981;&#x5BF9;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x7684;&#x6E90;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x8BFB;&#xFF0C;&#x6545;&#x5FFD;&#x7565;&#x6E90;&#x7801;&#xFF0C;&#x53EA;&#x7B80;&#x8981;&#x8BB0;&#x5F55;&#x89E3;&#x8BFB;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h5 id="anchor_5"><a name="anchor_5" class="anchor-navigation-ex-anchor" href="#anchor_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5165;&#x53E3;</h5>
+<p>&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x6839;&#x636E;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x6765;&#x9009;&#x62E9;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;&#x547D;&#x4EE4;&#x884C;&#x6A21;&#x5F0F;&#xFF1A;-c&#xFF0C;&#x53EF;&#x9009;&#x62E9;&#x6A21;&#x5757;&#x6A21;&#x5F0F;:-m&#xFF0C;&#x4EE5;&#x53CA;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#xFF0C;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#xFF1B;&#x6700;&#x540E;&#x9000;&#x51FA;&#x6E05;&#x7406;&#x3002;</p>
+<h5 id="anchor_6"><a name="anchor_6" class="anchor-navigation-ex-anchor" href="#anchor_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;</h5>
+<p>&#x9664;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x5916;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x662F;&#x521B;&#x5EFA;builtins&#x3001;sys&#x6A21;&#x5757;&#xFF0C;&#x5E76;&#x6267;&#x884C;sys.modules&#x3001;sys.path&#x7B49;&#x8FD0;&#x884C;&#x6240;&#x9700;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x3002;</p>
+<ul>
+<li><p>&#x521B;&#x5EFA;&#x89E3;&#x91CA;&#x5668;&#x548C;&#x4E3B;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x5B9E;&#x4F8B;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x5185;&#x7F6E;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;&#x5E26;&#x6709;&#x5BF9;&#x8C61;&#x7F13;&#x5B58;&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;sys.modules&#xFF0C;&#x5B58;&#x50A8;&#x8FD0;&#x884C;&#x671F;&#x5E76;&#x5BFC;&#x5165;&#x7684;&#x6A21;&#x5757;</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;__builtins__&#x6A21;&#x5757;</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;&#x5185;&#x7F6E;&#x5F02;&#x5E38;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;sys&#x6A21;&#x5757;</p>
+</li>
+<li><p>&#x8BBE;&#x7F6E;sys.path&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#x5217;&#x8868;(&#x4E0D;&#x5305;&#x542B;site-packages)</p>
+</li>
+<li><p>&#x8BBE;&#x7F6E;sys.modules</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;&#x5BFC;&#x5165;&#x673A;&#x5236;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;__main__&#x6A21;&#x5757;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x65F6;__main__&#x6A21;&#x5757;&#x548C;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x5E76;&#x6CA1;&#x6709;&#x5173;&#x7CFB;</p>
+</li>
+<li><p>&#x521D;&#x59CB;&#x5316;site&#x6A21;&#x5757;&#xFF0C;&#x6DFB;&#x52A0;site-specific&#x8DEF;&#x5F84;&#x5230;sys.path&#x5217;&#x8868;</p>
+</li>
+</ul>
+<p>&#x4E3B;&#x6A21;&#x5757;&#x4F7F;&#x7528;__main__&#x8FD9;&#x4E2A;&#x7279;&#x6B8A;&#x540D;&#x79F0;&#xFF0C;&#x4F46;&#x5E76;&#x672A;&#x5C31;&#x662F;&#x5165;&#x53E3;&#x6E90;&#x6587;&#x4EF6;&#x3002;&#x5728;&#x4EA4;&#x4E92;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5B83;&#x4E5F;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x4F5C;&#x7528;&#x57DF;&#x5B58;&#x5728;&#xFF0C;&#x6B64;&#x5904;&#x7684;&#x91CD;&#x70B9;&#x662F;&#x5EFA;&#x7ACB;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x5BFC;&#x5165;&#x5185;&#x7F6E;&#x6210;&#x5458;&#x3002;</p>
+<p>&#x4E3B;&#x6A21;&#x5757;__main__&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x6A21;&#x5757;(&#x5305;&#x62EC;&#x521B;&#x5EFA;__dict__&#xFF0C;&#x8BBE;&#x7F6E;__name__)</li>
+<li>&#x5C06;__builtins__&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x3002;</li>
+</ul>
+<h5 id="anchor_7"><a name="anchor_7" class="anchor-navigation-ex-anchor" href="#anchor_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6267;&#x884C;</h5>
+<p>&#x5728;&#x5B8C;&#x6210;&#x521D;&#x59CB;&#x5316;&#x540E;&#xFF0C;&#x8F6C;&#x5165;&#x5230;&#x9009;&#x5B9A;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5148;&#x524D;&#x521B;&#x5EFA;&#x7684;__main__.__dict__&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6A21;&#x5757;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x3002;</p>
+<ul>
+<li>&#x83B7;&#x53D6;__main__.__dict__&#xFF0C;&#x6DFB;&#x52A0;__file__&#x4FE1;&#x606F;</li>
+<li>&#x8FD0;&#x884C;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#xFF08;&#x68C0;&#x67E5;pyc&#x7F13;&#x5B58;&#xFF09;&#xFF0C;&#x5C06;__main__.__dict__&#x4F5C;&#x4E3A;&#x540D;&#x5B57;&#x7A7A;&#x95F4;&#x4F20;&#x5165;</li>
+</ul>
+<p>&#x7F16;&#x8BD1;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x968F;&#x540E;&#x8FDB;&#x5165;&#x5B57;&#x8282;&#x7801;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x6267;&#x884C;&#x6240;&#x9700;&#x7684;&#x6808;&#x5E27;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x51C6;&#x5907;&#x597D;&#x53C2;&#x6570;&#x3001;&#x81EA;&#x7531;&#x53D8;&#x91CF;(&#x95ED;&#x5305;)&#x7B49;&#x6267;&#x884C;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x6700;&#x7EC8;&#xFF0C;&#x5B57;&#x8282;&#x7801;&#x5728;&#x4E00;&#x4E2A;&#x89C4;&#x6A21;&#x63A5;&#x8FD1;3000&#x884C;&#x7684;&#x8D85;&#x5927;&#x51FD;&#x6570;&#x5185;&#x5FAA;&#x73AF;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x3002;</p>
+<ul>
+<li>&#x6307;&#x4EE4;&#x53C2;&#x6570;&#x6240;&#x9700;&#x7684;&#x76F8;&#x5173;&#x540D;&#x5B57;&#x5217;&#x8868;</li>
+<li>&#x7C7B;&#x4F3C;&#x4E8E;SP&#x3001;PC&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x53CA;&#x6808;&#x5E27;&#x9876;&#x4F4D;&#x7F6E;</li>
+<li>&#x89E3;&#x91CA;&#x5FAA;&#x73AF;<pre class="language-"><code>* &#x68C0;&#x67E5;&#x5E76;&#x5904;&#x7406;GIL
+* &#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x548C;&#x53C2;&#x6570;
+* &#x6307;&#x4EE4;&#x6267;&#x884C;
+* &#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x90FD;&#x6709;C&#x5B9E;&#x73B0;&#x5177;&#x4F53;&#x8FC7;&#x7A0B;
+</code></pre></li>
+</ul>
+<p>&#x7528;&#x6237;&#x6808;&#x5185;&#x5B58;&#x6309;&#x5730;&#x5740;&#x4ECE;&#x4F4E;&#x5411;&#x9AD8;&#x5206;&#x914D;&#xFF0C;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x9012;&#x589E;&#x6307;&#x4EE4;&#x8BA1;&#x6570;&#x5668;&#x3002;</p>
+<h5 id="anchor_8"><a name="anchor_8" class="anchor-navigation-ex-anchor" href="#anchor_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC8;&#x6B62;</h5>
+<p>&#x5728;&#x7ED3;&#x675F;&#x524D;&#xFF0C;&#x8FD8;&#x8981;&#x5B8C;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x6E05;&#x7406;&#x64CD;&#x4F5C;&#x3002;</p>
+<ul>
+<li>&#x7B49;&#x5F85;&#x524D;&#x53F0;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;</li>
+<li>&#x8C03;&#x7528;atexit&#x6CE8;&#x518C;&#x7684;&#x9000;&#x51FA;&#x51FD;&#x6570;</li>
+<li>&#x5783;&#x573E;&#x56DE;&#x6536;&#xFF0C;&#x6267;&#x884C;&#x6790;&#x6784;&#x65B9;&#x6CD5;</li>
+<li>&#x91CA;&#x653E;&#x5BFC;&#x5165;&#x7684;&#x6A21;&#x5757;</li>
+<li>&#x6267;&#x884C;&#x76F8;&#x5173;&#x7ED3;&#x675F;&#x51FD;&#x6570;</li>
+<li>&#x6E05;&#x7406;&#x89E3;&#x91CA;&#x5668;&#x548C;&#x4E3B;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;</li>
+<li>&#x6267;&#x884C;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x675F;&#x51FD;&#x6570;</li>
+</ul>
+<h4 id="anchor_9"><a name="anchor_9" class="anchor-navigation-ex-anchor" href="#anchor_9"><i class="fa fa-link" aria-hidden="true"></i></a>1.4&#x3001;&#x5185;&#x5B58;&#x5206;&#x914D;</h4>
+<p>&#x5728;&#x6267;&#x884C;&#x6E90;&#x7801;&#x89E3;&#x8BFB;&#x4E2D;&#xFF0C;&#x6709;&#x76F8;&#x5173;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5668;&#x7684;&#x57FA;&#x672C;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x3002;</p>
+<p>&#x4EE5;&#x67D0;&#x4E2A;&#x9608;&#x503C;&#x4E3A;&#x754C;&#xFF0C;&#x5206;&#x4E3A;&#x5927;&#x5C0F;&#x5BF9;&#x8C61;&#x3002;&#x5927;&#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x53EA;&#x6709;&#x5C0F;&#x5BF9;&#x8C61;&#x624D;&#x4F7F;&#x7528;&#x4E13;&#x7528;&#x5185;&#x5B58;&#x5206;&#x914D;&#x5668;&#x3002;&#x5C0F;&#x5BF9;&#x8C61;&#x6309;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;&#x5BF9;&#x9F50;&#x540E;&#xFF0C;&#x5728;&#x5206;&#x6210;&#x4E0D;&#x540C;&#x7C7B;&#x522B;(size class)&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0E;&#x590D;&#x7528;&#x548C;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5411;&#x7CFB;&#x7EDF;&#x7533;&#x8BF7;&#x5927;&#x5757;Arena&#x5185;&#x5B58;&#xFF0C;&#x6309;&#x9875;&#x5927;&#x5C0F;&#x5C06;&#x5176;&#x5206;&#x6210;&#x591A;&#x4E2A;Pool&#x5757;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x7EA7;&#x91CD;&#x7528;&#x5355;&#x5143;&#xFF0C;&#x6BCF;&#x4E2A;Pool&#x4E3A;&#x4E00;&#x79CD;&#x7C7B;&#x522B;&#x7684;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x5185;&#x5B58;&#x3002;Pool&#x88AB;&#x56DE;&#x6536;&#x540E;&#xFF0C;&#x53EF;&#x91CD;&#x65B0;&#x4E3A;&#x53E6;&#x4E00;&#x7C7B;&#x522B;&#x7684;&#x5BF9;&#x8C61;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;&#x6309;&#x6307;&#x5B9A;&#x7C7B;&#x522B;&#x5927;&#x5C0F;&#xFF0C;&#x5C06;Pool&#x518D;&#x6B21;&#x5207;&#x5206;&#x6210;&#x591A;&#x4E2A;Block&#x5757;&#x3002;&#x6BCF;&#x4E2A;Block&#x5757;&#x53EF;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7C7B;&#x522B;&#x7684;&#x5C0F;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x662F;&#x4E8C;&#x7EA7;&#x91CD;&#x7528;&#x5355;&#x5143;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x901A;&#x7528;&#x5185;&#x5B58;&#x5206;&#x914D;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x4EE5;&#x7F13;&#x5B58;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x5C0F;&#x5BF9;&#x8C61;&#x5FEB;&#x901F;&#x5206;&#x914D;&#x3002;</p>
+<p>&#x5728;&#x6DF1;&#x5165;&#x7EC6;&#x8282;&#x524D;&#xFF0C;&#x5148;&#x4E86;&#x89E3;&#x5176;API&#x57FA;&#x672C;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x6D89;&#x53CA;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5206;&#x914D;&#x9009;&#x62E9;&#xFF0C;&#x4E5F;&#x4FBF;&#x4E8E;&#x5728;&#x6E90;&#x7801;&#x4E2D;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x51FD;&#x6570;&#x3002;</p>
+<p><img src="https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1560826139647.png" alt=""></p>
+<p>&#x5C0F;&#x5BF9;&#x8C61;&#x6309;8&#x5B57;&#x8282;&#x5BF9;&#x9F50;&#xFF0C;&#x5206;&#x6210;64&#x4E2A;&#x4E0D;&#x540C;&#x7C7B;&#x522B;&#x3002;</p>
+<p>&#x5E95;&#x5C42;PyMem API&#x6CA1;&#x5565;&#x503C;&#x5F97;&#x5173;&#x6CE8;&#x5185;&#x5BB9;&#x3002;&#x53EF;&#x4ECE;PyObject&#x5F00;&#x59CB;&#x5206;&#x6790;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#xA9; 2019  Dastone Deng <dastone.deng@gmail.com>. All rights reserved.</dastone.deng@gmail.com></span><span class="footer-modification"><span id="busuanzi_container_site_uv" style="display:none">&#x672C;&#x7AD9;&#x8BBF;&#x5BA2;&#x6570; <span id="busuanzi_value_site_uv"></span> &#x4EBA;&#x6B21;</span></span></footer><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../basic/unittest.html" class="navigation navigation-prev " aria-label="Previous page: 单元测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../module/" class="navigation navigation-next " aria-label="Next page: 内置模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"进阶","level":"1.4","depth":1,"next":{"title":"内置模块","level":"1.5","depth":1,"path":"module/README.md","ref":"module/README.md","articles":[]},"previous":{"title":"单元测试","level":"1.3.15","depth":2,"path":"basic/unittest.md","ref":"basic/unittest.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","-lunr","-search","-highlight","-sharing","books"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"books":{"github_url":"https://github.com/szdastone","prism_themes":"prismjs/themes/prism-okaidia.css","variable_name":"_pictures"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"disqus":{"useIdentifier":false,"shortName":"dastonedeng"},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Dastone Deng <dastone.deng@gmail.com>","pdf":{"pageNumbers":false,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{"_pictures":[{"alt":"1554967797901","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554967797901","key":"1.2.2.1","backlink":"install/venv.html#fig1.2.2.1","nro":1,"list_caption":"图：1554967797901"},{"alt":"1554970396705","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1554967797901.png","label":"1554970396705","key":"1.2.2.2","backlink":"install/venv.html#fig1.2.2.2","nro":2,"list_caption":"图：1554970396705"},{"alt":"1559027907842","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559027907842.png","label":"1559027907842","key":"1.3.4.1","backlink":"basic/express.html#fig1.3.4.1","nro":3,"list_caption":"图：1559027907842"},{"alt":"1559182801747","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559182801747.png","label":"1559182801747","key":"1.3.7.1","backlink":"basic/function.html#fig1.3.7.1","nro":4,"list_caption":"图：1559182801747"},{"alt":"1559724201028","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559724201028.png","label":"1559724201028","key":"1.3.9.1","backlink":"basic/module.html#fig1.3.9.1","nro":5,"list_caption":"图：1559724201028"},{"alt":"1559726056262","url":"https://szdastone-1258479409.cos.ap-hongkong.myqcloud.com/python_study_notes/1559726056262.png","label":"1559726056262","key":"1.3.9.2","backlink":"basic/module.html#fig1.3.9.2","nro":6,"list_caption":"图：1559726056262"}]},"title":"Python学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"我的主页":"http://szdastone.github.io"}},"gitbook":"3.2.3","description":"记录Python的一些学习笔记"},"file":{"path":"advance/README.md","mtime":"2019-06-18T09:00:43.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-18T09:03:59.246Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/jquery.mark.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/main.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-books/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
